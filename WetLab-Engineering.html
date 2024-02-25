@@ -4,93 +4,159 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="./css/Team-Team_member.css">
-        <!-- <link rel="stylesheet" href="./css/iconfont.css"> -->
+        <link rel="stylesheet" href="./css/WetLab-Engineering.css">
 
         <link rel="icon" type="image/x-icon" href="./img/icon2-1.ico">
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .MathJax
+            {
+                outline: 0 !important;
+            }
+            .MathJax_Display
+            {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+        </style>
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1&display=swap" rel="stylesheet">
-        
-        <title>Team-Team_member</title>
 
+        <link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+        <link rel="dns-prefetch" href="https://cdn.mathjax.org" />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"]
+                    ], //行内公式选择$
+                    displayMath: [
+                        ["$$", "$$"]
+                    ] //段内公式选择$$
+                },
+                svg: {
+                    fontCache: 'global'
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'], //避开某些标签
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+        </script>
+
+        <title>Wet Lab-Engineering</title>
+
+        
     </head>
     <body>
+        <script>
+            function getRatio()
+                {
+                    var ratio=0;
+                    var screen=window.screen;
+                    var ua=navigator.userAgent.toLowerCase();
+    
+                    if(window.devicePixelRatio !== undefined)
+                    {
+                        ratio=window.devicePixelRatio;    
+                    }
+                    else if(~ua.indexOf('msie'))
+                    {
+                        if(screen.deviceXDPI && screen.logicalXDPI)
+                        {
+                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                        }
+                    
+                    }
+                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                    {
+                        ratio=window.outerWidth/window.innerWidth;
+                    }
+    
+                    // if(ratio)
+                    // {
+                    //     ratio=Math.round(ratio*100);    
+                    // }
+                    return ratio;
+                }
+                let t=getRatio();
+                console.log( getRatio() );
+                document.body.style.zoom =1.5/t;
+        </script>
+
         <style>
             .body   
             {
                 height: fit-content;
-                /* display: flex;
-                flex-direction: column; */
             }
         </style>
         <!-- ---------------------------------------------------------------------- -->
         <!-- 导航栏 开始 -->
 
         <header>
-        
-            <!-- LOGO -->
-            <a herf="#"><img src="./img/LOGOinPic_base.png" alt="This is our logo!"></a>
+            <a href="./mainbody.html"><img src="./img/LOGOinPic_base.png" alt="This is our logo!"></a>
             <!-- <a href="#" class="LOGOinTEXT">CYSL</a> -->
-            <!-- LOGO -->
-
-            <!-- 导航栏按钮 -->
             <ul>
-                <li><a href="#">Home</a></li>            
+                <li><a href="./mainbody.html" target="_blank">Home</a></li>            
                 <li>
-                    <a href="#">Project</a>
+                    <a href="#GapforProjectIntro">Project</a>
                     <div class="nav-sub" style="width:185px; height:105px;">
                         <ul class="Project_submenu">
-                            <li><a href="https://www.bilibili.com/">Description</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Troubleshooting</a></li>
+                            <li><a href="./Project-Description.html" target="_blank">Description</a></li>
+                            <li><a href="./Project-Design.html" target="_blank">Design</a></li>
+                            <li><a href="./Project-Troubleshooting.html" target="_blank">Troubleshooting</a></li>
                         </ul>
                     </div>
                 </li> 
                 <li>
-                    <a href="#">Wet Lab</a>
+                    <a href="#GapforWetLabIntro">Wet Lab</a>
                     <div class="nav-sub" style="width:145px; height:105px;">
                         <ul class="Project_submenu">
-                            <li><a href="https://www.bilibili.com/">Engineering</a></li>
-                            <li><a href="#">Protocol</a></li>
-                            <li><a href="#">Notebook</a></li>
+                            <li><a href="#" >Engineering</a></li>
+                            <li><a href="./WetLab-Protocol.html" >Protocol</a></li>
+                            <li><a href="./WetLab-Notebook.html" >Notebook</a></li>
                         </ul>
                     </div>
                 </li>           
                 <li>
-                    <a href="#">Dry Lab</a>
+                    <a href="#GapforDryLabIntro">Dry Lab</a>
                     <div class="nav-sub" style="width:95px; height:75px;">
                         <ul class="Project_submenu">
-                            <li><a href="https://www.bilibili.com/">Model</a></li>
-                            <li><a href="#">Results</a></li>
+                            <li><a href="./DryLab-Model.html" target="_blank">Model</a></li>
+                            <li><a href="./DryLab-Results.html" target="_blank">Results</a></li>
                         </ul>
                     </div>
                 </li>            
                 <li>
-                    <a href="#">Human Practices</a>
-                    <div class="nav-sub" style="width:270px; height:75px;">
+                    <a href="#GapforHumanPracticesIntro">Human Practices</a>
+                    <div class="nav-sub" style="width:290px; height:75px;">
                         <ul class="Project_submenu">
-                            <li><a href="https://www.bilibili.com/">Education</a></li>
-                            <li><a href="#">Integrated human practice</a></li>
+                            <li><a href="./HumanPractices-IntegratedHP.html" target="_blank">Integrated human practices</a></li>
+                            <li><a href="./HumanPractices-Education.html" target="_blank">Education</a></li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <a href="#">Team</a>
+                    <a href="#GapforTeamIntro">Team</a>
                     <div class="nav-sub" style="width: 165px; height:75px;">
                         <ul class="Project_submenu">
-                            <li><a href="https://www.bilibili.com/">Team Member</a></li>
-                            <li><a href="#">Documents</a></li>
+                            <li><a href="./Team-Team_member.html" target="_blank">Team Member</a></li>
+                            <li><a href="./Team-Documents.html" target="_blank">Documents</a></li>
                         </ul>
                     </div>
                 </li>            
-                <li><a href="#">Safety</a></li>            
+                <li><a href="./Safety.html">Safety</a></li>            
             </ul>
-            <!-- 导航栏按钮 -->
-
         </header>
 
         <script type="text/javascript">
@@ -102,22 +168,6 @@
 
         <!-- 导航栏 结束 -->
         <!-- ---------------------------------------------------------------------- -->
-        
-        
-        <!-- <div style="padding: 200px;">
-            <p>尝试滚动页面。</p>
-            <p>注意: IE/Edge 15 及更早 IE 版本不支持 sticky 属性。</p>
-            
-            <p>滚动我</p>
-            <p>来回滚动我</p>
-            <p>滚动我</p>
-            <p>来回滚动我</p>
-            <p>滚动我</p>
-            <p>来回滚动我</p>
-        </div>
-    <div class="sticky" id="menu">我是粘性定位!</div>
-        -->
-        
         
         <!-- ---------------------------------------------------------------------- --> 
         <!-- Title begins -->
@@ -136,8 +186,8 @@
                     }
                 </style>
             </div>
-            <p>
-                <span style="color: rgb(164, 205, 50); font-size: 180px; text-decoration: underline 10px;">T</span>eam Members
+            <p style="font-size: 90px;">
+                <span style="color: rgb(164, 205, 50); font-size: 135px; text-decoration: underline 10px;">E</span>ngineering
             </p>
         </div>
 
@@ -158,51 +208,44 @@
                 <div class="menu">
                     <!-- 侧边栏的标题 开始-->
                     <div class="menu-title">
-                        <span style="font-size: 36px; font-weight: 900;">Team Members</span>
+                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 24px; font-weight: 900;">Model</span></a>
                     </div>
                     <!-- 侧边栏的标题 结束-->
 
                     <!-- 每一项导航 -->
+                    <style>
+                        .menu-item a
+                        {
+                            text-decoration: none;
+                            color: #363b28;
+                        }
+                    </style>
+                    
                     <div class="menu-item">
                         <input type="checkbox" id="menu-item1">
                         <label for="menu-item1">
                             <i class="material-icons" style="font-size: 20px;">apps</i>
-                            <span style="font-size: 18px;">Member Introduction and attribution</span>
+                            <span style="font-size: 14px;">A dynamic coculture model based on mechanistic coupling of genome scale metabolic models</span>
                             <i class="material-icons">keyboard_arrow_down</i>
                         </label>
                         <div class="menu-content">
-                            <span style="font-size: 14px;">Representation of the model</span>
-                            <span style="font-size: 14px;">Construction of the system of ODEs</span>
-                            <span>option3</span>
+                            <span style="font-size: 12px;"><a href="#RepresentationLinksHere">Representation of the model</a></span>
+                            <span style="font-size: 12px;"><a href="#ConstructionLinksHere">Construction of the system of ODEs</a></span>
                         </div>
-                    </div>
+                    </div>   
 
                     <div class="menu-item">
                         <input type="checkbox" id="menu-item2">
                         <label for="menu-item2">
                             <i class="material-icons" style="font-size: 20px;">apps</i>
-                            <span>navigation2</span>
+                            <span style="font-size: 18px;">AlphaFold2 Structure Prediction</span>
                             <i class="material-icons">keyboard_arrow_down</i>
                         </label>
                         <div class="menu-content">
-                            <span>option1</span>
-                            <span>option2</span>
+                            <span style="font-size: 14px;"><a href="#IntroductionLinksHere">Introduction</a></span>
+                            <span style="font-size: 14px;"><a href="#DesignLinksHere">Design</a></span>
                         </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="menu-item3">
-                        <label for="menu-item3">
-                            <i class="material-icons" style="font-size: 20px;">apps</i>
-                            <span>navigation3</span>
-                            <i class="material-icons">keyboard_arrow_down</i>
-                        </label>
-                        <div class="menu-content">
-                            <span>option1</span>
-                            <span>option2</span>
-                            <span>option3</span>
-                        </div>
-                    </div>
+                    </div>  
 
                     <div class="set-line"></div>
 
@@ -211,7 +254,7 @@
                             <i class="material-icons" style="font-size: 36px;">
                                 keyboard_double_arrow_right
                             </i>
-                            <span style="font-size: 36px; font-weight: 900;">Documents</span>
+                            <span style="font-size: 23px; font-weight: 900;"><a href="./WetLab-Protocol.html">Protocol</a></span>
                         </label>
                     </div>
                     <div class="menu-item">
@@ -219,7 +262,7 @@
                             <i class="material-icons" style="font-size: 36px;">
                                 keyboard_double_arrow_right
                             </i>
-                            <span style="font-size: 36px; font-weight: 900;">Setting</span>
+                            <span style="font-size: 23px; font-weight: 900;"><a href="./WetLab-Notebook.html">Notebook</a></span>
                         </label>
                     </div>
                 </div>
@@ -230,7 +273,6 @@
             #MenuC.sticky
             {
                 z-index: 999;
-                /* position: fixed; */
                 top: 15%;
                 left: 0;
             }
@@ -250,191 +292,287 @@
     
         <!-- height: 600px; -->
         <div style="height: fit-content; width: 65%;  left: 32%; position: relative; ">
-             <!-- transform: translateY(-360px); -->
-            
-            <div class="container_MemberIntro">
-                <div class="testimonial">
-                    <div class="testimonial-text">
-                        <div class="user-text active-text"><!-- Li Weijie -->
-                            <i class="material-icons" style="color : #ffffff;">drafts</i>
-                            <p style="text-align: left;">
-                                <ul style="text-align: left;">
-                                    <li><span class="inList">Project reviews:</span> <br>
-                                        - sharing project: 2021-NUS_Singapore<br>
-                                        - sharing project: 2021-Toulouse INSA-UPS </li>
-                                    <li><span class="inList">Journal Club:</span> <br>
-                                        - sharing gene editing technology<br>
-                                        - sharing quorum sensing </li>
-                                    <li><span class="inList">Brainstorm:</span> <br>
-                                        - proposing the idea of biomanufacturing natural pigment by cell-free chloroplast system</li>
-                                    <li><span class="inList">Dry lab:</span> <br>
-                                        - design of a dynamic coculture model based on mechanistic coupling of genome scale metabolic models and carbon accounting </li>
-                                    <li><span class="inList">Human practices:</span>
-                                        - design of integrated human practice</li> 
-                                    <li><span class="inList">Art Design</span></li>
-                                    <li><span class="inList" style="color: #cfb86e; font-weight: 700;">A very responsible leader</span></li>   
-                                </ul>
-                            </p>
-                            <span>Weijie Li</span> 
-                            
-                        </div>
-                        <div class="user-text"><!-- Zhang Chengxue -->
-                            <i class="material-icons" style="color : #ffffff;">drafts</i>
-                            <p>
-                                <ul style="text-align: left;">
-                                    <li><span class="inList">Project reviews:</span> <br>
-                                        - sharing project: -2023IISER-TVM, 2023TU-Braunschweig, 2023Tec-Chihuahua
-                                         </li>
-                                    <li><span class="inList">Journal Club:</span> <br>
-                                        - summarying molecular cloning techniques<br>
-                                        - sharing RNA interference technique </li>
-                                    <li style="color: #cfb86e;"><span class="inList" style="color: #cfb86e;">Brainstorm:</span> <br>
-                                        - proposing idea of co-culturing cyanobacteria and yeast to fix carbon dioxide and glow </li>
-                                    <li><span class="inList">Wet lab:</span> <br>
-                                        - discovery of caffeic acid luminescence cycle related studies <br>
-                                        - select and design of optically controlled gene expression elements
-                                    </li>
-                                </ul>
-                            </p>
-                            <span style="color: aquamarine;">Chengxue Zhang</span>
-                        </div>
-                        <div class="user-text"><!-- Gong Jiantin -->
-                            <i class="material-icons" style="color : #ffffff;">drafts</i>
-                            <p> <span class="inList"></span>
-                                <ul style="text-align: left;">
-                                    <li><span class="inList">Project reviews:</span> <br>
-                                        - sharing project: 2021-DTU-China, 2022-TU-Einhoven, 2023-Aalto-Helsinki </li>
-                                    <li><span class="inList">Journal Club:</span> <br>
-                                        - sharing directed evolution of protein<br>
-                                        - sharing microorganism sensors </li>
-                                    <li><span class="inList">Brainstorm:</span> <br>
-                                        - Synchronized Lysis Circuit can cause S.typhimurium release PETase and MHETase periodically </li>
-                                    <li><span class="inList">Dry lab:</span> <br>
-                                        - tried but with no gain </li>
-                                    <li><span class="inList">Wet lab:</span> <br>
-                                        - Biosynthesis of Caffeic acid and the Bioluminescence Circuit </li>
-                                </ul>
-                            </p>
-                            <span style="color: #cfb86e;">Jianting Gong</span>
-                        </div>
-                        <div class="user-text"><!-- Yang Jiayi -->
-                            <i class="material-icons" style="color : #ffffff;">drafts</i>
-                            <p>
-                                <ul style="text-align: left;">
-                                    <li><span class="inList">Project reviews:</span> <br>
-                                        - sharing project: 2023-TJUSLS-China, 2023-Freiburg, 2023-Mcgill </li>
-                                    <li><span class="inList">Journal Club:</span> <br>
-                                        - sharing technology related to fusion proteins<br>
-                                        - sharing nanozyme </li>
-                                    <li><span class="inList">Brainstorm:</span> <br>
-                                        - proposing the idea of optimizing production of terpene compounds through enhancing activity of P450 by creating a new simplified photosynthetic system with protein backbone </li>
-                                    <li><span class="inList">Dry lab:</span> <br>
-                                        - helping design the fusion protein TUP1-FHY1 </li>
-                                    <li><span class="inList">Wet lab:</span> <br>
-                                        - helping design the co-culture system </li>
-                                    <li style="color: #cfb86e;"><span class="inList" style="color: #cfb86e; font-weight: 700;">Best Drawer</span> <br>
-                                        - draw some pictures for our team </li>
-                                </ul>
-                            </p>
-                            <span style="color: rgb(177, 45, 45);">Jiayi Yang</span>
-                        </div>
-                        <div class="user-text"> <!-- Liu Zirui -->
-                            <i class="material-icons" style="color : #ffffff;">drafts</i>
-                            <p style="text-align: left;">
-                                <ul style="text-align: left; ">
-                                    <li><span class="inList">Project reviews:</span> <br>
-                                        - sharing project: Rules and prizes of iGEM
-                                    </li>
-                                    <li><span class="inList">Journal Club:</span> <br>
-                                        - sharing Principles and examples of protein cluster analysis<br>
-                                        - introducing some algorithms and databases for cluster analysis  </li>
-                                    <li> <span class="inList">Brainstorm:</span> <br>
-                                        - Letting everyone be shocked</li>
-                                    <li> <span class="inList" style="color: #cfb86e;">Wiki:</span> <br>
-                                        <span style="font-size: 24px; color: #cfb86e; font-weight: 600;">- ALL the Codes!</span></li>   
-                                </ul>
-                            </p>
-                            <span style="color: #172bb0;">Zirui Liu</span>
-                        </div>
-                        <div class="user-text"><!-- Zhang Enpu -->
-                            <i class="material-icons" style="color : #000000;">drafts</i>
-                            <p>
-                                Almost Heaven, West Virginia/
-                                Blue Ridge Mountains, Shenandoah River/
-                                Life is old there, older than the trees/
-                                Younger than the mountains, growing like a breeze/
-                                Country roads, take me home/ 
-                                To the place I belong/ 
-                                West Virginia, mountain mama/ 
-                                Take me home, country roads
-                            </p>
-                            <span>Enpu Zhang</span>
-                        </div>
-                        <div class="user-text"><!-- Lu Weimin -->
-                            <i class="material-icons" style="color : #000000;">drafts</i>
-                            <p>
-                                Almost Heaven, West Virginia/
-                                Blue Ridge Mountains, Shenandoah River/
-                                Life is old there, older than the trees/
-                                Younger than the mountains, growing like a breeze/
-                                Country roads, take me home/ 
-                                To the place I belong/ 
-                                West Virginia, mountain mama/ 
-                                Take me home, country roads
-                            </p>
-                            <span>Weimin Lu</span>
-                        </div>
-                        <div class="user-text"><!-- Lin Guangyuan -->
-                            <i class="material-icons" style="color : #000000;">drafts</i>
-                            <p>
-                                Almost Heaven, West Virginia/
-                                Blue Ridge Mountains, Shenandoah River/
-                                Life is old there, older than the trees/
-                                Younger than the mountains, growing like a breeze/
-                                Country roads, take me home/ 
-                                To the place I belong/ 
-                                West Virginia, mountain mama/ 
-                                Take me home, country roads
-                            </p>
-                            <span>Guangyuan Lin</span>
-                        </div>
-                    </div>  
-                    
-                    <div class="testimonial-pic">
-                        <img src="./img/LWJ.jpg" class="user-pic active-pic" alt="Li WJ" onclick="showreview()">
-                        <img src="./img/ZCX.png" class="user-pic" alt="Zhang CX" onclick="showreview()">
-                        <img src="./img/GJT.jpg" class="user-pic" alt="Gong JT" onclick="showreview()">
-                        <img src="./img/YJY.jpg" class="user-pic" alt="Yang JY" onclick="showreview()">
-                        <img src="./img/LZR.jpg" class="user-pic" alt="Liu ZR" onclick="showreview()">
-                        <img src="./img/LWJ.jpg" class="user-pic" alt="Zhang EF" onclick="showreview()">
-                        <img src="./img/LWJ.jpg" class="user-pic" alt="Lu WM" onclick="showreview()">
-                        <img src="./img/LWJ.jpg" class="user-pic" alt="Lin GY" onclick="showreview()">                     
-                    </div>
+
+
+            <div class="ParentBox" id="OverviewLinksHere">
+                <div class="content-text">
+                    <p style="font-size: 40px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
+                        A dynamic coculture model based on mechanistic coupling of genome scale metabolic models
+                    </p>
                 </div>
             </div>
-            <script>
-                let userTexts=document.getElementsByClassName("user-text")
-                let userPics=document.getElementsByClassName("user-pic")
 
-                function showreview()
-                {
-                    for(userPic of userPics)
+            <div class="ParentBox" id="container-HeadTextofAdynamic">
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        To understand, predict and ultimately control the behavior of the synthetic microbial consortium, we designed a mechanistic, dynamic model of the microbial consortium. The balance of concentration of extracellular substrates and/or products of our microbial consortium are described by a system of ordinary differential equations (ODEs), and intracellular processes are modeled using genome scale metabolic models (GSMs) that contain all metabolic capabilities of each organism. The final model integra tes 2000 metabolites and 2442 reactions representing a broad range of processes (growth of each microorganism, metabolite production and utilization, transport between compartments, diffusion, etc). This model can be written by <a id="RepresentationLinksHere" href="https://sbml.org/" target="_blank" style="text-decoration: underline;">SBML</a> and utilized by <a href="https://cobrapy.readthedocs.io/en/latest/#" target="_blank" style="text-decoration: underline;">cobra</a> in <a href="https://sbml.org/" target="_blank" style="text-decoration: underline;">python</a>. Our model are based on the model developed by <a href="https://2021.igem.org/Team:Toulouse_INSA-UPS/Model" target="_blank" style="text-decoration: underline;">Toulouse INSA-UPS</a>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Representation_of_the_model -->
+            <div class="ParentBox" id="container-Representation_of_the_model" >
+                <style>
+                    #container-Representation_of_the_model
                     {
-                        userPic.classList.remove("active-pic")
+                        background-color: rgba(225, 225, 240, 0.5);
+                        border-radius: 15px;
                     }
-                    for(userText of userTexts)
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Representation of the model
+                    </p>
+                </div>
+                
+                <div class="content-pic" id="Pic1">
+                    <style>
+                        #Pic1
+                        {
+                            height: 520px;
+                            background-image: url(./img/dry_lab_final/img/co_culture_simulation.svg);
+                        }
+                    </style>
+                </div>
+                <div id="ConstructionLinksHere" class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 1. Representation of the dynamic coculture model.
+                    </p>
+                </div>
+            </div>
+            <!-- Representation_of_the_model -->
+
+            <!-- Construction -->
+            <div class="ParentBox" id="container-Construction" >
+                <style>
+                    #container-Construction
                     {
-                        userText.classList.remove("active-text")
+                        background-color: rgba(238, 225, 240, 0.5);
+                        border-radius: 15px;
                     }
-                    let i=Array.from(userPics).indexOf(event.target)
-                    userPics[i].classList.add("active-pic")
-                    userTexts[i].classList.add("active-text")
-                }
-            </script>
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 60px 0 0 0;">
+                        Construction of the system of ODEs
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <h2>Growth</h2>
+                    <p style="text-indent: 1em;">
+                        The growth of each of the microorganisms is modeled using their growth rate 
+                        <!-- $ \scriptsize{} $ -->
+                        $ \scriptsize{\mu ~(in~h^{-1})} $
+                        $$ \scriptsize{\frac{dX_{cyano}}{dt}=X_{cyano}\cdot\mu_{cyano}} $$
+                        $$ \scriptsize{\frac{dX_{yeast}}{dt}=X_{yeast}\cdot\mu_{yeast}} $$
+                    </p>
+                    
+                    <p style="text-indent: 1em;">
+                        Where $ \scriptsize{X_{cyano}} $ and $ \scriptsize{X_{yeast}} $ denote the biomass concentration for cyanobacteria and yeasts, respectively. 
+                    </p>
+                    
+                    <h2>$\scriptsize{CO_2}$ gas transfer</h2>
+                    <p style="text-indent: 1em;"> 
+                        The $\scriptsize{CO_2}$ balance can be represented by considering three processes: the input of $\scriptsize{CO_2}$ in the reactor provided by the bubbling of $\scriptsize{CO_2}$-enriched air ($\scriptsize{I_{CO_2}}$), the transfer of $\scriptsize{CO_2}$ from the gas to the liquid phase ($\scriptsize{T_{CO_2}}$) and finally the output of gas $\scriptsize{CO_2}$ outside of the reactors ($\scriptsize{O_{CO_2}}$) (Figure 1).
+                        $$ \scriptsize{\frac{d_{CO_2,g}}{dt}=I_{CO_2}-T_{CO_2}-O_{CO_2}} $$
+                        $$ \scriptsize{I_{CO_2}=Q_{gas}\cdot CO_{2,input}} $$
+                        $$ \scriptsize{T_{CO_2}=\kappa_l\alpha(\beta\cdot CO_{2,g}-CO_{2,l})} $$
+                        $$ \scriptsize{O_{CO_2}=Q_{gas}\cdot CO_{2,g}} $$
+                    </p>
+                    <p style="text-indent: 1em;"> 
+                        Where $\scriptsize{CO_{2,g}}$and $\scriptsize{CO_{2,l}}$ are the  $ \scriptsize{CO_2}$ concentrations in the gas and liquid phase respectively (in mM), $\scriptsize{Q_{gas}}$ is the flow of air bubbled in the reactor (in L.h-1), κlα is the global mass transfer coefficient of  $ \scriptsize{CO_2}$ (in h-1) and β is Henry's law constant which models the gas-liquid equilibrium.
+                    </p>
+                    
+                    <h2>Carbon source uptake</h2>
+                    <p style="text-indent: 1em;"> 
+                        <!-- $ \scriptsize{} $ -->
+                        In our co-culture system, cyano utilize $\scriptsize{CO_2}$ as carbon source while yeast utilize sucrose as carbon source.
+                        $$ \scriptsize{q_{CO_2,cyano}=q_{CO_2,cyano}^{max}\cdot(\frac{CO_{2,l}}{K_{CO_2}+CO_{2,l}})} $$
+                        $$ \scriptsize{q_{sucrose,yeast}=q_{sucrose,yeast}^{max}\cdot(\frac{Sucrose}{K_{Sucrose}+Sucrose})} $$
+                        $$ \scriptsize{\frac{d_{CO_2}}{dt}=T_{CO_2}-q_{CO_2,cyano}\cdot X_{cyano}+q_{CO_2,yeast}\cdot X_{yeast}} $$
+                        $$ \scriptsize{\frac{d_{Sucrose}}{dt}=q_{sucrose,cyano}\cdot X_{cyano}-q_{sucrose,yeast}\cdot X_{yeast}} $$
+                    </p>
+                    
+
+                    <h2>Light</h2>
+                    <p style="text-indent: 1em;"> 
+                        Light is an important aspect of our model. First, we converted the experimentally measured light intensity $\scriptsize{I_{light}}$ ($\scriptsize{\mu mol_{photon}\cdot m^{-2}\cdot s^{-1}}$) into a specific flux $\scriptsize{q_{photon}}$($\scriptsize{mmol_{photon}\cdot g_{DCW}^{-1}\cdot h^{-1}}$)  using the reaction rate proposed by Clark et al.[1]: 
+                        $$\scriptsize{q_{photon}=I_{light}\cdot \frac{3600\cdot Surface}{1000\cdot X_{cyano}\cdot Volume_{reactor}}}$$
+                    </p>
+                    <h2>Caffeic acid cycle</h2>
+                    <p style="text-indent: 1em;">
+                        Each step of the caffeic cycle can be regarded as a first order reaction:
+                        $$ \scriptsize{\frac{d[caffeic~acid]}{dt}=q_{caffeic ~acdi}\cdot X_{yeast}-K_1\cdot [caffeic ~acid]+K_5\cdot [Caffeylpyruvic~acid]} $$
+                        $$ \scriptsize{\frac{d[caffeoyl~CoA]}{dt}=K_1\cdot [caffeic~acid]} $$
+                        $$ \scriptsize{\frac{d[hispidin]}{dt}=K_2\cdot [caffeoyl~CoA]} $$
+                        $$ \scriptsize{\frac{d[3-Hydroxy-hispidin]}{dt}=K_3\cdot [hispidin]} $$
+                        $$ \scriptsize{\frac{d[Caffeyl-pyruvic~acid]}{dt}=K_4\cdot [3-Hydroxy-hispidin]} $$
+                    </p> 
+                    <p style="text-indent: 1em;">
+                        <!-- $ \scriptsize{} $ -->
+                        where $\scriptsize{q_{caffeic~acid}(mmol\cdot g_{DW}^{-1}\cdot h^{-1})}$​ represents the production rate of caffeic acid of interest.
+                    </p> 
+                    
+                    <h2>Genome Scale Models</h2>
+                    <p style="text-indent: 1em;">
+                        <!-- $ \scriptsize{} $ -->
+                        Flux Balance Analysis (FBA), a key method for simulating metabolic fluxes in silico, represents intracellular dynamics in our model using genome scale metabolic models (GSMs) [2]. FBA employs the GSM, which encompasses the metabolic network reconstruction, to forecast phenotypic responses under environmental constraints. In the equations mentioned, various fluxes, including growth rates and specific fluxes of odorant molecule production, are described, impacting the entire production process.
+                    </p> 
+                    <p style="text-indent: 1em;">
+                        Our model of <span style="font-style: italic;">S.cerevisiae</span> is based on the GSM iMM904 developed by Monica L Mo et al. in 2009 [3]. iMM904 is a basic model in yeast, containing 1226 metabolites and 1577 reactions. And for the <span style="font-style: italic;">S.elongatus</span>, we chose model  iJB785 developed by Jared T Broddrick et al. in 2016 [4]. This model contains 768 metabolites and 849 reactions. We further added 6 metabolites and 16 reactions to complete the system. 
+                    </p> 
+                </div>
+
+                <div class="content-pic" id="Pic2">
+                    <style>
+                        #Pic2
+                        {
+                            height: 1600px;
+                            background-image: url(./img/dry_lab_final/img/saved_map.svg);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 2. Escher map of model iMM904 from <a style="font-size: 16px; text-decoration: underline;" target="_blank" href="http://bigg.ucsd.edu/models/iMM904">BIGG</a>
+                    </p>
+                </div>
+
+            </div>
+            <!-- Construction -->
+            
+            <div class="ParentBox" id="IntroductionLinksHere">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
+                        AlphaFold2 Structure Prediction
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+             <div class="ParentBox" id="container-Introduction" >
+                <style>
+                    #container-Introduction
+                    {
+                        background-color: rgba(240, 225, 225, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0 0 0;">
+                        Introduction
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        AlphaFold2 is an artificial intelligence software developed by DeepMind to predict the 3D structure of proteins. AlphaFold2 predicts with high enough accuracy to approximate experimental measurements. This power depends on a large enough database and a well-developed deep learning model. Specifically, it analyzes amino acid interactions and predicts how proteins are likely to fold through a technique called graph neural networks. By extracting and pairing feature information from protein-level structures, a deep learning model called “Transformer” is used to understand and interpret patterns in amino acid sequences and translate these structures into the 3D structure of the protein. Finally, optimization is performed to match the predicted pairs and distances [5]. 
+                        <!-- $ \scriptsize{} $ -->
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic3">
+                    <style>
+                        #Pic3
+                        {
+                            height: 520px;
+                            background-image: url(./img/dry_lab_final/img/alpha_fold.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p id="DesignLinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 3. Homepage of AlphaFold.
+                    </p>
+                </div>
+            </div>
+            <!-- Introduction -->
+
+            <!-- Design -->
+            <div class="ParentBox" id="container-Design" >
+                <style>
+                    #container-Design
+                    {
+                        background-color: rgba(240, 233, 225, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 50px 0 0 0;">
+                        Design
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        In our experiments, we used <a target="_blank" href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb?pli=1#scrollTo=kOblAo-xetgx">AlphaFold2</a> colab to design a fusion protein we needed. According to our previous research, we need to fuse protein TUP1(Figure 4) and protein FHY1(Figure 5) together. What's more these two proteins should function themselves respectively. Protein TUP1 needs its N-terminal sequences to function normally [6]. When we simply put the sequences together, we found that TUP1 positioned through FHY1. And that wasn't what we need as we proposed that mixing structure of two proteins will cause functional loss. So we decided to choose a proper linker to link two proteins as well as separate them into two clear part in space. 
+                        <!-- $ \scriptsize{} $ -->
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic4">
+                    <style>
+                        #Pic4
+                        {
+                            height: 520px;
+                            background-image: url(./img/dry_lab_final/img/Figure\ 4.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 4. 3D structure of TUP1.
+                    </p>
+                </div>
+
+                <div class="content-pic" id="Pic5">
+                    <style>
+                        #Pic5
+                        {
+                            height: 520px;
+                            background-image: url(./img/dry_lab_final/img/Figure\ 5.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 5. 3D structure of FHY1.
+                    </p>
+                </div>
+                <p style="text-indent: 1em;">
+                    We used some linkers that were often used in design of a fusion protein. We proposed that flexible linker wouldn’t help us divide the proteins into two clear part, so we choose rigid linkers primarily, such as (EAAAK)<sub>n</sub>, PAPAP, A(EAAAK)<sub>4</sub>ALEA(EAAAK)<sub>4</sub>A.
+                </p>
+            </div>
+            <!-- Design -->
+
+            <!-- Reference -->
+            <div class="ParentBox" id="container-Reference" >
+                <style>
+                    #container-Reference
+                    {
+                        background-color: rgba(212, 234, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 65px 0 0 0;">
+                        Reference
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p>
+                        [1] R.L. Clark, L.L. McGinley, H.M. Purdy, T.C. Korosh, J.L. Reed, T.W. Root, B.F. Pfleger, Light-optimized growth of cyanobacterial cultures: growth phases and productivity of biomass and secreted molecules in light-limited batch growth, Metabolic engineering, 47 (2018) 230-242.
+
+                        <br>[2] H.S. Choi, S.Y. Lee, T.Y. Kim, H.M. Woo, In silico identification of gene amplification targets for improvement of lycopene production, Applied and environmental microbiology, 76 (2010) 3097-3105.
+
+                        <br>[3] M.L. Mo, B.Ø. Palsson, M.J. Herrgård, Connecting extracellular metabolomic measurements to intracellular flux states in yeast, BMC systems biology, 3 (2009) 1-17.
+
+                        <br>[4] J.T. Broddrick, B.E. Rubin, D.G. Welkie, N. Du, N. Mih, S. Diamond, J.J. Lee, S.S. Golden, B.O. Palsson, Unique attributes of cyanobacterial metabolism revealed by improved genome-scale metabolic modeling and essential gene analysis, Proceedings of the National Academy of Sciences, 113 (2016) E8344-E8353.
+
+                        <br>[5] J. Jumper, R. Evans, A. Pritzel, T. Green, M. Figurnov, O. Ronneberger, K. Tunyasuvunakool, R. Bates, A. Žídek, A. Potapenko, Highly accurate protein structure prediction with AlphaFold, Nature, 596 (2021) 583-589.
+
+                        <br>[6] D. Tzamarias, K. Struhl, Functional dissection of the yeast Cyc8-Tupl transcriptional co-repressor complex, Nature, 369 (1994) 758-761.
+                    </p>
+                </div>
+            </div>
+            <!-- Reference -->
 
             <div style="min-height: 150px; min-width: 100%;"></div>
-
-
 
         </div>
 
