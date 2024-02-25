@@ -54,7 +54,7 @@
             src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
         </script>
 
-        <title>Dry Lab-Model</title>
+        <title>Dry Lab-Results</title>
 
         
     </head>
@@ -187,7 +187,7 @@
                 </style>
             </div>
             <p style="font-size: 90px;">
-                <span style="color: rgb(164, 205, 50); font-size: 135px; text-decoration: underline 10px;">M</span>odel
+                <span style="color: rgb(164, 205, 50); font-size: 135px; text-decoration: underline 10px;">R</span>esults
             </p>
         </div>
 
@@ -208,7 +208,7 @@
                 <div class="menu">
                     <!-- 侧边栏的标题 开始-->
                     <div class="menu-title">
-                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 24px; font-weight: 900;">Model</span></a>
+                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 24px; font-weight: 900;">Results</span></a>
                     </div>
                     <!-- 侧边栏的标题 结束-->
 
@@ -225,12 +225,11 @@
                         <input type="checkbox" id="menu-item1">
                         <label for="menu-item1">
                             <i class="material-icons" style="font-size: 20px;">apps</i>
-                            <span style="font-size: 14px;">A dynamic coculture model based on mechanistic coupling of genome scale metabolic models</span>
+                            <span style="font-size: 18px;">Carbon accounting</span>
                             <i class="material-icons">keyboard_arrow_down</i>
                         </label>
                         <div class="menu-content">
-                            <span style="font-size: 12px;"><a href="#RepresentationLinksHere">Representation of the model</a></span>
-                            <span style="font-size: 12px;"><a href="#ConstructionLinksHere">Construction of the system of ODEs</a></span>
+                            <span style="font-size: 14px;"><a href="#CaccountingLinksHere">Carbon accounting</a></span>
                         </div>
                     </div>   
 
@@ -238,12 +237,11 @@
                         <input type="checkbox" id="menu-item2">
                         <label for="menu-item2">
                             <i class="material-icons" style="font-size: 20px;">apps</i>
-                            <span style="font-size: 18px;">AlphaFold2 Structure Prediction</span>
+                            <span style="font-size: 18px;">Fusion protein design</span>
                             <i class="material-icons">keyboard_arrow_down</i>
                         </label>
                         <div class="menu-content">
-                            <span style="font-size: 14px;"><a href="#IntroductionLinksHere">Introduction</a></span>
-                            <span style="font-size: 14px;"><a href="#DesignLinksHere">Design</a></span>
+                            <span style="font-size: 14px;"><a href="#FusionproteinLinksHere">Fusion protein design</a></span>
                         </div>
                     </div>  
 
@@ -254,7 +252,7 @@
                             <i class="material-icons" style="font-size: 36px;">
                                 keyboard_double_arrow_right
                             </i>
-                            <span style="font-size: 23px; font-weight: 900;"><a href="./DryLab-Results.html">Results</a></span>
+                            <span style="font-size: 23px; font-weight: 900;"><a href="./DryLab-Model.html">Model</a></span>
                         </label>
                     </div>
                 </div>
@@ -284,36 +282,39 @@
     
         <!-- height: 600px; -->
         <div style="height: fit-content; width: 65%;  left: 32%; position: relative; ">
-
-
-            <div class="ParentBox" id="OverviewLinksHere">
-                <div class="content-text">
-                    <p style="font-size: 40px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
-                        A dynamic coculture model based on mechanistic coupling of genome scale metabolic models
-                    </p>
-                </div>
-            </div>
-
-            <div class="ParentBox" id="container-HeadTextofAdynamic">
+            <div class="ParentBox" id="container-HeadText">
                 <div class="content-text">
                     <p style="text-indent: 1em;">
-                        To understand, predict and ultimately control the behavior of the synthetic microbial consortium, we designed a mechanistic, dynamic model of the microbial consortium. The balance of concentration of extracellular substrates and/or products of our microbial consortium are described by a system of ordinary differential equations (ODEs), and intracellular processes are modeled using genome scale metabolic models (GSMs) that contain all metabolic capabilities of each organism. The final model integra tes 2000 metabolites and 2442 reactions representing a broad range of processes (growth of each microorganism, metabolite production and utilization, transport between compartments, diffusion, etc). This model can be written by <a id="RepresentationLinksHere" href="https://sbml.org/" target="_blank" style="text-decoration: underline;">SBML</a> and utilized by <a href="https://cobrapy.readthedocs.io/en/latest/#" target="_blank" style="text-decoration: underline;">cobra</a> in <a href="https://sbml.org/" target="_blank" style="text-decoration: underline;">python</a>. Our model are based on the model developed by <a href="https://2021.igem.org/Team:Toulouse_INSA-UPS/Model" target="_blank" style="text-decoration: underline;">Toulouse INSA-UPS</a>.
+                        Unfortunately, due to our poor knowledge on SBML and cobrapy package, it seems too difficult for us to rebuild our own model. But there does have something we can do. 
+                    </p>
+                </div>
+            </div>
+            
+            <div class="ParentBox" id="CaccountingLinksHere">
+                <div class="content-text">
+                    <p style="font-size: 40px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
+                        Carbon accounting
                     </p>
                 </div>
             </div>
 
-            <!-- Representation_of_the_model -->
-            <div class="ParentBox" id="container-Representation_of_the_model" >
+            <!-- Carbon_accounting -->
+            <div class="ParentBox" id="container-Carbon_accounting" >
                 <style>
-                    #container-Representation_of_the_model
+                    #container-Carbon_accounting
                     {
-                        background-color: rgba(225, 225, 240, 0.5);
+                        background-color: rgba(236, 236, 218, 0.5);
                         border-radius: 15px;
                     }
                 </style>
                 <div class="content-text">
                     <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
-                        Representation of the model
+                        Carbon accounting
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        Based on the similar module developed by <a target="_blank" href="https://2021.igem.org/Team:Toulouse_INSA-UPS/Model" style="text-decoration: underline;">Toulouse INSA-UPS</a>. To better run the simulation, the difference of day and night are blurred. Supposed that the $\scriptsize{CO_2}$ situation are nearly the same for there system and ours, since we share the similar co-culturing system. It is notable that they put this bio-manufacturing system under light all day-long while we utilize this system as street lighting, so the carbon intake should be half. We run the simulation and get the results as followed. Click [here](./co-culture-simulation/code.zip) to get the code.
                     </p>
                 </div>
                 
@@ -321,248 +322,119 @@
                     <style>
                         #Pic1
                         {
-                            height: 520px;
-                            background-image: url(./img/dry_lab_final/img/co_culture_simulation.svg);
+                            height: 480px;
+                            background-image: url(./img/dry_lab_final/img/carbon_accounting.png);
                         }
                     </style>
                 </div>
                 <div id="ConstructionLinksHere" class="content-text">
                     <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 1. Representation of the dynamic coculture model.
+                        Figure 1. Carbon accounting results.
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        The result shows that the co-culture system can release the carbon burden to a certain extent. But completely carbon neutral can be achieved only if cyano get light all day. 
+                    </p>
+                    <p style="text-indent: 1em;">
+                        To go further, we will compare CYSL with traditional LED light. Suppose the size of light is 
+                        $\scriptsize{0.3\times 0.3\times 0.1=0.009m^3}$.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        It can be easily figured out that the carbon cost for CYSL in a day  $\scriptsize{\approx 0.009\times(0.2-0.1)\times 10^6\times 0.044=39.6kg}$. Suppose the  average power of traditional street lighting is 150w for 10h, and one kilowatt hour require 1.5kg $\scriptsize{CO_2}$. So the carbon cost of traditional street lighting in a day is 2.25kg.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Although at present CYSL seem to be too weak to substitute traditional street lighting, it is notable that when cyano recieve light all day long, the carbon release of CYSL is near zero. And our system itself is actually giving out light in dark! With more editing carried out in CYSL, we believe it holds great potential to achieve better carbon efficiency. 
                     </p>
                 </div>
             </div>
-            <!-- Representation_of_the_model -->
+            <!-- Carbon_accounting -->
+            
+            
+            <div class="ParentBox" id="FusionproteinLinksHere">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
+                        Fusion protein design
+                    </p>
+                </div>
+            </div>
 
-            <!-- Construction -->
-            <div class="ParentBox" id="container-Construction" >
+            <!-- Fusion_protein_design -->
+            <div class="ParentBox" id="container-Fusion_protein_design" >
                 <style>
-                    #container-Construction
+                    #container-Fusion_protein_design
                     {
-                        background-color: rgba(238, 225, 240, 0.5);
+                        background-color: rgba(222, 236, 218, 0.5);
                         border-radius: 15px;
                     }
                 </style>
                 <div class="content-text">
-                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 60px 0 0 0;">
-                        Construction of the system of ODEs
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Fusion protein design
                     </p>
                 </div>
-                <div class="content-text" >
-                    <h2>Growth</h2>
+                <div class="content-text">
                     <p style="text-indent: 1em;">
-                        The growth of each of the microorganisms is modeled using their growth rate 
-                        <!-- $ \scriptsize{} $ -->
-                        $ \scriptsize{\mu ~(in~h^{-1})} $
-                        $$ \scriptsize{\frac{dX_{cyano}}{dt}=X_{cyano}\cdot\mu_{cyano}} $$
-                        $$ \scriptsize{\frac{dX_{yeast}}{dt}=X_{yeast}\cdot\mu_{yeast}} $$
+                        We designed 12 different linkers and expect to find a best one. However, it seemed difficult to use a linker loop to change the direction TUP1 positioned. Fortunately, one of our design showed almost complete separation of 5 models AlphaFold2 had displayed (Figure 6). 
                     </p>
-                    
                     <p style="text-indent: 1em;">
-                        Where $ \scriptsize{X_{cyano}} $ and $ \scriptsize{X_{yeast}} $ denote the biomass concentration for cyanobacteria and yeasts, respectively. 
+                        We will show TUP1, FHY1, simply fused version as well as the best prediction below. Other designs will be attached as files. It must be noticed that the pLDDT number of our model were around 59, with our best predicted design had the higher number of 62. We proposed that the flexibility of FHY1 caused the lower number of pLDDT.
                     </p>
-                    
-                    <h2>$\scriptsize{CO_2}$ gas transfer</h2>
-                    <p style="text-indent: 1em;"> 
-                        The $\scriptsize{CO_2}$ balance can be represented by considering three processes: the input of $\scriptsize{CO_2}$ in the reactor provided by the bubbling of $\scriptsize{CO_2}$-enriched air ($\scriptsize{I_{CO_2}}$), the transfer of $\scriptsize{CO_2}$ from the gas to the liquid phase ($\scriptsize{T_{CO_2}}$) and finally the output of gas $\scriptsize{CO_2}$ outside of the reactors ($\scriptsize{O_{CO_2}}$) (Figure 1).
-                        $$ \scriptsize{\frac{d_{CO_2,g}}{dt}=I_{CO_2}-T_{CO_2}-O_{CO_2}} $$
-                        $$ \scriptsize{I_{CO_2}=Q_{gas}\cdot CO_{2,input}} $$
-                        $$ \scriptsize{T_{CO_2}=\kappa_l\alpha(\beta\cdot CO_{2,g}-CO_{2,l})} $$
-                        $$ \scriptsize{O_{CO_2}=Q_{gas}\cdot CO_{2,g}} $$
-                    </p>
-                    <p style="text-indent: 1em;"> 
-                        Where $\scriptsize{CO_{2,g}}$and $\scriptsize{CO_{2,l}}$ are the  $ \scriptsize{CO_2}$ concentrations in the gas and liquid phase respectively (in mM), $\scriptsize{Q_{gas}}$ is the flow of air bubbled in the reactor (in L.h-1), κlα is the global mass transfer coefficient of  $ \scriptsize{CO_2}$ (in h-1) and β is Henry's law constant which models the gas-liquid equilibrium.
-                    </p>
-                    
-                    <h2>Carbon source uptake</h2>
-                    <p style="text-indent: 1em;"> 
-                        <!-- $ \scriptsize{} $ -->
-                        In our co-culture system, cyano utilize $\scriptsize{CO_2}$ as carbon source while yeast utilize sucrose as carbon source.
-                        $$ \scriptsize{q_{CO_2,cyano}=q_{CO_2,cyano}^{max}\cdot(\frac{CO_{2,l}}{K_{CO_2}+CO_{2,l}})} $$
-                        $$ \scriptsize{q_{sucrose,yeast}=q_{sucrose,yeast}^{max}\cdot(\frac{Sucrose}{K_{Sucrose}+Sucrose})} $$
-                        $$ \scriptsize{\frac{d_{CO_2}}{dt}=T_{CO_2}-q_{CO_2,cyano}\cdot X_{cyano}+q_{CO_2,yeast}\cdot X_{yeast}} $$
-                        $$ \scriptsize{\frac{d_{Sucrose}}{dt}=q_{sucrose,cyano}\cdot X_{cyano}-q_{sucrose,yeast}\cdot X_{yeast}} $$
-                    </p>
-                    
-
-                    <h2>Light</h2>
-                    <p style="text-indent: 1em;"> 
-                        Light is an important aspect of our model. First, we converted the experimentally measured light intensity $\scriptsize{I_{light}}$ ($\scriptsize{\mu mol_{photon}\cdot m^{-2}\cdot s^{-1}}$) into a specific flux $\scriptsize{q_{photon}}$($\scriptsize{mmol_{photon}\cdot g_{DCW}^{-1}\cdot h^{-1}}$)  using the reaction rate proposed by Clark et al.[1]: 
-                        $$\scriptsize{q_{photon}=I_{light}\cdot \frac{3600\cdot Surface}{1000\cdot X_{cyano}\cdot Volume_{reactor}}}$$
-                    </p>
-                    <h2>Caffeic acid cycle</h2>
-                    <p style="text-indent: 1em;">
-                        Each step of the caffeic cycle can be regarded as a first order reaction:
-                        $$ \scriptsize{\frac{d[caffeic~acid]}{dt}=q_{caffeic ~acdi}\cdot X_{yeast}-K_1\cdot [caffeic ~acid]+K_5\cdot [Caffeylpyruvic~acid]} $$
-                        $$ \scriptsize{\frac{d[caffeoyl~CoA]}{dt}=K_1\cdot [caffeic~acid]} $$
-                        $$ \scriptsize{\frac{d[hispidin]}{dt}=K_2\cdot [caffeoyl~CoA]} $$
-                        $$ \scriptsize{\frac{d[3-Hydroxy-hispidin]}{dt}=K_3\cdot [hispidin]} $$
-                        $$ \scriptsize{\frac{d[Caffeyl-pyruvic~acid]}{dt}=K_4\cdot [3-Hydroxy-hispidin]} $$
-                    </p> 
-                    <p style="text-indent: 1em;">
-                        <!-- $ \scriptsize{} $ -->
-                        where $\scriptsize{q_{caffeic~acid}(mmol\cdot g_{DW}^{-1}\cdot h^{-1})}$​ represents the production rate of caffeic acid of interest.
-                    </p> 
-                    
-                    <h2>Genome Scale Models</h2>
-                    <p style="text-indent: 1em;">
-                        <!-- $ \scriptsize{} $ -->
-                        Flux Balance Analysis (FBA), a key method for simulating metabolic fluxes in silico, represents intracellular dynamics in our model using genome scale metabolic models (GSMs) [2]. FBA employs the GSM, which encompasses the metabolic network reconstruction, to forecast phenotypic responses under environmental constraints. In the equations mentioned, various fluxes, including growth rates and specific fluxes of odorant molecule production, are described, impacting the entire production process.
-                    </p> 
-                    <p style="text-indent: 1em;">
-                        Our model of <span style="font-style: italic;">S.cerevisiae</span> is based on the GSM iMM904 developed by Monica L Mo et al. in 2009 [3]. iMM904 is a basic model in yeast, containing 1226 metabolites and 1577 reactions. And for the <span style="font-style: italic;">S.elongatus</span>, we chose model  iJB785 developed by Jared T Broddrick et al. in 2016 [4]. This model contains 768 metabolites and 849 reactions. We further added 6 metabolites and 16 reactions to complete the system. 
-                    </p> 
                 </div>
-
+                
                 <div class="content-pic" id="Pic2">
                     <style>
                         #Pic2
                         {
-                            height: 1600px;
-                            background-image: url(./img/dry_lab_final/img/saved_map.svg);
+                            height: 480px;
+                            background-image: url(./img/dry_lab_final/img/Figure\ 6.png);
                         }
                     </style>
                 </div>
                 <div class="content-text">
                     <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 2. Escher map of model iMM904 from <a style="font-size: 16px; text-decoration: underline;" target="_blank" href="http://bigg.ucsd.edu/models/iMM904">BIGG</a>
+                        Figure 2. TUP1-FHY1.
                     </p>
                 </div>
 
-            </div>
-            <!-- Construction -->
-            
-            <div class="ParentBox" id="IntroductionLinksHere">
-                <div class="content-text">
-                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
-                        AlphaFold2 Structure Prediction
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Introduction -->
-             <div class="ParentBox" id="container-Introduction" >
-                <style>
-                    #container-Introduction
-                    {
-                        background-color: rgba(240, 225, 225, 0.5);
-                        border-radius: 15px;
-                    }
-                </style>
-                <div class="content-text">
-                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0 0 0;">
-                        Introduction
-                    </p>
-                </div>
-                <div class="content-text" >
-                    <p style="text-indent: 1em;">
-                        AlphaFold2 is an artificial intelligence software developed by DeepMind to predict the 3D structure of proteins. AlphaFold2 predicts with high enough accuracy to approximate experimental measurements. This power depends on a large enough database and a well-developed deep learning model. Specifically, it analyzes amino acid interactions and predicts how proteins are likely to fold through a technique called graph neural networks. By extracting and pairing feature information from protein-level structures, a deep learning model called “Transformer” is used to understand and interpret patterns in amino acid sequences and translate these structures into the 3D structure of the protein. Finally, optimization is performed to match the predicted pairs and distances [5]. 
-                        <!-- $ \scriptsize{} $ -->
-                    </p>
-                </div>
                 <div class="content-pic" id="Pic3">
                     <style>
                         #Pic3
                         {
-                            height: 520px;
-                            background-image: url(./img/dry_lab_final/img/alpha_fold.png);
-                        }
-                    </style>
-                </div>
-                <div class="content-text">
-                    <p id="DesignLinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 3. Homepage of AlphaFold.
-                    </p>
-                </div>
-            </div>
-            <!-- Introduction -->
-
-            <!-- Design -->
-            <div class="ParentBox" id="container-Design" >
-                <style>
-                    #container-Design
-                    {
-                        background-color: rgba(240, 233, 225, 0.5);
-                        border-radius: 15px;
-                    }
-                </style>
-                <div class="content-text">
-                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 50px 0 0 0;">
-                        Design
-                    </p>
-                </div>
-                <div class="content-text" >
-                    <p style="text-indent: 1em;">
-                        In our experiments, we used <a target="_blank" href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb?pli=1#scrollTo=kOblAo-xetgx">AlphaFold2</a> colab to design a fusion protein we needed. According to our previous research, we need to fuse protein TUP1(Figure 4) and protein FHY1(Figure 5) together. What's more these two proteins should function themselves respectively. Protein TUP1 needs its N-terminal sequences to function normally [6]. When we simply put the sequences together, we found that TUP1 positioned through FHY1. And that wasn't what we need as we proposed that mixing structure of two proteins will cause functional loss. So we decided to choose a proper linker to link two proteins as well as separate them into two clear part in space. 
-                        <!-- $ \scriptsize{} $ -->
-                    </p>
-                </div>
-                <div class="content-pic" id="Pic4">
-                    <style>
-                        #Pic4
-                        {
-                            height: 520px;
-                            background-image: url(./img/dry_lab_final/img/Figure\ 4.png);
+                            background-color: #ffffff;
+                            height: 480px;
+                            background-image: url(./img/dry_lab_final/img/Figure\ 7.png);
                         }
                     </style>
                 </div>
                 <div class="content-text">
                     <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 4. 3D structure of TUP1.
+                        Figure 3. Five predictions of $\scriptsize{TUP}$1$\scriptsize{-A(EAAAK)_{4}ALEA(EAAAK)_4 A-FHY}$1
                     </p>
                 </div>
 
-                <div class="content-pic" id="Pic5">
+                <div class="content-text" id="Test10">
                     <style>
-                        #Pic5
+                        #Test10 hr, #Test10 p
                         {
-                            height: 520px;
-                            background-image: url(./img/dry_lab_final/img/Figure\ 5.png);
+                            position: relative; 
+                            margin: 0 auto;
                         }
                     </style>
-                </div>
-                <div class="content-text">
-                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 5. 3D structure of FHY1.
+                    <br>
+                    <hr style="width: 95%; height: 3px; color: #000; background-color: #000;">
+                    <p style="width: 90%; text-align: center; margin-top: 3px; margin-bottom: 3px; font-weight: 600;">
+                        Test10 Sequences(designed linker sequences were shown in highlight): 
                     </p>
+                    <p style="width: 90%; word-break: break-all; word-wrap: break-word;">
+                        TASVSNTQNKLNELLDAIRQEFLQVSQEANTYRLQNQKDYDFKMNQQLAEMQQIRNTVYELELTHRKMKDAYEEEIKHLKLGLEQRDHQIA<span style="background-color: yellow;">AEAAAKEAAAKEAAAKEAAAKALEAEAAAKEAAAKEAAAKEAAAKA</span>PEVEVDNNNEKPSEINSFHHMIISSSKNVLKMEEVEVSKKRKFQTDQSDELSLLPLSKHTCFANVACSENTNGNSEIDTEYSMSSYVNSTTSMECNNDIEMKEESSGSCGEDKMISFESHLDYIYGTQNLEDFSEKVIENILYLDEQEEEEEDAKGCSSNAAKFVLSSGRWTVNQDDSTLHETKKPTIDQEFEQYFSTL
+                    </p>
+                    <hr style="width: 95%; height: 2.5px; color: #000; background-color: #000;">
+                    <br>
                 </div>
-                <p style="text-indent: 1em;">
-                    We used some linkers that were often used in design of a fusion protein. We proposed that flexible linker wouldn’t help us divide the proteins into two clear part, so we choose rigid linkers primarily, such as (EAAAK)<sub>n</sub>, PAPAP, A(EAAAK)<sub>4</sub>ALEA(EAAAK)<sub>4</sub>A.
-                </p>
+                
             </div>
-            <!-- Design -->
-
-            <!-- Reference -->
-            <div class="ParentBox" id="container-Reference" >
-                <style>
-                    #container-Reference
-                    {
-                        background-color: rgba(212, 234, 210, 0.5);
-                        border-radius: 15px;
-                    }
-                </style>
-                <div class="content-text">
-                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 65px 0 0 0;">
-                        Reference
-                    </p>
-                </div>
-                <div class="content-text">
-                    <p>
-                        [1] R.L. Clark, L.L. McGinley, H.M. Purdy, T.C. Korosh, J.L. Reed, T.W. Root, B.F. Pfleger, Light-optimized growth of cyanobacterial cultures: growth phases and productivity of biomass and secreted molecules in light-limited batch growth, Metabolic engineering, 47 (2018) 230-242.
-
-                        <br>[2] H.S. Choi, S.Y. Lee, T.Y. Kim, H.M. Woo, In silico identification of gene amplification targets for improvement of lycopene production, Applied and environmental microbiology, 76 (2010) 3097-3105.
-
-                        <br>[3] M.L. Mo, B.Ø. Palsson, M.J. Herrgård, Connecting extracellular metabolomic measurements to intracellular flux states in yeast, BMC systems biology, 3 (2009) 1-17.
-
-                        <br>[4] J.T. Broddrick, B.E. Rubin, D.G. Welkie, N. Du, N. Mih, S. Diamond, J.J. Lee, S.S. Golden, B.O. Palsson, Unique attributes of cyanobacterial metabolism revealed by improved genome-scale metabolic modeling and essential gene analysis, Proceedings of the National Academy of Sciences, 113 (2016) E8344-E8353.
-
-                        <br>[5] J. Jumper, R. Evans, A. Pritzel, T. Green, M. Figurnov, O. Ronneberger, K. Tunyasuvunakool, R. Bates, A. Žídek, A. Potapenko, Highly accurate protein structure prediction with AlphaFold, Nature, 596 (2021) 583-589.
-
-                        <br>[6] D. Tzamarias, K. Struhl, Functional dissection of the yeast Cyc8-Tupl transcriptional co-repressor complex, Nature, 369 (1994) 758-761.
-                    </p>
-                </div>
-            </div>
-            <!-- Reference -->
+            <!-- Fusion_protein_design -->
 
             <div style="min-height: 150px; min-width: 100%;"></div>
 

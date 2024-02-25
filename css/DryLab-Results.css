@@ -344,10 +344,10 @@ header li:hover>.nav-sub
 
 /* choices 选项，若 n 项，就 n * 40px */
 .menu-item>input#menu-item1:checked~.menu-content {
-    height: calc(2 * 40px);
+    height: calc(1 * 40px);
 }
 .menu-item>input#menu-item2:checked~.menu-content {
-    height: calc(2 * 40px);
+    height: calc(1 * 40px);
 }
 
 .menu-content>span {

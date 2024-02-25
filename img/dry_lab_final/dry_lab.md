@@ -173,7 +173,7 @@ Unfortunately, due to our poor knowledge on SBML and cobrapy package, it seems t
 
 Based on the similar module developed by [*Toulouse INSA-UPS*](https://2021.igem.org/Team:Toulouse_INSA-UPS/Model). To better run the simulation, the difference of day and night are blurred. Supposed that the $CO_2$ situation are nearly the same for there system and ours, since we share the similar co-culturing system. It is notable that they put this bio-manufacturing system under light all day-long while we utilize this system as street lighting, so the carbon intake should be half. We run the simulation and get the results as followed. Click [here](./co-culture-simulation/code.zip) to get the code.
 
-![Figure_1](img/carbon_accounting.png)
+![Figure_1](./img/carbon_accounting.png)
 
 Figure 1: Carbon accounting results.
 
