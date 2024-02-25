@@ -1,0 +1,141 @@
+
+*
+{
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+body
+{
+    background-color: #f4f8ec;
+    /* background: #F7F8F8;   fallback for old browsers */
+    /*background: linear-gradient(to right, #ACBB78, #F7F8F8);  W3C, IE 10+/ Edge, Firefox 16+,Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: -webkit-linear-gradient(to right, #f7f8f8, #acbb78); /* Chrome 10-25, Safari 5.1-6 */
+
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    transition: 0.6s;
+    padding: 8px 100px;
+    z-index: 100000;
+}
+/* header .LOGOinTEXT
+{
+
+    position: relative;
+    font-weight: 700;
+    color: #222222;
+    text-decoration: none;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+
+    justify-content: left;
+} */
+
+header img
+{
+    /* position: relative; */
+    height: auto;
+    width: 140px;
+}
+
+header > ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+header > ul > li
+{
+    /* position: relative; */
+    list-style: none;
+}
+
+header > ul > li > a
+{
+    /* position: relative; */
+    margin: 0 5px;
+    text-decoration: none;
+    color: #94b15e;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.6s;
+    padding: 10px 15px;
+}
+header > ul > li > a:hover
+{
+    color: #eb6a53;
+    text-decoration: underline;
+    background-color: #cfd1ce;
+}
+header.sticky
+{
+    padding: 3px 100px;
+    background: #f8f8f8;
+    box-shadow: 0 0 15px 0 #888888;
+}
+
+header .nav-sub
+{
+    display: none;
+    position: absolute;
+    background-color: #f8fbf3;
+    /* width: 185px;
+    height: 140px; */
+    top: 35px;
+    left: auto;
+
+    border-radius: 5px;
+}
+header li:hover>.nav-sub
+{
+    /* transition: 1s; */
+    display: block;
+    border: #d2d2d2 solid 0.5px;
+}
+.Project_submenu
+{
+    margin: 3px 8px;
+    list-style: none;
+    line-height: 2;
+    padding-inline-start: 0px; 
+    height: auto;
+}
+.Project_submenu li a
+{
+    /* margin: 3px 2px; */
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #94b15e;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+.Project_submenu li:hover>a
+{
+    color: #eb6a53;
+    text-decoration: underline;
+    background-color: #cfd1ce;
+}
+
+
+.banner
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background: -webkit-linear-gradient(to right, #f7f8f8, #acbb78); */
+    background-size: cover;
+}
+/* header.sticky ul li a, */

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./css/Project-Design.css">
+
+        <link rel="icon" type="image/x-icon" href="./img/icon2-1.ico">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .MathJax
+            {
+                outline: 0 !important;
+            }
+            .MathJax_Display
+            {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+        </style>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+        <link rel="dns-prefetch" href="https://cdn.mathjax.org" />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"]
+                    ], //行内公式选择$
+                    displayMath: [
+                        ["$$", "$$"]
+                    ] //段内公式选择$$
+                },
+                svg: {
+                    fontCache: 'global'
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'], //避开某些标签
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+        </script>
+
+        <title>Project-Design</title>
+
+        
+    </head>
+    <body>
+        <script>
+            function getRatio()
+                {
+                    var ratio=0;
+                    var screen=window.screen;
+                    var ua=navigator.userAgent.toLowerCase();
+    
+                    if(window.devicePixelRatio !== undefined)
+                    {
+                        ratio=window.devicePixelRatio;    
+                    }
+                    else if(~ua.indexOf('msie'))
+                    {
+                        if(screen.deviceXDPI && screen.logicalXDPI)
+                        {
+                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                        }
+                    
+                    }
+                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                    {
+                        ratio=window.outerWidth/window.innerWidth;
+                    }
+    
+                    // if(ratio)
+                    // {
+                    //     ratio=Math.round(ratio*100);    
+                    // }
+                    return ratio;
+                }
+                let t=getRatio();
+                console.log( getRatio() );
+                document.body.style.zoom =1.5/t;
+        </script>
+
+        <style>
+            .body   
+            {
+                height: fit-content;
+            }
+        </style>
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 导航栏 开始 -->
+
+        <header>
+            <a href="./mainbody.html" target="_blank"><img src="./img/LOGOinPic_base.png" alt="This is our logo!"></a>
+            <ul>
+                <li><a href="./mainbody.html" target="_blank">Home</a></li>            
+                <li>
+                    <a href="#GapforProjectIntro">Project</a>
+                    <div class="nav-sub" style="width:185px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Project-Description.html">Description</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="./Project-Troubleshooting.html">Troubleshooting</a></li>
+                        </ul>
+                    </div>
+                </li> 
+                <li>
+                    <a href="#GapforWetLabIntro">Wet Lab</a>
+                    <div class="nav-sub" style="width:145px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./WetLab-Engineering.html" target="_blank">Engineering</a></li>
+                            <li><a href="./WetLab-Protocol.html" target="_blank">Protocol</a></li>
+                            <li><a href="./WetLab-Notebook.html" target="_blank">Notebook</a></li>
+                        </ul>
+                    </div>
+                </li>           
+                <li>
+                    <a href="#GapforDryLabIntro">Dry Lab</a>
+                    <div class="nav-sub" style="width:95px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./DryLab-Model.html" target="_blank">Model</a></li>
+                            <li><a href="./DryLab-Results.html" target="_blank">Results</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li>
+                    <a href="#GapforHumanPracticesIntro">Human Practices</a>
+                    <div class="nav-sub" style="width:270px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./HumanPractices-IntegratedHP.html" target="_blank">Integrated human practice</a></li>
+                            <li><a href="./HumanPractices-Education.html" target="_blank">Education</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#GapforTeamIntro">Team</a>
+                    <div class="nav-sub" style="width: 165px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Team-Team_member.html" target="_blank">Team Member</a></li>
+                            <li><a href="./Team-Documents.html" target="_blank">Documents</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li><a href="./Safety.html">Safety</a></li>            
+            </ul>
+        </header>
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        <!-- 导航栏 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+        
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- Title begins -->
+
+        <div class="BigTitle" style="height: 300px;">
+            <div>
+                <style>
+                    .BigTitle>div:first-child
+                    {
+                        height: 66.7%;
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(174, 190, 137, 0.2);
+                    }
+                </style>
+            </div>
+            <p>
+                <span style="color: rgb(164, 205, 50); font-size: 180px; text-decoration: underline 10px;">D</span>esign
+            </p>
+        </div>
+
+        <!-- Title ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- menu begins -->
+
+        <div id="MenuC" class="MenuContainer">
+            <div class="menu-box">
+                <!-- 展示与隐藏侧边栏 开始-->
+                <input type="checkbox" id="menu-btn">
+                <label for="menu-btn">
+                    <i class="material-icons" style="font-size: 25px;margin: 0 0 0 1.5px;">keyboard_arrow_left</i>
+                </label>
+                <!-- 展示与隐藏侧边栏 结束-->
+                <div class="menu">
+                    <!-- 侧边栏的标题 开始-->
+                    <div class="menu-title">
+                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 36px; font-weight: 900;">Design</span></a>
+                    </div>
+                    <!-- 侧边栏的标题 结束-->
+
+                    <!-- 每一项导航 -->
+                    <style>
+                        .menu-item a
+                        {
+                            text-decoration: none;
+                            color: #363b28;
+                        }
+                    </style>
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item1">
+                        <label for="menu-item1">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Co-culture</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#SynechococcuselongatusUTEX2973LinksHere">Synechococcus elongatus UTEX 2973</a></span>
+                            <span style="font-size: 14px;"><a href="#StrainSaccharomycescerevisiaeW303clumpLinksHere">Strain Saccharomyces cerevisiae W303 clump</a></span>
+                            <span style="font-size: 12px;"><a href="#Sucrosesecretion&CocultureLinksHere">Sucrose secretion & Coculture with S. cerevisiae</a></span>
+                        </div>
+                    </div>                  
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item2">
+                        <label for="menu-item2">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">The Bioluminescence System</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#container-Title-The_Bioluminescence_System">Fungal bioluminescence pathway</a></span>
+                            <span style="font-size: 14px;"><a href="#ScerevisiaemodificationLinksHere">S. cerevisiae modification</a></span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item3">
+                        <label for="menu-item3">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">A light-controlled gene switch</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#container-Title-A_lightcontrolled_gene_switch">Design</a></span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item4">
+                        <label for="menu-item4">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Reference</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#ReferenceLinksHere">Reference</a></span>
+                        </div>
+                    </div>
+
+                    <div class="set-line"></div>
+
+                    <div class="menu-item">
+                        <label>
+                            <i class="material-icons" style="font-size: 36px;">
+                                keyboard_double_arrow_right
+                            </i>
+                            <span style="font-size: 36px; font-weight: 900;"><a href="./Project-Description.html">Description</a></span>
+                        </label>
+                    </div>
+                    <div class="menu-item">
+                        <label>
+                            <i class="material-icons" style="font-size: 36px;">
+                                keyboard_double_arrow_right
+                            </i>
+                            <span style="font-size: 36px; font-weight: 900;"><a href="./Project-Troubleshooting.html">Troubleshooting</a></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            #MenuC.sticky
+            {
+                z-index: 999;
+                top: 15%;
+                left: 0;
+            }
+        </style>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let Menu = document.querySelector("#MenuC");
+                Menu.classList.toggle("sticky", window.scrollY > 200);
+            })
+        </script>
+        <!-- menu ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 内容 开始 -->
+    
+        <!-- height: 600px; -->
+        <div style="height: fit-content; width: 65%;  left: 32%; position: relative; ">
+            
+            <div class="ParentBox" id="container-Title-Co-culture">
+                <div class="content-text">
+                    <p id="OverviewLinksHere" style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        Co-culture
+                    </p>
+                </div>
+            </div>
+
+            <div class="ParentBox" id="container-HeadTextofCo_culture" >
+                <style>
+                    #container-HeadTextofCo_culture
+                    {
+                        background-color: rgba(231, 246, 242, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Inspired by the project Team INSA-UPS had done in 2021 iGEM Competition, we tried to build a co-culture system to achieve sustainable luminescence with just the energy from sunlight. Moreover, this system can also catch $ \scriptsize{CO_2} $ from atmosphere. We hope our co-culture system could achieve at least one month automatically sustain the luminescence system to enhance the practicality when we make our whole project into real street lamps.
+                    </p>
+                    <p id="SynechococcuselongatusUTEX2973LinksHere" style="text-indent: 1em;">
+                        Thus, we chose cyanobacteria and yeast as the strains in the co-culture system. Strain <span style="font-style: italic;">S. elongatus UTEX 2973 CscB+</span> can absorb $ \scriptsize{CO_2} $ and transform it to sucrose as well as transport sucrose out of the cell. Then Strain Saccharomyces cerevisiae W303clump, which had strong ability to use sucrose as carbon sources, will obtain sucrose from the medium and sustain the luminescence system. Therefore, there is no need to add additional carbon sources during cultivation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Synechococcus_elongatus_UTEX_2973 -->
+            <div class="ParentBox" id="container-Synechococcus_elongatus_UTEX_2973" >
+                <style>
+                    #container-Synechococcus_elongatus_UTEX_2973
+                    {
+                        background-color: rgba(225, 225, 240, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Synechococcus elongatus UTEX 2973, <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #666666;">------ an attractive chassis for sustainable bioproduction</span> 
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Cyanobacteria are prokaryotic organisms capable of oxygenic photosynthesis. They utilize sunlight, the most prevalent form of renewable energy, to power their metabolic activities while efficiently converting carbon dioxide ($\scriptsize{CO_2}$) into organic carbon compounds [1, 8, 11]. These organisms have the ability to thrive in non-arable areas and can be cultivated using saltwater or wastewater, thereby avoiding competition with food production [7, 8]. In contrast to plants or eukaryotic microalgae, cyanobacteria exhibit rapid growth and are straightforward to manipulate genetically [9, 10]. Carbon-neutral frameworks like these possess significant potential as platforms for industrial biotechnology, offering promising avenues for bioproduction [1, 8, 9, 10, 11]. 
+                    </p>
+                    <p style="text-indent: 1em;">
+                        <span style="font-style: italic;">Synechococcus elongatus</span> UTEX 2973 (hereafter <span style="font-style: italic;">Syn UTEX 2973</span>), a freshwater cyanobacterium strain isolated in 2015, grows photo-autotrophically with one of the fastest rates reported for any photosynthetic microbe, with generation times as low as 1.5 hours which is equivalent to heterotrophic organisms such as certain yeasts [9, 10].  
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Nevertheless, despite the benefits of employing cyanobacteria in biotechnological applications, certain constraints have hindered their establishment as a conventional microbial platform. In comparison to model heterotrophs like E. coli or S. cerevisiae, cyanobacteria typically exhibit slower growth rates. Additionally, the repertoire of characterized genetic components and synthetic biology tools is considerably more limited [1, 8, 11]. Ultimately, numerous technical hurdles persist, particularly in realizing the scaling-up of cyanobacteria-based biotechnological processes in a financially viable manner [2, 4].
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic1">
+                    <style>
+                        #Pic1
+                        {
+                            height: 350px;
+                            background-image: url(./img/project_design_final/img/utex2973.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" id="OptogeneticLinksHere">
+                    <p id="StrainSaccharomycescerevisiaeW303clumpLinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 1. Electron micrographs of $ \scriptsize{\it{Synechococcus~elongatus~{UTEX~2973}}} $ . Labels are carboxysomes (C) and thylakoid membranes (T) (adapted from Yu et al.2015 [9]) 
+                    </p>
+                </div>
+            </div>
+            <!-- Synechococcus_elongatus_UTEX_2973 -->
+
+            <!-- Strain_Saccharomyces_cerevisiae_W303_clump -->
+            <div class="ParentBox" id="container-Strain_Saccharomyces_cerevisiae_W303_clump" >
+                <style>
+                    #container-Strain_Saccharomyces_cerevisiae_W303_clump
+                    {
+                        background-color: rgba(234, 210, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Strain Saccharomyces cerevisiae W303 clump <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #666666;">------ a good consumer of sucrose</span> 
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Based on the work down by Hays et al.[5], we chose Saccharomyces cerevisiae W303clump as our strain. S. cerevisiae growth in co-culture is dependent on genetic engineering to improve sucrose utilization. 
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Wild type (WT) S. cerevisiae W303 did not grow in co-culture with or without IPTG induction. We examined the capacity of WT S. cerevisiae W303 to grow axenically at low sucrose concentrations and saw poor/no growth below 2.5 g/L sucrose , a higher concentration of sucrose than is produced by cscB+ S. elongatus at 48 hours. 
+                    </p>
+                    <p style="text-indent: 1em;">
+                        It is notable that W303 performed far better than other strains under salt stress (Figure 2), making it more suitable for our design.
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic2">
+                    <style>
+                        #Pic2
+                        {
+                            height: 350px;
+                            background-image: url(./img/project_design_final/img/saltperform.jpeg);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" id="OptogeneticLinksHere">
+                    <p id="Sucrosesecretion&CocultureLinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 2. Saccharomyces cerevisiae BY4741 and W303-1A laboratory strains differ in salt tolerance. (adapted from Hana et al.[21])
+                    </p>
+                </div>
+            </div>
+            <!-- Strain_Saccharomyces_cerevisiae_W303_clump -->
+
+            <!-- Sucrose_secretion_&_Coculture -->
+            <div class="ParentBox" id="container-Sucrose_secretion_Coculture_with_S_cerevisiae" >
+                <style>
+                    #container-Sucrose_secretion_Coculture_with_S_cerevisiae
+                    {
+                        background-color: rgba(204, 230, 221, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 60px 0 0 0;">
+                        Sucrose secretion & Coculture with S. cerevisiae 
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Industrial biotechnology offers alternative solutions to lessen reliance on fossil fuels. Present biotechnological methods involving heterotrophic organisms depend on sugar inputs derived from agriculture, frequently entering into competition with the food and feed markets. Consequently, the expense of the carbon source in commercial fermentations constitutes a significant portion, accounting for up to 50% of the overall operating cost [6,12]. The choice of sugar feedstock therefore remains a challenge to achieve a sustainable and cost-effective bioproduction [4,6].
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Many cyanobacterial species are known to accumulate sucrose to resist osmotic stress. Several strain engineering studies have been carried out in the last few years to further enhance the sucrose production in <span style="font-style: italic;">Synechococcus</span> [4, 6]. In particular, the sucrose/H+ symporter CscB, from <span style="font-style: italic;">E. coli</span>, was recently introduced in UTEX 2973 under the control of the IPTG-inducible promoter PlacUV5 leading to sucrose production with a rate of $ \scriptsize{1.9~g \cdot L^{-1}\cdot day^{-1}} $ in salt stress conditions, reaching titers as high as $ \scriptsize{8~g \cdot L^{-1}} $
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic3">
+                    <style>
+                        #Pic3
+                        {
+                            height: 350px;
+                            background-image: url(./img/project_design_final/img/sucrose.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 3. Engineering sucrose secretion in $\scriptsize{\it{Syn~UTEX~2973}}$  (adapted from Lin et al.2020 [4]) (A) Metablolic pathway for sucrose secretion in $\scriptsize{\it{Syn~UTEX~2973}}$ (B) Genetic construction inserted in the genome of the cscB strains developed by Lin et al. 2020 which secrete sucrose upon salt stress and IPTG induction [4]. The additional overexpression of the spp and sps genes allows sucrose production without need of salt stress.
+                    </p>
+                </div>
+            </div>
+            <!-- Sucrose_secretion_&_Coculture -->
+            
+            <div class="ParentBox" id="container-Title-The_Bioluminescence_System">
+                <div class="content-text">
+                    <p id="OverviewLinksHere" style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        The Bioluminescence System
+                    </p>
+                </div>
+            </div>
+
+            <!-- Fungal_bioluminescence_pathway -->
+            <div class="ParentBox" id="container-Fungal_bioluminescence_pathway" >
+                <style>
+                    #container-Fungal_bioluminescence_pathway
+                    {
+                        background-color: rgba(204, 216, 233, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0 0 0;">
+                        Fungal bioluminescence pathway
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Bioluminescence is a natural phenomenon which was observed in bacteria, fireflies and fungi. However, although luciferin and luciferase in fireflies are wildly used in identification, the pathway to regenerate luciferin has not been clearly characterized (figure 4)[13]. The fungal bioluminescence pathway (FBP) (Figure 5) is a circuit which depends on four key enzymes from <span style="font-style: italic;">N. nambi</span> (Luz H3H HispS CPH). Substrate of the circuit is caffeic acid. Research shows that fungi which is introduced the four enzymes and caffeic biosynthesis pathway can luminous as well [14]. What's more, NPGA from <span style="font-style: italic;">A. nidulans</span> can combine with Hisps and speed up the whole cycle [15].
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic4">
+                    <style>
+                        #Pic4
+                        {
+                            height: 600px;
+                            background-image: url(./img/project_design_final/img/Figure_4.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 4. The part in the block has not been characterized [13].
+                    </p>
+                </div>
+
+                <div class="content-pic" id="Pic5">
+                    <style>
+                        #Pic5
+                        {
+                            height: 380px;
+                            background-image: url(./img/project_design_final/img/FBP.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 5. The circuit of caffeic acid [15].
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        The Luciferase from fungi is not stable above 30 degrees (Figure 6)[14]. During the day, the Luciferase will become inactive and the circuit will be blocked. During the night, as the Luciferase began to be produced, the circuit will recover and luminous. 
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic6">
+                    <style>
+                        #Pic6
+                        {
+                            height: 380px;
+                            background-image: url(./img/project_design_final/img/design_figure_6.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" >
+                    <p id="ScerevisiaemodificationLinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 6. Total light emission after 10min incubation of recombinant purified Luz at various temperatures [14].
+                    </p>
+                </div>
+            </div>
+            <!-- Fungal_bioluminescence_pathway -->
+
+            <!-- S_dot_cerevisiae_modification -->
+            <div class="ParentBox" id="container-S_dot_cerevisiae_modification" >
+                <style>
+                    #container-S_dot_cerevisiae_modification
+                    {
+                        background-color: rgba(227, 209, 232, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 60px 0 0 0;">
+                        S. cerevisiae modification
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        <span style="font-style: italic;">S. cerevisiae</span> can synthesis tyrosine. Previous research shows that TAL from <span style="font-style: italic;">Rhodobacter capsulatus</span> (RcTAL) could catalyze the deamination of l-tyrosine and led to the biosynthesis of p-coumaric acid in <span style="font-style: italic;">S. cerevisiae</span>. C3H from <span style="font-style: italic;">A. thaliana</span> could catalyze the hydroxylation of p-coumaric and led to the biosynthesis of caffeic acid. (Figure 7) [16]. As C3H depends on cytochrome P450 reductase (CPR), the CPR is needed to transfer electrons.
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic7">
+                    <style>
+                        #Pic7
+                        {
+                            height: 300px;
+                            background-image: url(./img/project_design_final/img/design_figure_7.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 7.  Caffeic acid biosynthesis pathway [18].
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        We partly followed the gene circuit design and plasmid design from the original paper. Three kinds of plasmids are needed, which named pCAF (Figure 8a), pCYC (Figure 8b) and pSWI(Figure 8c). pCAF is totally same as the one in the original paper. We plan to use Gibson assembly to clone 5 genes (TAL H3H CPH HispS NPGA) in a plasmid (pCYC). And the luciferase with GAL1 promoter will be placed in pSWI.
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic8">
+                    <style>
+                        #Pic8
+                        {
+                            height: 500px;
+                            background-image: url(./img/project_design_final/img/design_figure_8.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 8.  pCAF [14], pCYC and pSWI.
+                    </p>
+                </div>
+            </div>
+            <!-- S_dot_cerevisiae_modification -->
+
+            <!-- A_lightcontrolled_gene_switch -->
+            <div class="ParentBox" id="container-Title-A_lightcontrolled_gene_switch">
+                <div class="content-text">
+                    <p id="OverviewLinksHere" style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        A light-controlled gene switch
+                    </p>
+                </div>
+            </div>
+            <!-- A_lightcontrolled_gene_switch -->
+
+            <div class="ParentBox" id="container-HeadText">
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        Since the luminescence process is energy-consuming,to avoid energy waste and ensure it can glow at night,we chose light-responsive gene promoter system.
+                    </p>
+                </div>
+            </div>
+             
+            <!-- Design -->
+            <div class="ParentBox" id="container-Design" >
+                <style>
+                    #container-Design
+                    {
+                        background-color: rgba(232, 209, 209, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0 0 0;">
+                        Design
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <h2>Light-controlled Phy-Y2H</h2>
+                    <p style="text-indent: 1em;">
+                        Phytochromes (Phys) are plant photoreceptors that exist in two inter-convertible conformational states. Pr is the inactive form and cannot interact with FHY1 and Pfr is the active form.When absorbing far red light or being kept in darkness,Pfr(active) will turn into Pr(inactive).
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic9">
+                    <style>
+                        #Pic9
+                        {
+                            height: 600px;
+                            background-image: url(./img/project_design_final/img/design_figure_9.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 9.  (a) $\scriptsize{\it{luz}}$ can transcribe in darkness or shadow (b) $\scriptsize{\it{luz}}$ is repressed by TUP1 in daytime or bright environment.
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <!-- <h2>Light-controlled Phy-Y2H</h2> -->
+                    <p style="text-indent: 1em;">
+                        In the model organism Arabidopsis thaliana, a group of light-sensitive proteins known as phytochromes is represented by five related receptors, named PhyA, PhyB, PhyC, PhyD, and PhyE. Following the same molecular concepts, PhyA or PhyB along with their respective interacting partners have been utilized as synthetic light-responsive switches in yeast up to this point.
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic10">
+                    <style>
+                        #Pic10
+                        {
+                            height: 280px;
+                            background-image: url(./img/project_design_final/img/design_figure_10.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 10.  Conversion between Pf and Pfr.
+                    </p>
+                </div>
+                <div class="content-text" id="supplementary1" style="">
+                    <style>
+                        #supplementary1 hr, #supplementary1 p
+                        {
+                            position: relative; 
+                            margin: 0 auto;
+                        }
+                    </style>
+                    <br>
+                    <hr style="width: 95%; height: 3px; color: #000; background-color: #000;">
+                    <p style="width: 90%; text-align: center; margin-top: 3px; margin-bottom: 3px; font-weight: 600;">
+                        Supplementary
+                    </p>
+                    <p style="width: 90%; text-indent: 1em;">
+                        Phytochrome receptors consist of a protein part and a covalently linked chromophore part, and the chromophore is not synthesized in yeast. Phycocyanobilin (PCB) produced by cyanobacteria is always used as analog of chromophore in yeast [17]. However, without the chromophore, Phy can also work in yeast though weakly [18], and when cyanobacteria dead, PCB can be released into medium. Hence, PCB is not paid too much attention.
+                    </p>
+                    <hr style="width: 95%; height: 2.5px; color: #000; background-color: #000;">
+                    <br>
+                </div>
+
+                <div class="content-text" >
+                    <h2>Phy-Y2H pairs</h2>
+                    <p style="text-indent: 1em;">
+                        Research shows that the PhyA-FHY1 pair provides higher induction level with lower background than that of the PhyB-PIF3 pair[18], hence we choose PhyA-FHY1 as our light-sensing pair.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Commonly used light-regulated gene expression system in yeast consist of PHY-GBD, IP-GAD and GAL1 promoter. On this basis, we replace GAD with TUP1 in order to achieve the effect of blocking gene expression when PhyA is activated. And to keep GAL1 promoter working, GAD is also transferred into cell.
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <h2>Repressor TUP1</h2>
+                    <p style="text-indent: 1em;">
+                        TUP1 is a yeast general repressor protein. The N-terminal 200 residues of TUP1 are sufficient to cause repression when artificially recruited to a promoter[19]. A two-hybrid system for transactivator bait proteins has been developed using DBD-bait and TUP1-prey fusion.What's more, TUP1 can repress gene expression even when GAD exists [20].So GBD-PHY fusion protein, GAD and TUP1-FHY1 fusion protein are used in our switch.
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <h2>Working scenario</h2>
+                    <p style="text-indent: 1em;">
+                        When in daytime or the environment is bright, PhyA will be activated and luz gene will be blocked, thus our system won't glow.
+                    </p>
+                    <p id="ReferenceLinksHere" style="text-indent: 1em;">
+                        When in dark,without red light, Pfr will be degraded or slowly turn into Pr, which is inactive. Also, in the shade(where top plants absorb a lot of red light), FR has a higher proportion than R, so PhyA will also be inactive.
+                    </p>
+                </div>
+            </div>
+            <!-- Design -->
+
+            
+            <!-- Reference -->
+            <div class="ParentBox" id="container-Reference" >
+                <style>
+                    #container-Reference
+                    {
+                        background-color: rgba(228, 214, 198, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 58px 0 0 0;">
+                        Reference
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <!-- style="text-indent: 1em;" -->
+                    <p >
+                        [1] S. Li, T. Sun, C. Xu, L. Chen, W. Zhang, Development and optimization of genetic toolboxes for a fast-growing cyanobacterium Synechococcus elongatus UTEX 2973, Metab Eng, 48 (2018) 163-174.
+
+
+                        <br>[2] Y. Oba, Y. Suzuki, G.N.R. Martins, R.P. Carvalho, T.A. Pereira, H.E. Waldenmaier, S. Kanie, M. Naito, A.G. Oliveira, F.A. Dörr, E. Pinto, I.V. Yampolsky, C.V. Stevani, Identification of hispidin as a bioluminescent active compound and its recycling biosynthesis in the luminous fungal fruiting body, Photochemical & Photobiological Sciences, 16 (2017) 1435-1440.
+
+                        <br>[3] T. Li, C.T. Li, K. Butler, S.G. Hays, M.T. Guarnieri, G.A. Oyler, M.J. Betenbaugh, Mimicking lichens: incorporation of yeast strains together with sucrose-secreting cyanobacteria improves survival, growth, ROS removal, and lipid production in a stable mutualistic co-culture production platform, Biotechnol Biofuels, 10 (2017) 55.
+
+                        <br>[4] P.C. Lin, F. Zhang, H.B. Pakrasi, Enhanced production of sucrose in the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973, Sci Rep, 10 (2020) 390.
+
+                        <br>[5] S.G. Hays, L.L.W. Yan, P.A. Silver, D.C. Ducat, Synthetic photosynthetic consortia define interactions leading to robustness and photoproduction, J Biol Eng, 11 (2017) 4.
+
+                        <br>[6] D.C. Ducat, J.A. Avelar-Rivas, J.C. Way, P.A. Silver, Rerouting carbon flux to enhance photosynthetic productivity, Appl Environ Microbiol, 78 (2012) 2660-2668.
+
+                        <br>[7] N.E. Nozzi, J.W. Oliver, S. Atsumi, Cyanobacteria as a Platform for Biofuel Production, Front Bioeng Biotechnol, 1 (2013) 7.
+
+                        <br>[8] M. Santos-Merino, A.K. Singh, D.C. Ducat, New Applications of Synthetic Biology Tools for Cyanobacterial Metabolic Engineering, Front Bioeng Biotechnol, 7 (2019) 33.
+
+                        <br>[9] J. Yu, M. Liberton, P.F. Cliften, R.D. Head, J.M. Jacobs, R.D. Smith, D.W. Koppenaal, J.J. Brand, H.B. Pakrasi, Synechococcus elongatus UTEX 2973, a fast growing cyanobacterial chassis for biosynthesis using light and CO(2), Sci Rep, 5 (2015) 8132.
+
+                        <br>[10] J. Ungerer, K.E. Wendt, J.I. Hendry, C.D. Maranas, H.B. Pakrasi, Comparative genomics reveals the molecular determinants of rapid growth of the cyanobacterium Synechococcus elongatus UTEX 2973, Proc Natl Acad Sci U S A, 115 (2018) E11761-E11770.
+
+                        <br>[11] F. Wang, Y. Gao, G. Yang, Recent advances in synthetic biology of cyanobacteria for improved chemicals production, Bioengineered, 11 (2020) 1208-1220.
+
+                        <br>[12] J.C. Ortiz-Marquez, M. Do Nascimento, J.P. Zehr, L. Curatti, Genetic engineering of multispecies microbial cell factories as an alternative for bioenergy production, Trends Biotechnol, 31 (2013) 521-529.
+
+                        <br>[13] Y.Y. Cheng, Y.J. Liu, Luciferin Regeneration in Firefly Bioluminescence via Proton-Transfer-Facilitated Hydrolysis, Condensation and Chiral Inversion, Chemphyschem, 20 (2019) 1719-1727.
+
+                        <br>[14] A.A. Kotlobay, K.S. Sarkisyan, Y.A. Mokrushina, M. Marcet-Houben, E.O. Serebrovskaya, N.M. Markina, L. Gonzalez Somermeyer, A.Y. Gorokhovatsky, A. Vvedensky, K.V. Purtov, V.N. Petushkov, N.S. Rodionova, T.V. Chepurnyh, L.I. Fakhranurova, E.B. Guglya, R. Ziganshin, A.S. Tsarkova, Z.M. Kaskova, V. Shender, M. Abakumov, T.O. Abakumova, I.S. Povolotskaya, F.M. Eroshkin, A.G. Zaraisky, A.S. Mishin, S.V. Dolgov, T.Y. Mitiouchkina, E.P. Kopantzev, H.E. Waldenmaier, A.G. Oliveira, Y. Oba, E. Barsova, E.A. Bogdanova, T. Gabaldon, C.V. Stevani, S. Lukyanov, I.V. Smirnov, J.I. Gitelson, F.A. Kondrashov, I.V. Yampolsky, Genetically encodable bioluminescent system from fungi, Proc Natl Acad Sci U S A, 115 (2018) 12728-12732.
+
+                        <br>[15] P. Zheng, J. Ge, J. Ji, J. Zhong, H. Chen, D. Luo, W. Li, B. Bi, Y. Ma, W. Tong, L. Han, S. Ma, Y. Zhang, J. Wu, Y. Zhao, R. Pan, P. Fan, M. Lu, H. Du, Metabolic engineering and mechanical investigation of enhanced plant autoluminescence, Plant Biotechnol J, 21 (2023) 1671-1681.
+
+                        <br>[16] Y. Li, J. Mao, Q. Liu, X. Song, Y. Wu, M. Cai, H. Xu, M. Qiao, De Novo Biosynthesis of Caffeic Acid from Glucose by Engineered Saccharomyces cerevisiae, ACS Synth Biol, 9 (2020) 756-765.
+
+                        <br>[17] L. Li, J.C. Lagarias, Phytochrome assembly in living cells of the yeast Saccharomyces cerevisiae, Proceedings of the National Academy of Sciences, 91 (1994) 12535-12539.
+
+                        <br>[18] O. Sorokina, A. Kapus, K. Terecskei, L.E. Dixon, L. Kozma-Bognar, F. Nagy, A.J. Millar, A switchable light-input, light-output system modelled and constructed in yeast, Journal of Biological Engineering, 3 (2009) 15.
+
+                        <br>[19] S.Y. Roth, Chromatin-mediated transcriptional repression in yeast, Curr Opin Genet Dev, 5 (1995) 168-173.
+
+                        <br>[20] M. Hirst, C. Ho, L. Sabourin, M. Rudnicki, L. Penn, I. Sadowski, A two-hybrid system for transactivator bait proteins, Proceedings of the National Academy of Sciences, 98 (2001) 8726-8731.
+
+                        <br>[21] S. Petrezselyova, J. Zahradka, H. Sychrova, Saccharomyces cerevisiae BY4741 and W303-1A laboratory strains differ in salt tolerance, Fungal Biology, 114 (2010) 144-150.
+                    </p>
+                </div>
+            </div>
+            <!-- Reference -->
+
+            <div style="min-height: 150px; min-width: 100%;"></div>
+
+        </div>
+
+        <!-- 内容 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ENDing begins -->
+        <div class="endbar" ></div>
+        <div class="CopyrightDeclare" >
+            <p style="color: #ffffff;" class="ContactUs">Contact us: E-mail: zr-liu22@mails.tsinghua.edu.cn | Tel: 13547831314 </p>
+            <p style="color: #ffffff;" class="ContactUs">Copyright © 2024 Tsinghua University Tanwei College iGEM winter training Group 4. All rights reserved. </p>
+        </div>
+        <!-- it all ends -->
+
+        
+
+
+    </body>
+</html>

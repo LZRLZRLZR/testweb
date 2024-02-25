@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./css/HumanPractices-Education.css">
+
+        <link rel="icon" type="image/x-icon" href="./img/icon2-1.ico">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .MathJax
+            {
+                outline: 0 !important;
+            }
+            .MathJax_Display
+            {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+        </style>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+        <link rel="dns-prefetch" href="https://cdn.mathjax.org" />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"]
+                    ], //行内公式选择$
+                    displayMath: [
+                        ["$$", "$$"]
+                    ] //段内公式选择$$
+                },
+                svg: {
+                    fontCache: 'global'
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'], //避开某些标签
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+        </script>
+
+        <title>HumanPractices-Education</title>
+
+        
+    </head>
+    <body>
+        <script>
+            function getRatio()
+                {
+                    var ratio=0;
+                    var screen=window.screen;
+                    var ua=navigator.userAgent.toLowerCase();
+    
+                    if(window.devicePixelRatio !== undefined)
+                    {
+                        ratio=window.devicePixelRatio;    
+                    }
+                    else if(~ua.indexOf('msie'))
+                    {
+                        if(screen.deviceXDPI && screen.logicalXDPI)
+                        {
+                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                        }
+                    
+                    }
+                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                    {
+                        ratio=window.outerWidth/window.innerWidth;
+                    }
+    
+                    // if(ratio)
+                    // {
+                    //     ratio=Math.round(ratio*100);    
+                    // }
+                    return ratio;
+                }
+                let t=getRatio();
+                console.log( getRatio() );
+                document.body.style.zoom =1.5/t;
+        </script>
+
+        <style>
+            .body   
+            {
+                height: fit-content;
+            }
+        </style>
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 导航栏 开始 -->
+
+        <header>
+            <a href="./mainbody.html"><img src="./img/LOGOinPic_base.png" alt="This is our logo!"></a>
+            <!-- <a href="#" class="LOGOinTEXT">CYSL</a> -->
+            <ul>
+                <li><a href="#">Home</a></li>            
+                <li>
+                    <a href="#GapforProjectIntro">Project</a>
+                    <div class="nav-sub" style="width:185px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Project-Description.html" target="_blank">Description</a></li>
+                            <li><a href="./Project-Design.html" target="_blank">Design</a></li>
+                            <li><a href="./Project-Troubleshooting.html" target="_blank">Troubleshooting</a></li>
+                        </ul>
+                    </div>
+                </li> 
+                <li>
+                    <a href="#GapforWetLabIntro">Wet Lab</a>
+                    <div class="nav-sub" style="width:145px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./WetLab-Engineering.html" target="_blank">Engineering</a></li>
+                            <li><a href="./WetLab-Protocol.html" target="_blank">Protocol</a></li>
+                            <li><a href="./WetLab-Notebook.html" target="_blank">Notebook</a></li>
+                        </ul>
+                    </div>
+                </li>           
+                <li>
+                    <a href="#GapforDryLabIntro">Dry Lab</a>
+                    <div class="nav-sub" style="width:95px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./DryLab-Model.html" target="_blank">Model</a></li>
+                            <li><a href="./DryLab-Results.html" target="_blank">Results</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li>
+                    <a href="#GapforHumanPracticesIntro">Human Practices</a>
+                    <div class="nav-sub" style="width:270px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./HumanPractices-IntegratedHP.html" target="_blank">Integrated human practice</a></li>
+                            <li><a href="./HumanPractices-Education.html" target="_blank">Education</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#GapforTeamIntro">Team</a>
+                    <div class="nav-sub" style="width: 165px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Team-Team_member.html" target="_blank">Team Member</a></li>
+                            <li><a href="./Team-Documents.html" target="_blank">Documents</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li><a href="#Safetylinkshere">Safety</a></li>            
+            </ul>
+        </header>
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        <!-- 导航栏 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+        
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- Title begins -->
+
+        <div class="BigTitle" style="height: 300px;">
+            <div>
+                <style>
+                    .BigTitle>div:first-child
+                    {
+                        height: 66.7%;
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(174, 190, 137, 0.2);
+                    }
+                </style>
+            </div>
+            <p>
+                <span style="color: rgb(164, 205, 50); font-size: 180px; text-decoration: underline 10px;">E</span>ducation
+            </p>
+        </div>
+
+        <!-- Title ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- menu begins -->
+
+        <div id="MenuC" class="MenuContainer">
+            <div class="menu-box">
+                <!-- 展示与隐藏侧边栏 开始-->
+                <input type="checkbox" id="menu-btn">
+                <label for="menu-btn">
+                    <i class="material-icons" style="font-size: 25px;margin: 0 0 0 1.5px;">keyboard_arrow_left</i>
+                </label>
+                <!-- 展示与隐藏侧边栏 结束-->
+                <div class="menu">
+                    <!-- 侧边栏的标题 开始-->
+                    <div class="menu-title">
+                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 36px; font-weight: 900;">Education</span></a>
+                    </div>
+                    <!-- 侧边栏的标题 结束-->
+
+                    <!-- 每一项导航 -->
+                    <style>
+                        .menu-item a
+                        {
+                            text-decoration: none;
+                            color: #363b28;
+                        }
+                    </style>
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item1">
+                        <label for="menu-item1">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Outline</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#OutlineLinksHere">A brief introduction</a></span>
+                        </div>
+                    </div>                  
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item2">
+                        <label for="menu-item2">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 16px;">Prepare tools needed for for education and communication</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#PreparetoolsneededLinksHere">Tools needed</a></span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item3">
+                        <label for="menu-item3">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Strive for our goals</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#EducationandpublicityLinksHere">Education and publicity</a></span>
+                            <span style="font-size: 14px;"><a href="#PerceptionandinspirationLinksHere">Perception and inspiration</a></span>
+                            <span style="font-size: 14px;"><a href="#TrustandexpectationLinksHere">Trust and expectation</a></span>
+                        </div>
+                    </div>
+
+                    <div class="set-line"></div>
+
+                    <div class="menu-item">
+                        <label>
+                            <i class="material-icons" style="font-size: 36px;">
+                                keyboard_double_arrow_right
+                            </i>
+                            <span style="font-size: 23px; font-weight: 900;"><a href="./HumanPractices-IntegratedHP.html">Integrated Human Practice</a></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            #MenuC.sticky
+            {
+                z-index: 999;
+                top: 15%;
+                left: 0;
+            }
+        </style>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let Menu = document.querySelector("#MenuC");
+                Menu.classList.toggle("sticky", window.scrollY > 200);
+            })
+        </script>
+        <!-- menu ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 内容 开始 -->
+    
+        <!-- height: 600px; -->
+        <div style="height: fit-content; width: 65%;  left: 32%; position: relative; ">
+            <div class="ParentBox" id="container-HeadText" >                
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Before coming to the main content, here are two facts seemingly irrelevant:
+                    </p>
+                    <div class="container-ul" style="margin: 5px 0 15px 0;">
+                        <ul>
+                            <li>
+                                &nbsp;&nbsp;Human production uses a lot of energy and contributes to higher and higher levels of carbon dioxide on Earth. Nowadays, energy and environment are two of the biggest concerns.
+                            </li>
+                            <li>
+                                &nbsp;&nbsp;Nearly 200 years ago, the world's first electric lamp was lit. Since then, people can get the light wherever wire exists. Nowadays, most electric lights still rely on wires.
+                            </li>
+                        </ul>
+                    </div>
+                    <p style="text-indent: 1em;">
+                        With the help of synthetic biology, both of these problems can probably be solved, and our world will be a better place.
+                    </p>
+                    <p  style="text-indent: 1em;">
+                        What we do is trying to increase public engagement and let people of all ages and all walks of life realize the needs of our world and feel the charm and potential of synthetic biology!
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="ParentBox" id="OutlineLinksHere">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        Outline
+                    </p>
+                </div>
+            </div>
+
+            <!-- Outline -->
+            <div class="ParentBox" id="container-Outline" >
+                <style>
+                    #container-Outline
+                    {
+                        background-color: rgba(225, 225, 240, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        A brief introduction
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic1">
+                    <style>
+                        #Pic1
+                        {
+                            height: 350px;
+                            background-image: url(./img//human_practice/img/HM_figure_6.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 1. Three progressive goals during our education. 
+                    </p>
+                </div>
+            </div>
+            <!-- Outline -->
+
+            <div class="ParentBox" id="PreparetoolsneededLinksHere">
+                <div class="content-text">
+                    <p style="font-size: 38px; font-family: 'Tapestry', serif; padding: 15px 0 0 0;">
+                        Prepare tools needed for for education and communication
+                    </p>
+                </div>
+            </div>
+
+            <!-- Prepare_tools_needed -->
+            <div class="ParentBox" id="container-Prepare_tools_needed" >
+                <style>
+                    #container-Prepare_tools_needed
+                    {
+                        background-color: rgba(229, 210, 234, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Tools needed
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <div class="container-ul" style="margin: 5px 0 15px 0;">
+                        <ol>
+                            <li>
+                                &nbsp;A poster to introduction to synthetic biology and our projects
+                            </li>
+                            <li>
+                                &nbsp;Fairy tale books drawing about a story of "The Prince of Cyanobacteria and the Princess of Yeast defeat the carbon dioxide monster to reclaim the light for the people" (still being written now)
+                            </li>
+                            <li>
+                                &nbsp;A slide introducing basic knowledge of synthetic biology, which can be easily understood by junior high school students
+                            </li>
+                            <li>
+                                &nbsp;Brochures corresponds to our project, emphasizing the environmental and energy value of the project
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="content-pic" id="Pic2">
+                    <style>
+                        #Pic2
+                        {
+                            height: 300px;
+                            background-image: url(./img/human_practice/img/hm_figure_7.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 2. Some illustrations.
+                    </p>
+                </div>
+            </div>
+            <!-- Prepare_tools_needed -->
+
+            <div class="ParentBox" id="EducationandpublicityLinksHere">
+                <div class="content-text">
+                    <p style="font-size: 38px; font-family: 'Tapestry', serif; padding: 15px 0 0 0;">
+                        Strive for our goals
+                    </p>
+                </div>
+            </div>
+
+            <!-- Education_and_publicity -->
+            <div class="ParentBox" id="container-Education_and_publicity" >
+                <style>
+                    #container-Education_and_publicity
+                    {
+                        background-color: rgba(234, 224, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Education and publicity
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        At this stage, we are trying to educate the general public about our project and synthetic biology. Tools we use for this stage are posters, fairy tale books and brochures.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        We need to <span style="font-weight: 600;">combine both online and offline forms</span> and use the power of online media to expand our influence:
+                    </p>
+                    <div class="content-text" >
+                        <div id="PerceptionandinspirationLinksHere" class="container-ul" style="margin: 5px 0 15px 0;">
+                            <ul>
+                                <li>
+                                    &nbsp;Online form : Use online articles, videos, and live broadcasts on all platforms
+                                </li>
+                                <li>
+                                    &nbsp;Offline form : Promote our programs and synthetic biology in parks, indergartens and other places.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Education_and_publicity -->
+
+            <!-- Perception_and_inspiration -->
+            <div class="ParentBox" id="container-Perception_and_inspiration" >
+                <style>
+                    #container-Perception_and_inspiration
+                    {
+                        background-color: rgba(234, 233, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Perception and inspiration
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        At this stage,our goal is to inspire middle school students who are just beginning to learn about biology and other sciences to feel the charm and inspiration of synthetic biology.
+                    </p>
+                    <p id="TrustandexpectationLinksHere" style="text-indent: 1em;">
+                        We mainly introduce synthetic biology and our project to middle school students and some primary school students in the form of <span style="font-weight: 600;">volunteer teaching and micro-class.</span>
+                    </p>
+                </div>
+            </div>
+            <!-- Perception_and_inspiration -->
+
+            <!-- Trust_and_expectation -->
+            <div class="ParentBox" id="container-Trust_and_expectation" >
+                <style>
+                    #container-Trust_and_expectation
+                    {
+                        background-color: rgba(210, 234, 213, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Trust and expectation
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        At this stage, we will no longer focus on different people, but focus on the significance of our projects to solve environmental, energy and other issues, and further let the whole society realize the power of synthetic biology to solve current problems and build a better world, so that they can trust and look forward to synthetic biology.
+                    </p>
+                </div>
+            </div>
+            <!-- Perception_and_inspiration -->
+
+
+            <div style="min-height: 150px; min-width: 100%;"></div>
+
+        </div>
+
+        <!-- 内容 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ENDing begins -->
+        <div class="endbar" ></div>
+        <div class="CopyrightDeclare" >
+            <p style="color: #ffffff;" class="ContactUs">Contact us: E-mail: zr-liu22@mails.tsinghua.edu.cn | Tel: 13547831314 </p>
+            <p style="color: #ffffff;" class="ContactUs">Copyright © 2024 Tsinghua University Tanwei College iGEM winter training Group 4. All rights reserved. </p>
+        </div>
+        <!-- it all ends -->
+
+        
+
+
+    </body>
+</html>

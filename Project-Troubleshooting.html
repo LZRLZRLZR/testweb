@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./css/Project-Troubleshooting.css">
+
+        <link rel="icon" type="image/x-icon" href="./img/icon2-1.ico">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .MathJax
+            {
+                outline: 0 !important;
+            }
+            .MathJax_Display
+            {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+        </style>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+        <link rel="dns-prefetch" href="https://cdn.mathjax.org" />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"]
+                    ], //行内公式选择$
+                    displayMath: [
+                        ["$$", "$$"]
+                    ] //段内公式选择$$
+                },
+                svg: {
+                    fontCache: 'global'
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'], //避开某些标签
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+        </script>
+
+        <title>Project-Troubleshooting</title>
+
+        
+    </head>
+    <body>
+        <script>
+            function getRatio()
+                {
+                    var ratio=0;
+                    var screen=window.screen;
+                    var ua=navigator.userAgent.toLowerCase();
+    
+                    if(window.devicePixelRatio !== undefined)
+                    {
+                        ratio=window.devicePixelRatio;    
+                    }
+                    else if(~ua.indexOf('msie'))
+                    {
+                        if(screen.deviceXDPI && screen.logicalXDPI)
+                        {
+                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                        }
+                    
+                    }
+                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                    {
+                        ratio=window.outerWidth/window.innerWidth;
+                    }
+    
+                    // if(ratio)
+                    // {
+                    //     ratio=Math.round(ratio*100);    
+                    // }
+                    return ratio;
+                }
+                let t=getRatio();
+                console.log( getRatio() );
+                document.body.style.zoom =1.5/t;
+        </script>
+        <style>
+            .body   
+            {
+                height: fit-content;
+                /* display: flex;
+                flex-direction: column; */
+            }
+        </style>
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 导航栏 开始 -->
+
+        <header>
+            <a href="./mainbody.html" target="_blank"><img src="./img/LOGOinPic_base.png" alt="This is our logo!"></a>
+            <!-- <a href="#" class="LOGOinTEXT">CYSL</a> -->
+            <ul>
+                <li><a href="./mainbody.html" target="_blank">Home</a></li>            
+                <li>
+                    <a href="#GapforProjectIntro">Project</a>
+                    <div class="nav-sub" style="width:185px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Project-Description.html">Description</a></li>
+                            <li><a href="./Project-Design.html">Design</a></li>
+                            <li><a href="./Project-Troubleshooting.html">Troubleshooting</a></li>
+                        </ul>
+                    </div>
+                </li> 
+                <li>
+                    <a href="#GapforWetLabIntro">Wet Lab</a>
+                    <div class="nav-sub" style="width:145px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./WetLab-Engineering.html" target="_blank">Engineering</a></li>
+                            <li><a href="./WetLab-Protocol.html" target="_blank">Protocol</a></li>
+                            <li><a href="./WetLab-Notebook.html" target="_blank">Notebook</a></li>
+                        </ul>
+                    </div>
+                </li>           
+                <li>
+                    <a href="#GapforDryLabIntro">Dry Lab</a>
+                    <div class="nav-sub" style="width:95px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./DryLab-Model.html" target="_blank">Model</a></li>
+                            <li><a href="./DryLab-Results.html" target="_blank">Results</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li>
+                    <a href="#GapforHumanPracticesIntro">Human Practices</a>
+                    <div class="nav-sub" style="width:270px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./HumanPractices-IntegratedHP.html" target="_blank">Integrated human practice</a></li>
+                            <li><a href="./HumanPractices-Education.html" target="_blank">Education</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#GapforTeamIntro">Team</a>
+                    <div class="nav-sub" style="width: 165px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Team-Team_member.html" target="_blank">Team Member</a></li>
+                            <li><a href="./Team-Documents.html" target="_blank">Documents</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li><a href="./Safety.html">Safety</a></li>            
+            </ul>
+        </header>
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        <!-- 导航栏 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+        
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- Title begins -->
+
+        <div class="BigTitle" style="height: 300px;">
+            <div>
+                <style>
+                    .BigTitle>div:first-child
+                    {
+                        height: 66.7%;
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(174, 190, 137, 0.2);
+                    }
+                </style>
+            </div>
+            <p>
+                <span style="color: rgb(164, 205, 50); font-size: 180px; text-decoration: underline 10px;">T</span>roubleshooting
+            </p>
+        </div>
+
+        <!-- Title ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- menu begins -->
+
+        <div id="MenuC" class="MenuContainer">
+            <div class="menu-box">
+                <!-- 展示与隐藏侧边栏 开始-->
+                <input type="checkbox" id="menu-btn">
+                <label for="menu-btn">
+                    <i class="material-icons" style="font-size: 25px;margin: 0 0 0 1.5px;">keyboard_arrow_left</i>
+                </label>
+                <!-- 展示与隐藏侧边栏 结束-->
+                <div class="menu">
+                    <!-- 侧边栏的标题 开始-->
+                    <div class="menu-title">
+                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 36px; font-weight: 900;">Troubleshooting</span></a>
+                    </div>
+                    <!-- 侧边栏的标题 结束-->
+
+                    <!-- 每一项导航 -->
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item1">
+                        <label for="menu-item1">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Project design </span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#container-Title-Project_design">Duplicate checking</a></span>
+                            <span style="font-size: 14px;"><a href="#OptogeneticLinksHere">Optogenetic design</a></span>
+                        </div>
+                    </div>
+
+                    <style>
+                        .menu-item a
+                        {
+                            text-decoration: none;
+                            color: #363b28;
+                        }
+                    </style>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item2">
+                        <label for="menu-item2">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Dry lab</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#container-Title-Dry_lab">Unable for SBML</a></span>
+                            <span style="font-size: 14px;"><a href="#LackofdataLinksHere">Lack of data</a></span>
+                            <span style="font-size: 14px;"><a href="#FlawofcarbonaccountingLinksHere">Flaw of carbon accounting</a></span>
+                            <span style="font-size: 14px;"><a href="#MoleculardynamicsimulationLinksHere">Molecular dynamic simulation</a></span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item3">
+                        <label for="menu-item3">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Wiki</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#container-Title-Wiki">Problems in web editing</a></span>
+                        </div>
+                    </div>
+
+                    <div class="set-line"></div>
+
+                    <div class="menu-item">
+                        <label>
+                            <i class="material-icons" style="font-size: 36px;">
+                                keyboard_double_arrow_right
+                            </i>
+                            <span style="font-size: 36px; font-weight: 900;"><a href="./Project-Description.html">Description</a></span>
+                        </label>
+                    </div>
+                    <div class="menu-item">
+                        <label>
+                            <i class="material-icons" style="font-size: 36px;">
+                                keyboard_double_arrow_right
+                            </i>
+                            <span style="font-size: 36px; font-weight: 900;"><a href="./Project-Design.html">Design</a></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            #MenuC.sticky
+            {
+                z-index: 999;
+                /* position: fixed; */
+                top: 15%;
+                left: 0;
+            }
+        </style>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let Menu = document.querySelector("#MenuC");
+                Menu.classList.toggle("sticky", window.scrollY > 200);
+            })
+        </script>
+        <!-- menu ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 内容 开始 -->
+    
+        <!-- height: 600px; -->
+        <div style="height: fit-content; width: 65%;  left: 32%; position: relative; ">
+             <!-- transform: translateY(-360px); -->
+            
+            <div class="ParentBox" id="container-HeadText">
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        As a winter vacation training project, we experienced the accumulation of knowledge in the early stage, the brainstorming in the middle stage and the presentation of the project in the late stage, in which many deficiencies appeared, which we summarized as experience and learned from it. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="ParentBox" id="container-Title-Project_design">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        Project design
+                    </p>
+                </div>
+            </div>
+
+            <div class="ParentBox" id="container-Duplicate_checking" >
+                <style>
+                    #container-Duplicate_checking
+                    {
+                        background-color: rgba(231, 246, 242, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Duplicate checking
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        One of our biggest mistake is that we forgot to check whether our project has been down before in iGEM. When we came up with the idea of bio-street lighting, we searched nearly all the relevant paper, patent and start-ups. However, the difficult search engine of iGEM make it hard to quickly check previous project.It was only when our teammember in charge of the wiki shared the BEST wiki project for 2023 that we suddenly realized how similar Shanghaitech-China 2023's design was to ours! Luckily we used different ways to achieve our diverse goals, but it should be helpful if we can discover it earlier.  
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic1">
+                    <style>
+                        #Pic1
+                        {
+                            height: 550px;
+                            background-image: url(./img/trouble_shooting_final/img/WechatIMG3763.png);
+                        }
+                    </style>
+                    
+                </div>
+                <div class="content-text" id="OptogeneticLinksHere">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 1. Playback screenshot of group meeting when Liu Z.R. shared Shanghaitech-China 2023.  
+                    </p>
+                </div>
+                
+            </div>
+
+            <div class="ParentBox" id="container-Optogenetic_design">
+                <style>
+                    #container-Optogenetic_design
+                    {
+                        background-color: rgba(241, 231, 246, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text" >
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 52px 0 0 0 ;">
+                        Optogenetic design
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Another point waiting for improvement is the choose of optogenetic system. We compared lov-domain and PHY-FHY-1  system based on the previous research. But another key factor of our system is the light intensity and wave length. Our system should be able to react with the sunlight, whose intensity may be much lower than that in lab. Besides, we have to try to avoid activating optogenetic components with light emitted by our systems themselves.  
+                    </p>
+                </div>                
+            </div>
+            
+            <div class="ParentBox" id="container-Title-Dry_lab">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        Dry lab
+                    </p>
+                </div>
+            </div>
+            
+            <div class="ParentBox" id="container-Unable_for_SBML" >
+                <style>
+                    #container-Unable_for_SBML
+                    {
+                        background-color: rgba(246, 233, 231, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Unable for SBML
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        As a team full of passionate "wet laber (people who are interested in wet lab) ", we have greatly underesitimated the difficulty of dry lab, especially when we tried to build our genome-scale metabolic models. The complex xml file and hard-to-read SBML language have driven our dry lab members crazy.   
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic2">
+                    <style>
+                        #Pic2
+                        {
+                            height: 550px;
+                            background-image: url(./img/trouble_shooting_final/img/tianshu.png);
+                        }
+                    </style>
+                    
+                </div>
+                <div class="content-text" id="LackofdataLinksHere">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 2. When our dry lab members trying to figure out SBML in one day. 
+                    </p>
+                </div>
+                
+            </div>
+
+            <div class="ParentBox" id="container-Lack_of_data" >
+                <style>
+                    #container-Lack_of_data
+                    {
+                        background-color: rgba(232, 220, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 52px 0 0 0;">
+                        Lack of data
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Being unable to find the basic yeast model iAZ900 make it even harder. We have searched <a href="http://bigg.ucsd.edu" target="_blank">BIGG</a> database, <a href="https://www.ebi.ac.uk/biomodels/" target="_blank">BioModel</a> database. Furthermore, we cannot find any useful data about caffeic acid cycle in all available database, including <a href="https://www.kegg.jp" target="_blank">KEGG</a> and <a href="https://www.biocyc.org/" target="_blank">BioCyc</a>
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic3">
+                    <style>
+                        #Pic3
+                        {
+                            background-color: #ffffff;
+                            height: 520px;
+                            background-image: url(./img/trouble_shooting_final/img/lackofdata.png);
+                        }
+                    </style>
+                    
+                </div>
+                <div class="content-text" id="FlawofcarbonaccountingLinksHere">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 3. Lack of data blocked our research. 
+                    </p>
+                </div>
+                
+            </div>
+
+            <div class="ParentBox" id="container-Flaw_of_carbon_accounting" >
+                <style>
+                    #container-Flaw_of_carbon_accounting
+                    {
+                        background-color: rgba(231, 231, 194, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 52px 0 0 0;">
+                        Flaw of carbon accounting
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Due to the incompleteness of our GSM model, we have to make compromise for carbon accounting. Some assumptions are made as follows:
+                    </p>
+                    <div class="container-ul" style="margin: 5px 0 15px 0;">
+                        <ul >
+                            <li>
+                                <!-- Different <span style="font-style: italic;">S.elongatus</span>-*S.cerevisiae*-co-culture system share similar carbon effect.  -->
+                                Different $ \small{\cal{S.elongatus-S.cerevisiae}-co-culture} $ system share similar carbon effect. 
+                            </li>
+                            <li>
+                                *S.cerevisiae* absorb half amount of $ \small{CO_2} $ during an ordinary day compared with those being lighted all day.
+                            </li>
+                            <li>
+                                Suppose the  average power of traditional street lighting is 150w for 10h, and one kilowatt hour require 1.5kg $ \small{CO_2} $ . This number can differ greatly in different region and different time.
+                            </li>
+                        </ul>
+                    </div>
+                    <p style="text-indent: 1em;" id="MoleculardynamicsimulationLinksHere">
+                        Besides, in this calculation, we ignored the effect of bio-luminescence on cyanobacteria, which may cause minus deviation to the final result.
+                    </p>
+                </div>                
+            </div>
+
+            <div class="ParentBox" id="container-Molecular_dynamic_simulation" >
+                <style>
+                    #container-Molecular_dynamic_simulation
+                    {
+                        background-color: rgba(196, 225, 197, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Molecular dynamic simulation
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        After the design of the fusion protein we developed, we hope to learn more information from the sequence by <a href="http://www.ks.uiuc.edu/Research/namd/">NAMD</a>. However, the PDB file provided by alphafold2 seems to have conflict with the force field given by NAMD. And due to the limited time, after trying several different topology file and force field, we still failed to solve the problem. Nevertheless, we still successfully built the psf file and proved the stability of our fusion protein in water sphere.
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic4">
+                    <style>
+                        #Pic4
+                        {
+                            background-color: #ffffff;
+                            height: 50px;
+                            background-image: url(./img/trouble_shooting_final/img/mds.png);
+                        }
+                    </style>
+                    
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 4. FATAL ERROR from VMD 
+                    </p>
+                </div>
+            </div>
+
+            <div class="ParentBox" id="container-Title-Wiki">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        Wiki
+                    </p>
+                </div>
+            </div>
+
+            <div class="ParentBox" id="container-Problems_in_web_editing" >
+                <style>
+                    #container-Problems_in_web_editing
+                    {
+                        background-color: rgba(196, 225, 221, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Problems in web editing
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Building a website is never a required class for students of our major. Out of concern for programing ability, we arrange a single member to be in charge of wiki. <br>
+                    </p>
+                    <p style="text-indent: 1em;"> 
+                        However, in making this decision, we significantly underestimated the complexity and the multifaceted challenges that are inherent in the process of web development. This underestimation led to a consequential decrease in the amount of time available for academic studies and other important educational activities. The scarcity of study time then spiraled into a series of problematic outcomes, particularly in ensuring that the website was compatible and functioned effectively across various software platforms and on different types of hardware devices. Although we have learned someway able to fix our problem but no more time could be used.
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic5">
+                    <style>
+                        #Pic5
+                        {
+                            background-color: #ffffff;
+                            height: 520px;
+                            background-image: url(./img/trouble_shooting_final/img/截屏2024-02-23\ 21.29.53.png);
+                        }
+                    </style>
+                    
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 5. Mismatch of different element when tested on another computer. 
+                    </p>
+                </div>
+
+                <div class="content-pic" id="Pic6">
+                    <style>
+                        #Pic6
+                        {
+                            background-color: #ffffff;
+                            height: 520px;
+                            background-image: url(./img/trouble_shooting_final/img/WechatIMG3765.png);
+                        }
+                    </style>
+                    
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 6. One way to solve the incompatibility problem by Javascript. 
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;"> 
+                        Compounding these challenges was our limited understanding and knowledge of some crucial integrated development tools and frameworks, such as VUE. This lack of expertise meant that we were unable to leverage the efficiencies and advantages offered by these sophisticated tools. Consequently, we found ourselves in a position where we had to build the wiki incrementally, starting from the very basics, and doing so entirely on our own. This approach, while it provided a steep learning curve, also meant that the development process was slow, labor-intensive, and often more complicated than it needed to be. 
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="min-height: 150px; min-width: 100%;"></div>
+
+        </div>
+
+        <!-- 内容 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ENDing begins -->
+        <div class="endbar" ></div>
+        <div class="CopyrightDeclare" >
+            <p style="color: #ffffff;" class="ContactUs">Contact us: E-mail: zr-liu22@mails.tsinghua.edu.cn | Tel: 13547831314 </p>
+            <p style="color: #ffffff;" class="ContactUs">Copyright © 2024 Tsinghua University Tanwei College iGEM winter training Group 4. All rights reserved. </p>
+        </div>
+        <!-- it all ends -->
+
+        
+
+
+    </body>
+</html>

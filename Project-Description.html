@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./css/Project-Description.css">
+
+        <link rel="icon" type="image/x-icon" href="./img/icon2-1.ico">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .MathJax
+            {
+                outline: 0 !important;
+            }
+            .MathJax_Display
+            {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+        </style>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+        <link rel="dns-prefetch" href="https://cdn.mathjax.org" />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"]
+                    ], //行内公式选择$
+                    displayMath: [
+                        ["$$", "$$"]
+                    ] //段内公式选择$$
+                },
+                svg: {
+                    fontCache: 'global'
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'], //避开某些标签
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+        </script>
+
+        <title>Project-Description</title>
+
+        
+    </head>
+    <body>
+        <script>
+            function getRatio()
+                {
+                    var ratio=0;
+                    var screen=window.screen;
+                    var ua=navigator.userAgent.toLowerCase();
+    
+                    if(window.devicePixelRatio !== undefined)
+                    {
+                        ratio=window.devicePixelRatio;    
+                    }
+                    else if(~ua.indexOf('msie'))
+                    {
+                        if(screen.deviceXDPI && screen.logicalXDPI)
+                        {
+                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                        }
+                    
+                    }
+                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                    {
+                        ratio=window.outerWidth/window.innerWidth;
+                    }
+    
+                    // if(ratio)
+                    // {
+                    //     ratio=Math.round(ratio*100);    
+                    // }
+                    return ratio;
+                }
+                let t=getRatio();
+                console.log( getRatio() );
+                document.body.style.zoom =1.5/t;
+        </script>
+        <style>
+            .body   
+            {
+                height: fit-content;
+            }
+        </style>
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 导航栏 开始 -->
+
+        <header>
+            <a href="./mainbody.html" target="_blank"><img src="./img/LOGOinPic_base.png" alt="This is our logo!"></a>
+            <!-- <a href="#" class="LOGOinTEXT">CYSL</a> -->
+            <ul>
+                <li><a href="./mainbody.html" target="_blank"">Home</a></li>            
+                <li>
+                    <a href="#GapforProjectIntro">Project</a>
+                    <div class="nav-sub" style="width:185px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="#">Description</a></li>
+                            <li><a href="./Project-Design.html">Design</a></li>
+                            <li><a href="./Project-Troubleshooting.html">Troubleshooting</a></li>
+                        </ul>
+                    </div>
+                </li> 
+                <li>
+                    <a href="#GapforWetLabIntro">Wet Lab</a>
+                    <div class="nav-sub" style="width:145px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./WetLab-Engineering.html" target="_blank">Engineering</a></li>
+                            <li><a href="./WetLab-Protocol.html" target="_blank">Protocol</a></li>
+                            <li><a href="./WetLab-Notebook.html" target="_blank">Notebook</a></li>
+                        </ul>
+                    </div>
+                </li>           
+                <li>
+                    <a href="#GapforDryLabIntro">Dry Lab</a>
+                    <div class="nav-sub" style="width:95px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./DryLab-Model.html" target="_blank">Model</a></li>
+                            <li><a href="./DryLab-Results.html" target="_blank">Results</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li>
+                    <a href="#GapforHumanPracticesIntro">Human Practices</a>
+                    <div class="nav-sub" style="width:270px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./HumanPractices-IntegratedHP.html" target="_blank">Integrated human practice</a></li>
+                            <li><a href="./HumanPractices-Education.html" target="_blank">Education</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#GapforTeamIntro">Team</a>
+                    <div class="nav-sub" style="width: 165px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Team-Team_member.html" target="_blank">Team Member</a></li>
+                            <li><a href="./Team-Documents.html" target="_blank">Documents</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li><a href="./Safety.html">Safety</a></li>            
+            </ul>
+        </header>
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        <!-- 导航栏 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+        
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- Title begins -->
+
+        <div class="BigTitle" style="height: 300px;">
+            <div>
+                <style>
+                    .BigTitle>div:first-child
+                    {
+                        height: 66.7%;
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(174, 190, 137, 0.2);
+                    }
+                </style>
+            </div>
+            <p>
+                <span style="color: rgb(164, 205, 50); font-size: 180px; text-decoration: underline 10px;">D</span>escription
+            </p>
+        </div>
+
+        <!-- Title ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- menu begins -->
+
+        <div id="MenuC" class="MenuContainer">
+            <div class="menu-box">
+                <!-- 展示与隐藏侧边栏 开始-->
+                <input type="checkbox" id="menu-btn">
+                <label for="menu-btn">
+                    <i class="material-icons" style="font-size: 25px;margin: 0 0 0 1.5px;">keyboard_arrow_left</i>
+                </label>
+                <!-- 展示与隐藏侧边栏 结束-->
+                <div class="menu">
+                    <!-- 侧边栏的标题 开始-->
+                    <div class="menu-title">
+                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 36px; font-weight: 900;">Description</span></a>
+                    </div>
+                    <!-- 侧边栏的标题 结束-->
+
+                    <!-- 每一项导航 -->
+                    <style>
+                        .menu-item a
+                        {
+                            text-decoration: none;
+                            color: #363b28;
+                        }
+                    </style>
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item1">
+                        <label for="menu-item1">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Overview </span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#OverviewLinksHere">General description</a></span>
+                        </div>
+                    </div>                  
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item2">
+                        <label for="menu-item2">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Design principle</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#container-Title-Design_principle">Design principle</a></span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item3">
+                        <label for="menu-item3">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">System and technology</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#container-System_and_technology">Synechococcus elongatus</a></span>
+                            <span style="font-size: 14px;"><a href="#SaccharomycescerevisiaeLinksHere">Saccharomyces cerevisiae</a></span>
+                            <span style="font-size: 14px;"><a href="#FungalbioluminescencepathwayLinksHere">Fungal bioluminescence pathway</a></span>
+                            <span style="font-size: 14px;"><a href="#OptogeneticsystemLinksHere">Optogenetic system</a></span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item4">
+                        <label for="menu-item4">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Reference</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#ReferenceLinksHere">Reference</a></span>
+                        </div>
+                    </div>
+
+                    <div class="set-line"></div>
+
+                    <div class="menu-item">
+                        <label>
+                            <i class="material-icons" style="font-size: 36px;">
+                                keyboard_double_arrow_right
+                            </i>
+                            <span style="font-size: 36px; font-weight: 900;"><a href="./Project-Design.html">Design</a></span>
+                        </label>
+                    </div>
+                    <div class="menu-item">
+                        <label>
+                            <i class="material-icons" style="font-size: 36px;">
+                                keyboard_double_arrow_right
+                            </i>
+                            <span style="font-size: 36px; font-weight: 900;"><a href="./Project-Troubleshooting.html">Troubleshooting</a></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            #MenuC.sticky
+            {
+                z-index: 999;
+                top: 15%;
+                left: 0;
+            }
+        </style>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let Menu = document.querySelector("#MenuC");
+                Menu.classList.toggle("sticky", window.scrollY > 200);
+            })
+        </script>
+        <!-- menu ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 内容 开始 -->
+    
+        <!-- height: 600px; -->
+        <div style="height: fit-content; width: 65%;  left: 32%; position: relative; ">
+            
+            <div class="ParentBox" id="container-Title-Overview">
+                <div class="content-text">
+                    <p id="OverviewLinksHere" style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        Overview
+                    </p>
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <div class="ParentBox" id="container-General_description" >
+                <style>
+                    #container-General_description
+                    {
+                        background-color: rgba(231, 246, 242, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        General description
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic1">
+                    <style>
+                        #Pic1
+                        {
+                            height: 690px;
+                            background-image: url(./img/project_description_final/img/mainPic.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text" id="OptogeneticLinksHere">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 1. Representation of CYSL.  
+                    </p>
+                </div>
+                
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Our project was designed to achieve:
+                    </p>
+                    <div class="container-ul" style="margin: 5px 0 15px 0;">
+                        <ul>
+                            <li>Stay resting during the daytime:<br>
+                                &nbsp;&nbsp;The $ \scriptsize{\it{DBD-PhyA-FHY1-TUP1}} $ system recognize daytime by red light and thus be activated to suppress the expression of Luz, leading to the block of caffeic cycle and no light emission.
+                            </li>
+                            <li>Emission light at night<br>
+                                &nbsp;&nbsp;The $ \scriptsize{\it{DBD-PhyA-FHY1-TUP1}} $ system should be suppressed under far-red light, which is the main role of night. The caffeic acid cycle is thus activated to produce green luminescence.
+                            </li>
+                            <li>Reduce the carbon burden <br>
+                                &nbsp;&nbsp;Cyano is autotrophic organism and could utilize $\scriptsize{CO_2}$ as carbon resource. We designed the co-culture system to feed yeast by cyano thus achieve green cabon source for yeast.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Overview -->
+
+            <!-- Design_principle -->
+            <div class="ParentBox" id="container-Title-Design_principle">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        Design principle
+                    </p>
+                </div>
+            </div>
+            
+            <div class="ParentBox" id="container-Design_principle" >
+                <style>
+                    #container-Design_principle
+                    {
+                        background-color: rgba(244, 234, 232, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Design principle
+                    </p>
+                </div>
+                <div class="container-TextandIcon">
+                    <div class="content-icon" id="Pic2">
+                        <style>
+                            #Pic2
+                            {
+                                height: 150px;
+                                min-height: 60px;
+                                background-image: url(./img/project_description_final/img/ef.png);
+                            }
+                        </style>
+                    </div>
+                    <div class="content-icontext" >
+                        <p style="text-indent: 1em; font-family: 'Rubik Bubbles', system-ui; color: #6FAE4A;">
+                            Environmentally friendly: Our project should be sustainable and reliable, hopeful to help create better environment, performing better in carbon acounting.   
+                        </p>
+                    </div>
+                </div>
+                <div class="container-TextandIcon">
+                    <div class="content-icon" id="Pic3">
+                        <style>
+                            #Pic3
+                            {
+                                height: 150px;
+                                min-height: 60px;
+                                background-image: url(./img/project_description_final/img/efficeincy.png);
+                            }
+                        </style>
+                    </div>
+                    <div class="content-icontext" >
+                        <p style="text-indent: 1em; font-family: 'Rubik Bubbles', system-ui; color: #4472C4;">
+                            Efficiency: To make it really come into our life, our project should reveal good efficiency compared with traditional street lighting. It should be at least as functional as the traditional light. Able to automatically switch the light and the light intensity should meet the needs of resident.   
+                        </p>
+                    </div>
+                </div>
+                <div class="container-TextandIcon">
+                    <div class="content-icon" id="Pic4">
+                        <style>
+                            #Pic4
+                            {
+                                height: 150px;
+                                min-height: 60px;
+                                background-image: url(./img/project_description_final/img/profitable.png);
+                            }
+                        </style>
+                    </div>
+                    <div class="content-icontext" >
+                        <p style="text-indent: 1em; font-family: 'Rubik Bubbles', system-ui; color: #FFC000;">
+                            Profitable: Cost is a pivotal factor in bio-engineering. Only when the project is profitable can it attracts more companies to invest in it. Street lighting is rooted everywhere in everybody's life, so there is a giant market for better street lighting strategies. Our project should possess commercial potential to go further.    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Design_principle -->
+            
+            <!-- Title System_and_technology -->
+            <div class="ParentBox" id="container-System_and_technology">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        System and technology
+                    </p>
+                </div>
+            </div>
+            <!-- Title System_and_technology -->
+
+            <!-- Synechococcus_elongatus -->
+            <div class="ParentBox" id="container-Synechococcus_elongatus" >
+                <style>
+                    #container-Synechococcus_elongatus
+                    {
+                        background-color: rgba(239, 235, 218, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0 0 0;">
+                        Synechococcus elongatus
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic5">
+                    <style>
+                        #Pic5
+                        {
+                            height: 462px;
+                            background-image: url(./img/project_description_final/img/Synechococcus_elongatus_PCC_7942_electron_micrograph_showing_carboxysomes.jpeg);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 3. Electron micrograph of $\scriptsize{\it{Synechococcus~elongatus}}$ PCC 7942 cell showing the carboxysomes as polyhedral dark structures. From <a href="https://en.wikipedia.org/wiki/Synechococcus_elongatus" style="font-size: 18px; text-decoration: underline;">wikipedia</a> .  
+                    </p>
+                </div>
+                
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Inspired by the project Team INSA-UPS had done in 2021 iGEM Competition, we tried to build a co-culture system to achieve sustainable luminescence with just the energy from sunlight. Moreover, this system can also catch CO2 from atmosphere. We hope our co-culture system could achieve at least one month automatically sustain the luminescence system to enhance the practicality when we make our whole project into real street lamps.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Cyanobacteria are photoautotrophic organisms that are the main bearers of oxygen production by photosynthesis. Among them, <span style="font-style: italic;">Synechococcus</span> <span style="font-style: italic;">elongatus</span> (<span style="font-style: italic;">S. elongatus</span>), with its simple structure, rich genetic diversity and ecotypes, is a model species for microbial ecology research. Moreover, the genome information was published earlier, with a mature genetic transformation system, and the background information in physiology, biochemistry and molecular biology is clearer, which is a dominant species among the model species of cyanobacteria, and it can be used as a good material for the research of molecular mechanism of algal inhibition by chemosensory substances. 
+                    </p>
+                    <p id="SaccharomycescerevisiaeLinksHere" style="text-indent: 1em;">
+                        Furthermore, <span style="font-style: italic;">S. elongatus</span> is a widely used model for co-culture system. It can produce and release sucrose under salt stress, providing carbon source for another microorganism.
+                    </p>
+                </div>
+            
+            
+            
+            
+            </div>
+            <!-- Synechococcus_elongatus -->
+            
+            <!-- Saccharomyces_cerevisiae -->
+            <div class="ParentBox" id="container-Saccharomyces_cerevisiae" >
+                <style>
+                    #container-Saccharomyces_cerevisiae
+                    {
+                        background-color: rgba(218, 230, 206, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 58px 0 0 0;">
+                        Saccharomyces cerevisiae
+                    </p>
+                </div>
+
+                <div class="content-pic" id="Pic7">
+                    <style>
+                        #Pic7
+                        {
+                            height: 645px;
+                            background-image: url(./img/project_description_final/img/Saccharomyces_cerevisiae_SEM.jpg);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 3. Scanning electron micrograph of $ \scriptsize{\it{Saccharomyces~cerevisiae}}$.  
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p id="FungalbioluminescencepathwayLinksHere" style="text-indent: 1em;">
+                        <span style="font-style: italic;">Saccharomyces cerevisiae</span> (<span style="font-style: italic;">S.cereviasiae</span>), or brewer's yeast, is a cornerstone in synthetic biology due to its simple eukaryotic structure, well-mapped genome, and advanced genetic modification capabilities. These features make it an ideal model for genetic studies and bioengineering. Its ability to produce a variety of valuable compounds and its established safety record in food and beverage industries further solidify its role as a versatile and reliable organism for both research and industrial biotechnology applications.
+                    </p>
+                </div>
+            </div>
+            <!-- Saccharomyces_cerevisiae -->
+
+            <!-- Fungal_bioluminescence_pathway -->
+            <div class="ParentBox" id="container-Fungal_bioluminescence_pathway" >
+                <style>
+                    #container-Fungal_bioluminescence_pathway
+                    {
+                        background-color: rgba(190, 223, 216, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0 0 0;">
+                        Fungal bioluminescence pathway
+                    </p>
+                </div>
+
+                <div class="content-pic" id="Pic8">
+                    <style>
+                        #Pic8
+                        {
+                            width: 40%;
+                            height: 315px;
+                            background-image: url(./img/project_description_final/img/Nn.jpg);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 4. $\scriptsize{\it{Neonothopanus~nambi}}$ giving ou green light by caffeic acid cycle. From <span style=" text-decoration: underline;font-style: italic; font-size: 16px; color: #333333; font-family: 'Times New Roman', Times, serif;">Identification of hispidin as a bioluminescent active compound and its recycling biosynthesis in the luminous fungal fruiting body</span> [1].  
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p id="OptogeneticsystemLinksHere" style="text-indent: 1em;">
+                        <span style="font-style: italic;">Saccharomyces cerevisiae</span> (<span style="font-style: italic;">S.cereviasiae</span>), or brewer's yeast, is a cornerstone in synthetic biology due to its simple eukaryotic structure, well-mapped genome, and advanced genetic modification capabilities. These features make it an ideal model for genetic studies and bioengineering. Its ability to produce a variety of valuable compounds and its established safety record in food and beverage industries further solidify its role as a versatile and reliable organism for both research and industrial biotechnology applications.
+                    </p>
+                </div>
+            </div>
+            <!-- Fungal_bioluminescence_pathway -->
+
+            <!-- Optogenetic_system -->
+            <div class="ParentBox" id="container-Optogenetic_system" >
+                <style>
+                    #container-Optogenetic_system
+                    {
+                        background-color: rgba(190, 198, 223, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0 0 0;">
+                        Optogenetic system
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        To minimize energy waste and guarantee nocturnal luminescence, given the energy-intensive nature of the luminescence process, we selected a light-responsive gene promoter system. Following a comparison of various systems, the R/FR light-controlled gene switch was chosen for our design. This system ensures that the luz gene is inhibited during bright conditions or daytime by the activation of PhyA, preventing luminescence. Conversely, in darkness or the absence of red light, Pfr converts to its inactive form, Pr, enabling the system to glow. Moreover, in shaded areas where far-red light (FR) predominates over red light (R), PhyA remains inactive due to the higher FR proportion.
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic9">
+                    <style>
+                        #Pic9
+                        {
+                            height: 315px;
+                            background-image: url(./img/project_description_final/img/opt.png);
+                        }
+                    </style>
+                </div>
+                <div class="content-text">
+                    <p id="ReferenceLinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 5. Representation of FR-R switch.  
+                    </p>
+                </div>
+                
+            </div>
+            <!-- Optogenetic_system -->
+
+            <!-- Reference -->
+            <div class="ParentBox" id="container-Reference" >
+                <style>
+                    #container-Reference
+                    {
+                        background-color: rgba(206, 182, 216, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 58px 0 0 0;">
+                        Reference
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        [1] Y. Oba, Y. Suzuki, G.N. Martins, R.P. Carvalho, T.A. Pereira, H.E. Waldenmaier, S. Kanie, M. Naito, A.G. Oliveira, F.A. Dörr, Identification of hispidin as a bioluminescent active compound and its recycling biosynthesis in the luminous fungal fruiting body, Photochemical & Photobiological Sciences, 16 (2017) 1435-1440.
+                    </p>
+                </div>
+            </div>
+            <!-- Reference -->
+
+            <div style="min-height: 150px; min-width: 100%;"></div>
+
+        </div>
+
+        <!-- 内容 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ENDing begins -->
+        <div class="endbar" ></div>
+        <div class="CopyrightDeclare" >
+            <p style="color: #ffffff;" class="ContactUs">Contact us: E-mail: zr-liu22@mails.tsinghua.edu.cn | Tel: 13547831314 </p>
+            <p style="color: #ffffff;" class="ContactUs">Copyright © 2024 Tsinghua University Tanwei College iGEM winter training Group 4. All rights reserved. </p>
+        </div>
+        <!-- it all ends -->
+
+        
+
+
+    </body>
+</html>

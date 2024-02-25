@@ -1,0 +1,426 @@
+*
+{
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body
+{
+    background-color: #f4f8ec;
+    /* background: #F7F8F8;   fallback for old browsers */
+    /*background: linear-gradient(to right, #ACBB78, #F7F8F8);  W3C, IE 10+/ Edge, Firefox 16+,Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: -webkit-linear-gradient(to right, #f7f8f8, #acbb78); /* Chrome 10-25, Safari 5.1-6 */
+
+}
+
+/* ---------------------------------------------------------------------- */
+/* ---------导航栏开始--------- */
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    transition: 0.6s;
+    padding: 8px 100px;
+    z-index: 100000;
+}
+/* header .LOGOinTEXT
+{
+
+    position: relative;
+    font-weight: 700;
+    color: #222222;
+    text-decoration: none;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+
+    justify-content: left;
+} */
+
+header img
+{
+    /* position: relative; */
+    height: auto;
+    width: 140px;
+}
+
+header > ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+header > ul > li
+{
+    /* position: relative; */
+    list-style: none;
+}
+
+header > ul > li > a
+{
+    /* position: relative; */
+    margin: 0 5px;
+    text-decoration: none;
+    color: #94b15e;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.6s;
+    padding: 10px 15px;
+}
+header > ul > li > a:hover
+{
+    color: #eb6a53;
+    text-decoration: underline;
+    background-color: #cfd1ce;
+}
+header.sticky
+{
+    padding: 3px 100px;
+    background: #f8f8f8;
+    box-shadow: 0 0 15px 0 #888888;
+}
+
+header .nav-sub
+{
+    display: none;
+    position: absolute;
+    background-color: #f8fbf3;
+    /* width: 185px;
+    height: 140px; */
+    top: 35px;
+    left: auto;
+
+    border-radius: 5px;
+}
+header li:hover>.nav-sub
+{
+    /* transition: 1s; */
+    display: block;
+    border: #d2d2d2 solid 0.5px;
+}
+.Project_submenu
+{
+    margin: 3px 8px;
+    list-style: none;
+    line-height: 2;
+    padding-inline-start: 0px; 
+    height: auto;
+}
+.Project_submenu li a
+{
+    /* margin: 3px 2px; */
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #94b15e;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+.Project_submenu li:hover>a
+{
+    color: #eb6a53;
+    text-decoration: underline;
+    background-color: #cfd1ce;
+}
+
+/* ---------导航栏结束--------- */
+/* ---------------------------------------------------------------------- */
+
+/* .sticky[id="menu"] 
+{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15%;
+    padding: 5px;
+    background-color: #cae8ca;
+    border: 2px solid #4CAF50;
+} */
+
+/* ---------------------------------------------------------------------- */
+/* ---------menu 开始--------- */
+
+.MenuContainer
+{
+    position: sticky;
+    top: 15%;
+    left: 6%;
+    height: 600px;
+    width: 300px;  
+    background-color: #888888;
+}
+
+.iconfont {
+    font-size: 20px;
+}
+
+.menu {
+    position: absolute;
+    width: 60px; /*收起来的宽度*/
+    height: 600px;
+    background-color: #111727;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    border-radius: 0.8rem;
+    transition: 0.3s ease 0.15s;
+    font-family: sans-serif;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu .actionsBar {
+    width: 100%;
+    height: 10%;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+.menu .actionsBar div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+}
+
+.menu .actionsBar div button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+.menu .actionsBar div button:hover {
+    background-color: #364152;
+}
+
+.menu .actionsBar div h3 {
+    width: calc(100% - 45px);
+    text-align: center;
+}
+
+.menu .optionsBar {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 60%;
+    padding: 0 0.5rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu .optionsBar .menuItem {
+    width: 100%;
+    height: 45px;
+    margin: 0.3rem;
+}
+
+.menu .optionsBar .menuItem .menuOption {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+}
+
+.menu .optionsBar .menuItem .menuOption:hover {
+    background-color: #364152;
+}
+
+.menu .optionsBar .menuItem .menuOption i {
+    width: 45px;
+    text-align: center;
+    color: #fff;
+}
+
+.menu .optionsBar .menuItem .menuOption h5 {
+    width: calc(100% - 45px);
+}
+
+.menuText {
+    color: rgba(255, 255, 255, 0.8);
+    transform: translateX(-250px);
+    opacity: 0;
+    transition: transform 0.3s ease 0.1s;
+}
+
+.menu .about {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    flex-direction: column;
+    font-family: sans-serif;
+    opacity: 0;
+    white-space: nowrap;
+    transition: 0.3s ease 0.15s;
+}
+
+.menu.open {
+    width: 240px;
+}
+
+.menuText.open2 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu .menuBreak {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .menuBreak hr {
+    width: 70%;
+    height: 3px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu .themeBar {
+    overflow: hidden;
+    width: 100%;
+    height: 10%;
+    padding: 0.5rem;
+}
+
+.menu .themeBar div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+}
+
+.menu .themeBar div button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    width: 100%;
+    height: 45px;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+.menu .themeBar div button:hover {
+    background-color: #364152;
+}
+
+.menu .menuUser {
+    width: 100%;
+    height: 10%;
+}
+
+.menu .menuUser a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.menu .menuUser a div {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.menu .menuUser a div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.menu .menuUser a .Username {
+    width: calc(70% - 45px);
+}
+
+.menu .menuUser a p {
+    width: calc(30% - 45px);
+}
+
+.menu .menuUser a:hover p {
+    animation: animArrow 0.3s ease 2;
+}
+
+@keyframes animArrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.menu .menuUser .userInfo {
+    position: absolute;
+    width: 20rem;
+    height: 18rem;
+    opacity: 0;
+    pointer-events: none;
+    top: 34%;
+    left: 1.5rem;
+    transition: 0.3s ease;
+    transform: scale(0);
+    transform-origin: bottom left;
+}
+
+.menu .menuUser:hover .userInfo {
+    pointer-events: all;
+    opacity: 1;
+    transform: scale(1);
+}
+/* ---------menu 结束--------- */
+/* ---------------------------------------------------------------------- */
+
+

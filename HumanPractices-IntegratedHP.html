@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./css/HumanPractices-IntegratedHP.css">
+
+        <link rel="icon" type="image/x-icon" href="./img/icon2-1.ico">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .MathJax
+            {
+                outline: 0 !important;
+            }
+            .MathJax_Display
+            {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+        </style>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+        <link rel="dns-prefetch" href="https://cdn.mathjax.org" />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"]
+                    ], //行内公式选择$
+                    displayMath: [
+                        ["$$", "$$"]
+                    ] //段内公式选择$$
+                },
+                svg: {
+                    fontCache: 'global'
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'], //避开某些标签
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+        </script>
+
+        <title>Human Practices-Integrated Human Practices</title>
+
+        
+    </head>
+    <body>
+        <script>
+            function getRatio()
+                {
+                    var ratio=0;
+                    var screen=window.screen;
+                    var ua=navigator.userAgent.toLowerCase();
+    
+                    if(window.devicePixelRatio !== undefined)
+                    {
+                        ratio=window.devicePixelRatio;    
+                    }
+                    else if(~ua.indexOf('msie'))
+                    {
+                        if(screen.deviceXDPI && screen.logicalXDPI)
+                        {
+                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                        }
+                    
+                    }
+                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                    {
+                        ratio=window.outerWidth/window.innerWidth;
+                    }
+    
+                    // if(ratio)
+                    // {
+                    //     ratio=Math.round(ratio*100);    
+                    // }
+                    return ratio;
+                }
+                let t=getRatio();
+                console.log( getRatio() );
+                document.body.style.zoom =1.5/t;
+        </script>
+
+        <style>
+            .body   
+            {
+                height: fit-content;
+            }
+        </style>
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 导航栏 开始 -->
+
+        <header>
+            <a href="./mainbody.html"><img src="./img/LOGOinPic_base.png" alt="This is our logo!"></a>
+            <!-- <a href="#" class="LOGOinTEXT">CYSL</a> -->
+            <ul>
+                <li><a href="./mainbody.html" target="_blank">Home</a></li>            
+                <li>
+                    <a href="#GapforProjectIntro">Project</a>
+                    <div class="nav-sub" style="width:185px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Project-Description.html" target="_blank">Description</a></li>
+                            <li><a href="./Project-Design.html" target="_blank">Design</a></li>
+                            <li><a href="./Project-Troubleshooting.html" target="_blank">Troubleshooting</a></li>
+                        </ul>
+                    </div>
+                </li> 
+                <li>
+                    <a href="#GapforWetLabIntro">Wet Lab</a>
+                    <div class="nav-sub" style="width:145px; height:105px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./WetLab-Engineering.html" target="_blank">Engineering</a></li>
+                            <li><a href="./WetLab-Protocol.html" target="_blank">Protocol</a></li>
+                            <li><a href="./WetLab-Notebook.html" target="_blank">Notebook</a></li>
+                        </ul>
+                    </div>
+                </li>           
+                <li>
+                    <a href="#GapforDryLabIntro">Dry Lab</a>
+                    <div class="nav-sub" style="width:95px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./DryLab-Model.html" target="_blank">Model</a></li>
+                            <li><a href="./DryLab-Results.html" target="_blank">Results</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li>
+                    <a href="#GapforHumanPracticesIntro">Human Practices</a>
+                    <div class="nav-sub" style="width:290px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="#">Integrated human practices</a></li>
+                            <li><a href="./HumanPractices-Education.html">Education</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#GapforTeamIntro">Team</a>
+                    <div class="nav-sub" style="width: 165px; height:75px;">
+                        <ul class="Project_submenu">
+                            <li><a href="./Team-Team_member.html" target="_blank">Team Member</a></li>
+                            <li><a href="./Team-Documents.html" target="_blank">Documents</a></li>
+                        </ul>
+                    </div>
+                </li>            
+                <li><a href="./Safety.html">Safety</a></li>            
+            </ul>
+        </header>
+
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        <!-- 导航栏 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+        
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- Title begins -->
+
+        <div class="BigTitle" style="height: 300px;">
+            <div>
+                <style>
+                    .BigTitle>div:first-child
+                    {
+                        height: 66.7%;
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(174, 190, 137, 0.2);
+                    }
+                </style>
+            </div>
+            <p style="font-size: 90px;">
+                <span style="color: rgb(164, 205, 50); font-size: 135px; text-decoration: underline 10px;">I</span>ntegrated Human Practices
+            </p>
+        </div>
+
+        <!-- Title ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+        <!-- ---------------------------------------------------------------------- --> 
+        <!-- menu begins -->
+
+        <div id="MenuC" class="MenuContainer">
+            <div class="menu-box">
+                <!-- 展示与隐藏侧边栏 开始-->
+                <input type="checkbox" id="menu-btn">
+                <label for="menu-btn">
+                    <i class="material-icons" style="font-size: 25px;margin: 0 0 0 1.5px;">keyboard_arrow_left</i>
+                </label>
+                <!-- 展示与隐藏侧边栏 结束-->
+                <div class="menu">
+                    <!-- 侧边栏的标题 开始-->
+                    <div class="menu-title">
+                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 24px; font-weight: 900;">Integrated Human Practices</span></a>
+                    </div>
+                    <!-- 侧边栏的标题 结束-->
+
+                    <!-- 每一项导航 -->
+                    <style>
+                        .menu-item a
+                        {
+                            text-decoration: none;
+                            color: #363b28;
+                        }
+                    </style>
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item1">
+                        <label for="menu-item1">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 18px;">Integrated Human Practices</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#OverviewLinksHere">Overview</a></span>
+                            <span style="font-size: 14px;"><a href="#GovernmentLinksHere">Government</a></span>
+                            <span style="font-size: 14px;"><a href="#DuHaoLinksHere">Du hao's Team</a></span>
+                            <span style="font-size: 14px;"><a href="#ShanghaiTechLinksHere">ShanghaiTech-China 2023</a></span>
+                            <span style="font-size: 14px;"><a href="#LightbioLinksHere">Light bio</a></span>
+                            <span style="font-size: 14px;"><a href="#ReferenceLinksHere">Reference</a></span>
+                        </div>
+                    </div>                  
+
+
+                    <div class="set-line"></div>
+
+                    <div class="menu-item">
+                        <label>
+                            <i class="material-icons" style="font-size: 36px;">
+                                keyboard_double_arrow_right
+                            </i>
+                            <span style="font-size: 23px; font-weight: 900;"><a href="./HumanPractices-Education.html">Education</a></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            #MenuC.sticky
+            {
+                z-index: 999;
+                top: 15%;
+                left: 0;
+            }
+        </style>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                let Menu = document.querySelector("#MenuC");
+                Menu.classList.toggle("sticky", window.scrollY > 200);
+            })
+        </script>
+        <!-- menu ends -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- 内容 开始 -->
+    
+        <!-- height: 600px; -->
+        <div style="height: fit-content; width: 65%;  left: 32%; position: relative; ">
+
+
+            <div class="ParentBox" id="OverviewLinksHere">
+                <div class="content-text">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;">
+                        Integrated Human Practices
+                    </p>
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <div class="ParentBox" id="container-Outline" >
+                <style>
+                    #container-Outline
+                    {
+                        background-color: rgba(225, 225, 240, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Overview
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Great physicist Newtown once said, <span style="font-style: italic;">If I have seen further it is by standing on the shoulder of Giants."</span> As a young team eager to do something, we'll definitely go further with the aid of predecessor. In the integrated human practice, we mainly focus on the communication with different research groups and relevant organizations (Figure 1).
+                    </p>
+                </div>
+                
+                <div class="content-pic" id="Pic1">
+                    <style>
+                        #Pic1
+                        {
+                            height: 400px;
+                            background-image: url(./img//human_practice/img/IHM2.png);
+                        }
+                    </style>
+                </div>
+                <div id="GovernmentLinksHere" class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 1. Representation of the integrated human practice.  
+                    </p>
+                </div>
+            </div>
+            <!-- Overview -->
+
+            <!-- Government -->
+            <div class="ParentBox" id="container-Government" >
+                <style>
+                    #container-Government
+                    {
+                        background-color: rgba(229, 210, 234, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 60px 0 0 0;">
+                        Government
+                    </p>
+                </div>
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        China is one of the brightest countries in night. Our city Beijing, also the capital of China, has been increasingly recognized for its efforts in environmental protection and sustainability. Over the past few years, the city has undertaken significant measures to combat pollution and promote green living. 
+                    </p>
+                    <p style="text-indent: 1em;">
+                        In 2016, Beijing government released relevant document to instruct the <a href="https://fgw.beijing.gov.cn/gzdt/tztg/202004/t20200417_1818685.htm" style="text-decoration: underline;">green light project</a>. It is estimated that the use of intelligent LED lighting products can save 80% of electricity. Promote 2 million (sets) of intelligent LED lighting products, which can save 200 million kilowatt-hours of electricity per year, save 220 million yuan of electricity, and reduce 170,000 tons of carbon dioxide [1]. Thus it can be seen that our bio-luminescence system holds great potential for energy saving and carbon neutralizing.
+                    </p>
+                </div>
+
+                <div class="content-pic" id="Pic2">
+                    <style>
+                        #Pic2
+                        {
+                            height: 300px;
+                            background-image: url(./img/human_practice/img/EarthAtNight2016_SuomiNPP_13500.jpg);
+                        }
+                    </style>
+                </div>
+
+                <div class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 2. What the <a style="text-decoration: underline;font-size: 16px;" target="_blank" href="https://earthobservatory.nasa.gov/">Earth</a> looks like at night on 2022 February 13. By <a style="text-decoration: underline;font-size: 16px;" href="https://apod.nasa.gov/apod/ap220213.html">NASA</a>
+                    </p>
+                </div>
+
+                <hr id="hr1" style="width: 95%; height: 3px; color: #000; background-color: #000;">
+                <div class="container-TextandIcon" style="margin: 0 auto;">
+                    <div class="content-icon" id="Pic3">
+                        <style>
+                            #Pic3
+                            {
+                                height: 150px;
+                                min-height: 60px;
+                                background-image: url(./img/human_practice/img/2020032011320155415.png);
+                            }
+                        </style>
+                    </div>
+                    
+                    <div class="content-icontext" >
+                        <p id="DuHaoLinksHere" style="text-indent: 1em; color: #000;font-size: 16px;">
+                            We planned to have a conversation with Beijing municipal ecology and environment bureau. The conversation should be focus on present energy structure and street lighting situation of Beijing, how does the green light project move forward and what should be take care of  from the perspective of policy makers.  
+                        </p>
+                    </div>
+                    
+                    
+                </div>
+                <hr id="hr2" style="width: 95%; height: 3px; color: #000; background-color: #000;">
+            </div>
+            <!-- Government -->
+ 
+
+            <!-- Du_haos_Team -->
+            <div class="ParentBox" id="container-Du_haos_Team" >
+                <style>
+                    #container-Du_haos_Team
+                    {
+                        background-color: rgba(234, 210, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Du hao's Team
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        Du hao team from college of agriculture and biotechnology of Zhejiang university has been keen on the engineering of plants. In 2023, they proposed a new strategy to transplant the caffeic acid cycle into plants and successfully improved the brightness of luminous plant [2].
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Since they chose the same bio-luminescence system, we can learn from how they transplant the caffeic acid cycle and how they improved it. Compared to our microbial carrier, they chose plants to load the bio-luminescence cycle. It should be interesting and meaningful to compare the two different choices and help us to further design our model. 
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic4">
+                    <style>
+                        #Pic4
+                        {
+                            height: 500px;
+                            background-image: url(./img//human_practice/img/duhaolab.jpg);
+                        }
+                    </style>
+                </div>
+                <div id="ShanghaiTechLinksHere" class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 3. The performance of $\scriptsize{\it{eFBP}}$ bioluminescent plants in lighting up the room, picture captured with a Nikon D750 camera with the above parameter. Scale bars, 10 cm. From  $\scriptsize{\it{Metabolic~engineering~and~mechanical~investigation~of~enhanced~plant~autoluminescence}}$ [2].  
+                    </p>
+                </div>
+            </div>
+            <!-- Du_haos_Team -->
+
+            <!-- ShanghaiTech_China_2023 -->
+            <div class="ParentBox" id="container-ShanghaiTech_China_2023" >
+                <style>
+                    #container-ShanghaiTech_China_2023
+                    {
+                        background-color: rgba(234, 224, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        ShanghaiTech-China 2023
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        It's suprising to find that another team ShanghaiTech-China from ShanghaiTech university competed for iGEM in 2023 with the similar project of ours. Instead of caffeic acid cycle, they select a bacterial-original luminescence system to create light. 
+                    </p>
+                    <p style="text-indent: 1em;">
+                        They transfered the luxCDABE operon gene into PCC7942 strain(a kind of cyano) to produce carbon-free light. We also compared the co-culture system and cyano-single system and finally decided our present design due to the higher production ability and engineering potential. It should be beneficial to have a communication with them.
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic5">
+                    <style>
+                        #Pic5
+                        {
+                            height: 520px;
+                            background-image: url(./img//human_practice/img/lamp.png);
+                        }
+                    </style>
+                </div>
+                <div id="LightbioLinksHere" class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 4. <a style="text-decoration: underline;font-size: 16px;" target="_blank" href="https://2023.igem.wiki/shanghaitech-china/index.html">Homepage</a> of LAMPS by ShanghaiTech-China 2023.  
+                    </p>
+                </div>
+            </div>
+            <!-- ShanghaiTech_China_2023 -->
+
+            <!-- light_bio -->
+            <div class="ParentBox" id="container-Light_bio" >
+                <style>
+                    #container-Light_bio
+                    {
+                        background-color: rgba(234, 234, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 65px 0 0 0;">
+                        Light bio
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p style="text-indent: 1em;">
+                        To make the design more suitable for the society and can be really implemented into our life, this project should be profitable and possess marketing potential. One of the successful cases is light bio, a commercial company celling firefly petunia. They have just released their product reservation and gained received a great deal of attention. 
+                    </p>
+                    <p style="text-indent: 1em;">
+                        It's interesting to learn how they come up with the idea and how to make it profitable. Selling a living plant is different from selling an iphone, especially for genetically engineered plants. How to make the light sustainable is also a key question we care about. 
+                    </p>
+                </div>
+                <div class="content-pic" id="Pic6">
+                    <style>
+                        #Pic6
+                        {
+                            height: 520px;
+                            background-image: url(./img//human_practice/img/截屏2024-02-22\ 22.09.02.png);
+                        }
+                    </style>
+                </div>
+                <div id="ReferenceLinksHere" class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 5. <a style="text-decoration: underline;font-size: 16px;" target="_blank" href="https://light.bio">Homepage</a> of Light Bio. 
+                    </p>
+                </div>
+            </div>
+            <!-- light_bio -->
+
+            <!-- Reference -->
+            <div class="ParentBox" id="container-Reference" >
+                <style>
+                    #container-Reference
+                    {
+                        background-color: rgba(212, 234, 210, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 65px 0 0 0;">
+                        Reference
+                    </p>
+                </div>
+                <div class="content-text">
+                    <p>
+                        [1] 京发改[2016]1586号《北京市“十三五”时期绿色照明工程实施方案》<br>
+
+                        [2] Zheng, P., Ge, J., Ji, J., Zhong, J., Chen, H., Luo, D., Li, W., Bi, B., Ma, Y., Tong, W., Han, L., Ma, S., Zhang, Y., Wu, J., Zhao, Y., Pan, R., Fan, P., Lu, M. and Du, H. (2023), Metabolic engineering and mechanical investigation of enhanced plant autoluminescence. Plant Biotechnol. J, 21: 1671-1681. doi: 10.1111/pbi.14068
+                    </p>
+                </div>
+            </div>
+            <!-- Reference -->
+
+
+
+            <div style="min-height: 150px; min-width: 100%;"></div>
+
+        </div>
+
+        <!-- 内容 结束 -->
+        <!-- ---------------------------------------------------------------------- -->
+
+
+        <!-- ENDing begins -->
+        <div class="endbar" ></div>
+        <div class="CopyrightDeclare" >
+            <p style="color: #ffffff;" class="ContactUs">Contact us: E-mail: zr-liu22@mails.tsinghua.edu.cn | Tel: 13547831314 </p>
+            <p style="color: #ffffff;" class="ContactUs">Copyright © 2024 Tsinghua University Tanwei College iGEM winter training Group 4. All rights reserved. </p>
+        </div>
+        <!-- it all ends -->
+
+        
+
+
+    </body>
+</html>
