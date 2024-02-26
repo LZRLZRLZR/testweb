@@ -5,20 +5,94 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="./css/Team-Team_member.css">
-        <!-- <link rel="stylesheet" href="./css/iconfont.css"> -->
 
         <link rel="icon" type="image/x-icon" href="./img/icon2-1.ico">
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .MathJax
+            {
+                outline: 0 !important;
+            }
+            .MathJax_Display
+            {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+        </style>
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1&display=swap" rel="stylesheet">
-        
-        <title>Team-Team_member</title>
 
+        <link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+        <link rel="dns-prefetch" href="https://cdn.mathjax.org" />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"]
+                    ], //行内公式选择$
+                    displayMath: [
+                        ["$$", "$$"]
+                    ] //段内公式选择$$
+                },
+                svg: {
+                    fontCache: 'global'
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'], //避开某些标签
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+        </script>
+
+        <title>Team-Team Members</title>
+
+        
     </head>
     <body>
+        <script>
+            function getRatio()
+                {
+                    var ratio=0;
+                    var screen=window.screen;
+                    var ua=navigator.userAgent.toLowerCase();
+
+                    if(window.devicePixelRatio !== undefined)
+                    {
+                        ratio=window.devicePixelRatio;    
+                    }
+                    else if(~ua.indexOf('msie'))
+                    {
+                        if(screen.deviceXDPI && screen.logicalXDPI)
+                        {
+                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                        }
+                    
+                    }
+                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                    {
+                        ratio=window.outerWidth/window.innerWidth;
+                    }
+
+                    // if(ratio)
+                    // {
+                    //     ratio=Math.round(ratio*100);    
+                    // }
+                    return ratio;
+                }
+                let t=getRatio();
+                console.log( getRatio() );
+                document.body.style.zoom =1.5/t;
+        </script>
         <style>
             .body   
             {
@@ -34,7 +108,7 @@
             <a target="_blank" href="./mainbody.html"><img src="./img/LOGOinPic_base.png" alt="This is our logo!"></a>
             <!-- <a href="#" class="LOGOinTEXT">CYSL</a> -->
             <ul>
-                <li><a href="#">Home</a></li>            
+                <li><a target="_blank" href="./mainbody.html">Home</a></li>            
                 <li>
                     <a href="#GapforProjectIntro">Project</a>
                     <div class="nav-sub" style="width:185px; height:105px;">
@@ -274,11 +348,11 @@
                                         - Synchronized Lysis Circuit can cause S.typhimurium release PETase and MHETase periodically </li>
                                     <li><span class="inList">Dry lab:</span> <br>
                                         - tried but with no gain </li>
-                                    <li><span class="inList">Wet lab:</span> <br>
+                                    <li style="color: #cfb86e;"><span class="inList"  >Wet lab:</span> <br>
                                         - Biosynthesis of Caffeic acid and the Bioluminescence Circuit </li>
                                 </ul>
                             </p>
-                            <span style="color: #cfb86e;">Jianting Gong</span>
+                            <span style="color: #a580ae;">Jianting Gong</span>
                         </div>
                         <div class="user-text"><!-- Yang Jiayi -->
                             <i class="material-icons" style="color : #ffffff;">drafts</i>

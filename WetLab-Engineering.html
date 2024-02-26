@@ -208,7 +208,7 @@
                 <div class="menu">
                     <!-- 侧边栏的标题 开始-->
                     <div class="menu-title">
-                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 24px; font-weight: 900;">Model</span></a>
+                        <a href="#" style="color: #363b28; text-decoration: none;"><span style="font-size: 24px; font-weight: 900;">Engineering</span></a>
                     </div>
                     <!-- 侧边栏的标题 结束-->
 
@@ -225,12 +225,15 @@
                         <input type="checkbox" id="menu-item1">
                         <label for="menu-item1">
                             <i class="material-icons" style="font-size: 20px;">apps</i>
-                            <span style="font-size: 14px;">A dynamic coculture model based on mechanistic coupling of genome scale metabolic models</span>
+                            <span style="font-size: 18px;">Light-controlled switch</span>
                             <i class="material-icons">keyboard_arrow_down</i>
                         </label>
                         <div class="menu-content">
-                            <span style="font-size: 12px;"><a href="#RepresentationLinksHere">Representation of the model</a></span>
-                            <span style="font-size: 12px;"><a href="#ConstructionLinksHere">Construction of the system of ODEs</a></span>
+                            <span style="font-size: 14px;"><a href="#ACycle1LinksHere">Cycle 1</a></span>
+                            <span style="font-size: 14px;"><a href="#ACycle2LinksHere">Cycle 2</a></span>
+                            <span style="font-size: 14px;"><a href="#ACycle3LinksHere">Cycle 3</a></span>
+                            <span style="font-size: 14px;"><a href="#ACycle4LinksHere">Cycle 4</a></span>
+                            <span style="font-size: 14px;"><a href="#ACycle5LinksHere">Cycle 5</a></span>
                         </div>
                     </div>   
 
@@ -238,12 +241,37 @@
                         <input type="checkbox" id="menu-item2">
                         <label for="menu-item2">
                             <i class="material-icons" style="font-size: 20px;">apps</i>
-                            <span style="font-size: 18px;">AlphaFold2 Structure Prediction</span>
+                            <span style="font-size: 18px;">Fusion protein TUP1-FHY1</span>
                             <i class="material-icons">keyboard_arrow_down</i>
                         </label>
                         <div class="menu-content">
-                            <span style="font-size: 14px;"><a href="#IntroductionLinksHere">Introduction</a></span>
-                            <span style="font-size: 14px;"><a href="#DesignLinksHere">Design</a></span>
+                            <span style="font-size: 14px;"><a href="#BCycle1LinksHere">Cycle 1</a></span>
+                            <span style="font-size: 14px;"><a href="#BCycle2LinksHere">Cycle 2</a></span>
+                        </div>
+                    </div>  
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item3">
+                        <label for="menu-item3">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 16px;">Construction of Luminescence Circuit and Biosynthesis of Caffeic Acid</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#CCycle1LinksHere">Cycle 1</a></span>
+                            <span style="font-size: 14px;"><a href="#CCycle2LinksHere">Cycle 2</a></span>
+                        </div>
+                    </div>  
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item4">
+                        <label for="menu-item4">
+                            <i class="material-icons" style="font-size: 20px;">apps</i>
+                            <span style="font-size: 16px;">Reference</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </label>
+                        <div class="menu-content">
+                            <span style="font-size: 14px;"><a href="#ReferenceLinksHere">Reference</a></span>
                         </div>
                     </div>  
 
@@ -293,27 +321,35 @@
         <!-- height: 600px; -->
         <div style="height: fit-content; width: 65%;  left: 32%; position: relative; ">
 
-
-            <div class="ParentBox" id="OverviewLinksHere">
-                <div class="content-text">
-                    <p style="font-size: 40px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
-                        A dynamic coculture model based on mechanistic coupling of genome scale metabolic models
-                    </p>
-                </div>
-            </div>
-
             <div class="ParentBox" id="container-HeadTextofAdynamic">
-                <div class="content-text">
-                    <p style="text-indent: 1em;">
-                        To understand, predict and ultimately control the behavior of the synthetic microbial consortium, we designed a mechanistic, dynamic model of the microbial consortium. The balance of concentration of extracellular substrates and/or products of our microbial consortium are described by a system of ordinary differential equations (ODEs), and intracellular processes are modeled using genome scale metabolic models (GSMs) that contain all metabolic capabilities of each organism. The final model integra tes 2000 metabolites and 2442 reactions representing a broad range of processes (growth of each microorganism, metabolite production and utilization, transport between compartments, diffusion, etc). This model can be written by <a id="RepresentationLinksHere" href="https://sbml.org/" target="_blank" style="text-decoration: underline;">SBML</a> and utilized by <a href="https://cobrapy.readthedocs.io/en/latest/#" target="_blank" style="text-decoration: underline;">cobra</a> in <a href="https://sbml.org/" target="_blank" style="text-decoration: underline;">python</a>. Our model are based on the model developed by <a href="https://2021.igem.org/Team:Toulouse_INSA-UPS/Model" target="_blank" style="text-decoration: underline;">Toulouse INSA-UPS</a>.
+                <div class="content-pic" id="Pic1">
+                    <style>
+                        #Pic1
+                        {
+                            height: 720px;
+                            background-image: url(./img/engineering/img/engineering_figure_1.png);
+                        }
+                    </style>
+                </div>
+                <div id="ConstructionLinksHere" class="content-text">
+                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 1. Representation of our engineering process.
                     </p>
                 </div>
             </div>
 
-            <!-- Representation_of_the_model -->
-            <div class="ParentBox" id="container-Representation_of_the_model" >
+            <div class="ParentBox">
+                <div class="content-text" id="ACycle1LinksHere">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
+                        Light-controlled switch
+                    </p>
+                </div>
+            </div>
+
+            <!-- A_Cycle_1 -->
+            <div class="ParentBox" id="container-Cycle_1" >
                 <style>
-                    #container-Representation_of_the_model
+                    #container-Cycle_1
                     {
                         background-color: rgba(225, 225, 240, 0.5);
                         border-radius: 15px;
@@ -321,231 +357,451 @@
                 </style>
                 <div class="content-text">
                     <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
-                        Representation of the model
+                        Cycle 1
                     </p>
                 </div>
-                
-                <div class="content-pic" id="Pic1">
+
+                <div class="content-text" >
+                    <h2>Design & Build</h2>
+                    <p style="text-indent: 1em;">
+                        At the beginning, we find two directions to realize light control:
+                    </p>
+                    <div class="container-ul" style="margin: 5px 0 15px 0;">
+                        <ol>
+                            <li>
+                                &nbsp;&nbsp;Using optogenetic devices
+                            </li>
+                            <li>
+                                &nbsp;&nbsp;Fusing LOV domain with luciferase
+                            </li>
+                        </ol>
+                    </div>
+                    <p style="text-indent: 1em; font-style: italic;">
+                        When in blue light (that is daytime or bright environment in our item), LOV domain changes its structure and disrupt luciferase activity.Without light, LOV domain keeps tight and luciferase has catalytic activity.
+                    </p>
+
+                    <h2>Test</h2>
+                    <p style="text-indent: 1em;">
+                        After searching detailed information about luciferase we used,we found that its structure was still unresolved(only can be prediceted by AlphaFold).
+                    </p>
+                    <h2>Learn</h2>
+                    <p style="text-indent: 1em;">
+                        Considering the difficulty of fusing LOV domain with the enzyme and achieving ideal photocontrol activity at the same time,we discarded this direction and decided to use optogenetic devices.
+                    </p >
+                </div>
+                <div class="content-pic" id="Pic2">
                     <style>
-                        #Pic1
+                        #Pic2
                         {
-                            height: 520px;
-                            background-image: url(./img/dry_lab_final/img/co_culture_simulation.svg);
+                            height: 150px;
+                            background-image: url(./img/engineering/img/engineering_figure_2.png);
                         }
                     </style>
                 </div>
-                <div id="ConstructionLinksHere" class="content-text">
-                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 1. Representation of the dynamic coculture model.
+                <div class="content-text">
+                    <p id="ACycle2LinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 2. Result searched in <a style="font-size: 16px; text-decoration: underline;" target="_blank" href="https://www.uniprot.org/uniprotkb/A0A3G9JYH7/feature-viewer">UniProt</a>
                     </p>
                 </div>
-            </div>
-            <!-- Representation_of_the_model -->
 
-            <!-- Construction -->
-            <div class="ParentBox" id="container-Construction" >
+            </div>
+            <!-- A_Cycle_1 -->
+            
+            <!-- A_Cycle_2 -->
+            <div class="ParentBox" id="container-Cycle_2" >
                 <style>
-                    #container-Construction
+                    #container-Cycle_2
                     {
-                        background-color: rgba(238, 225, 240, 0.5);
+                        background-color: rgba(237, 225, 240, 0.5);
                         border-radius: 15px;
                     }
                 </style>
                 <div class="content-text">
                     <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 60px 0 0 0;">
-                        Construction of the system of ODEs
+                        Cycle 2
                     </p>
                 </div>
+
                 <div class="content-text" >
-                    <h2>Growth</h2>
+                    <h2>Design & Build</h2>
                     <p style="text-indent: 1em;">
-                        The growth of each of the microorganisms is modeled using their growth rate 
-                        <!-- $ \scriptsize{} $ -->
-                        $ \scriptsize{\mu ~(in~h^{-1})} $
-                        $$ \scriptsize{\frac{dX_{cyano}}{dt}=X_{cyano}\cdot\mu_{cyano}} $$
-                        $$ \scriptsize{\frac{dX_{yeast}}{dt}=X_{yeast}\cdot\mu_{yeast}} $$
+                        When comes to optogenetic devices in yeast, there are even more choices.
                     </p>
-                    
                     <p style="text-indent: 1em;">
-                        Where $ \scriptsize{X_{cyano}} $ and $ \scriptsize{X_{yeast}} $ denote the biomass concentration for cyanobacteria and yeasts, respectively. 
+                        Given that we need to inhibit luciferase activity in the presence of light, we can either block luciferase gene expression or express enzyme to degrade luciferase.
                     </p>
-                    
-                    <h2>$\scriptsize{CO_2}$ gas transfer</h2>
-                    <p style="text-indent: 1em;"> 
-                        The $\scriptsize{CO_2}$ balance can be represented by considering three processes: the input of $\scriptsize{CO_2}$ in the reactor provided by the bubbling of $\scriptsize{CO_2}$-enriched air ($\scriptsize{I_{CO_2}}$), the transfer of $\scriptsize{CO_2}$ from the gas to the liquid phase ($\scriptsize{T_{CO_2}}$) and finally the output of gas $\scriptsize{CO_2}$ outside of the reactors ($\scriptsize{O_{CO_2}}$) (Figure 1).
-                        $$ \scriptsize{\frac{d_{CO_2,g}}{dt}=I_{CO_2}-T_{CO_2}-O_{CO_2}} $$
-                        $$ \scriptsize{I_{CO_2}=Q_{gas}\cdot CO_{2,input}} $$
-                        $$ \scriptsize{T_{CO_2}=\kappa_l\alpha(\beta\cdot CO_{2,g}-CO_{2,l})} $$
-                        $$ \scriptsize{O_{CO_2}=Q_{gas}\cdot CO_{2,g}} $$
-                    </p>
-                    <p style="text-indent: 1em;"> 
-                        Where $\scriptsize{CO_{2,g}}$and $\scriptsize{CO_{2,l}}$ are the  $ \scriptsize{CO_2}$ concentrations in the gas and liquid phase respectively (in mM), $\scriptsize{Q_{gas}}$ is the flow of air bubbled in the reactor (in L.h-1), κlα is the global mass transfer coefficient of  $ \scriptsize{CO_2}$ (in h-1) and β is Henry's law constant which models the gas-liquid equilibrium.
-                    </p>
-                    
-                    <h2>Carbon source uptake</h2>
-                    <p style="text-indent: 1em;"> 
-                        <!-- $ \scriptsize{} $ -->
-                        In our co-culture system, cyano utilize $\scriptsize{CO_2}$ as carbon source while yeast utilize sucrose as carbon source.
-                        $$ \scriptsize{q_{CO_2,cyano}=q_{CO_2,cyano}^{max}\cdot(\frac{CO_{2,l}}{K_{CO_2}+CO_{2,l}})} $$
-                        $$ \scriptsize{q_{sucrose,yeast}=q_{sucrose,yeast}^{max}\cdot(\frac{Sucrose}{K_{Sucrose}+Sucrose})} $$
-                        $$ \scriptsize{\frac{d_{CO_2}}{dt}=T_{CO_2}-q_{CO_2,cyano}\cdot X_{cyano}+q_{CO_2,yeast}\cdot X_{yeast}} $$
-                        $$ \scriptsize{\frac{d_{Sucrose}}{dt}=q_{sucrose,cyano}\cdot X_{cyano}-q_{sucrose,yeast}\cdot X_{yeast}} $$
-                    </p>
-                    
 
-                    <h2>Light</h2>
-                    <p style="text-indent: 1em;"> 
-                        Light is an important aspect of our model. First, we converted the experimentally measured light intensity $\scriptsize{I_{light}}$ ($\scriptsize{\mu mol_{photon}\cdot m^{-2}\cdot s^{-1}}$) into a specific flux $\scriptsize{q_{photon}}$($\scriptsize{mmol_{photon}\cdot g_{DCW}^{-1}\cdot h^{-1}}$)  using the reaction rate proposed by Clark et al.[1]: 
-                        $$\scriptsize{q_{photon}=I_{light}\cdot \frac{3600\cdot Surface}{1000\cdot X_{cyano}\cdot Volume_{reactor}}}$$
+                    <h2>Test</h2>
+                    <p style="text-indent: 1em;">
+                        After searching, we found that there were not enough studies on luciferase used in the caffeic acid cycle to find a good way to degrade it.
                     </p>
-                    <h2>Caffeic acid cycle</h2>
                     <p style="text-indent: 1em;">
-                        Each step of the caffeic cycle can be regarded as a first order reaction:
-                        $$ \scriptsize{\frac{d[caffeic~acid]}{dt}=q_{caffeic ~acdi}\cdot X_{yeast}-K_1\cdot [caffeic ~acid]+K_5\cdot [Caffeylpyruvic~acid]} $$
-                        $$ \scriptsize{\frac{d[caffeoyl~CoA]}{dt}=K_1\cdot [caffeic~acid]} $$
-                        $$ \scriptsize{\frac{d[hispidin]}{dt}=K_2\cdot [caffeoyl~CoA]} $$
-                        $$ \scriptsize{\frac{d[3-Hydroxy-hispidin]}{dt}=K_3\cdot [hispidin]} $$
-                        $$ \scriptsize{\frac{d[Caffeyl-pyruvic~acid]}{dt}=K_4\cdot [3-Hydroxy-hispidin]} $$
-                    </p> 
-                    <p style="text-indent: 1em;">
-                        <!-- $ \scriptsize{} $ -->
-                        where $\scriptsize{q_{caffeic~acid}(mmol\cdot g_{DW}^{-1}\cdot h^{-1})}$​ represents the production rate of caffeic acid of interest.
-                    </p> 
-                    
-                    <h2>Genome Scale Models</h2>
-                    <p style="text-indent: 1em;">
-                        <!-- $ \scriptsize{} $ -->
-                        Flux Balance Analysis (FBA), a key method for simulating metabolic fluxes in silico, represents intracellular dynamics in our model using genome scale metabolic models (GSMs) [2]. FBA employs the GSM, which encompasses the metabolic network reconstruction, to forecast phenotypic responses under environmental constraints. In the equations mentioned, various fluxes, including growth rates and specific fluxes of odorant molecule production, are described, impacting the entire production process.
-                    </p> 
-                    <p style="text-indent: 1em;">
-                        Our model of <span style="font-style: italic;">S.cerevisiae</span> is based on the GSM iMM904 developed by Monica L Mo et al. in 2009 [3]. iMM904 is a basic model in yeast, containing 1226 metabolites and 1577 reactions. And for the <span style="font-style: italic;">S.elongatus</span>, we chose model  iJB785 developed by Jared T Broddrick et al. in 2016 [4]. This model contains 768 metabolites and 849 reactions. We further added 6 metabolites and 16 reactions to complete the system. 
-                    </p> 
-                </div>
-
-                <div class="content-pic" id="Pic2">
-                    <style>
-                        #Pic2
-                        {
-                            height: 1600px;
-                            background-image: url(./img/dry_lab_final/img/saved_map.svg);
-                        }
-                    </style>
-                </div>
-                <div class="content-text">
-                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 2. Escher map of model iMM904 from <a style="font-size: 16px; text-decoration: underline;" target="_blank" href="http://bigg.ucsd.edu/models/iMM904">BIGG</a>
+                        However, we finded that the stability of this luciferase is greatly affected by temperature, and it can naturally lose activity during the day. In the future, this property of the enzyme can be further strengthened through directed evolution and a more suitable temperature range can be found.
                     </p>
-                </div>
-
-            </div>
-            <!-- Construction -->
-            
-            <div class="ParentBox" id="IntroductionLinksHere">
-                <div class="content-text">
-                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
-                        AlphaFold2 Structure Prediction
+                    <h2 id="ACycle3LinksHere">Learn</h2>
+                    <p style="text-indent: 1em;">
+                        Hence, blocking luciferase gene expression is our decision.
                     </p>
                 </div>
             </div>
-            
-            <!-- Introduction -->
-             <div class="ParentBox" id="container-Introduction" >
+            <!-- A_Cycle_2 -->
+        
+            <!-- A_Cycle_3 -->
+            <div class="ParentBox" id="container-Cycle_3" >
                 <style>
-                    #container-Introduction
+                    #container-Cycle_3
                     {
                         background-color: rgba(240, 225, 225, 0.5);
                         border-radius: 15px;
                     }
                 </style>
                 <div class="content-text">
-                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0 0 0;">
-                        Introduction
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Cycle 3
                     </p>
                 </div>
+
                 <div class="content-text" >
-                    <p style="text-indent: 1em;">
-                        AlphaFold2 is an artificial intelligence software developed by DeepMind to predict the 3D structure of proteins. AlphaFold2 predicts with high enough accuracy to approximate experimental measurements. This power depends on a large enough database and a well-developed deep learning model. Specifically, it analyzes amino acid interactions and predicts how proteins are likely to fold through a technique called graph neural networks. By extracting and pairing feature information from protein-level structures, a deep learning model called “Transformer” is used to understand and interpret patterns in amino acid sequences and translate these structures into the 3D structure of the protein. Finally, optimization is performed to match the predicted pairs and distances [5]. 
-                        <!-- $ \scriptsize{} $ -->
-                    </p>
-                </div>
-                <div class="content-pic" id="Pic3">
-                    <style>
-                        #Pic3
-                        {
-                            height: 520px;
-                            background-image: url(./img/dry_lab_final/img/alpha_fold.png);
-                        }
-                    </style>
-                </div>
-                <div class="content-text">
-                    <p id="DesignLinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 3. Homepage of AlphaFold.
+                    <p id="ACycle4LinksHere" style="text-indent: 1em;">
+                        During searching, we found a research which build a system to repress gene expression on the basis of yeast two-hybrid system[1]. In this research,we learned about TUP1, a yeast general repressor protein. Combining yeast two-hybrid systems in optogenetics, we chose Y2H system with TUP1.
                     </p>
                 </div>
             </div>
-            <!-- Introduction -->
+            <!-- A_Cycle_3 -->
 
-            <!-- Design -->
-            <div class="ParentBox" id="container-Design" >
+            <!-- A_Cycle_4 -->
+            <div class="ParentBox" id="container-Cycle_4" >
                 <style>
-                    #container-Design
+                    #container-Cycle_4
                     {
-                        background-color: rgba(240, 233, 225, 0.5);
+                        background-color: rgba(240, 234, 225, 0.5);
                         border-radius: 15px;
                     }
                 </style>
                 <div class="content-text">
-                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 50px 0 0 0;">
-                        Design
-                    </p>
-                </div>
-                <div class="content-text" >
-                    <p style="text-indent: 1em;">
-                        In our experiments, we used <a target="_blank" href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb?pli=1#scrollTo=kOblAo-xetgx">AlphaFold2</a> colab to design a fusion protein we needed. According to our previous research, we need to fuse protein TUP1(Figure 4) and protein FHY1(Figure 5) together. What's more these two proteins should function themselves respectively. Protein TUP1 needs its N-terminal sequences to function normally [6]. When we simply put the sequences together, we found that TUP1 positioned through FHY1. And that wasn't what we need as we proposed that mixing structure of two proteins will cause functional loss. So we decided to choose a proper linker to link two proteins as well as separate them into two clear part in space. 
-                        <!-- $ \scriptsize{} $ -->
-                    </p>
-                </div>
-                <div class="content-pic" id="Pic4">
-                    <style>
-                        #Pic4
-                        {
-                            height: 520px;
-                            background-image: url(./img/dry_lab_final/img/Figure\ 4.png);
-                        }
-                    </style>
-                </div>
-                <div class="content-text">
-                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 4. 3D structure of TUP1.
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Cycle 4
                     </p>
                 </div>
 
-                <div class="content-pic" id="Pic5">
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        Here we comes to the last step, chosing a photosensitive element.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Comparing Phy-Y2H, CRY2-Y2H and LOV-Y2H in a review article [2], Phy-Y2H has the following advantages:
+                    </p>
+                    <div id="ACycle5LinksHere" class="container-ul" style="margin: 5px 0 15px 0;">
+                        <ul>
+                            <li>
+                                &nbsp;&nbsp;Phy-Y2H has the fastest response
+                            </li>
+                            <li>
+                                &nbsp;&nbsp;Red light is more penetrating than blue light and works better in covered areas
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- A_Cycle_4 -->
+            
+            <!-- A_Cycle_5 -->
+            <div class="ParentBox" id="container-Cycle_5" >
+                <style>
+                    #container-Cycle_5
+                    {
+                        background-color: rgba(240, 240, 225, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 40px 0 0 0;">
+                        Cycle 5
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <p style="text-indent: 1em;">
+                        When designing plasmid, we found that without GAD, GAL1 promoter won't work. So we changed our plasmid used in light-controlled switch, adding GAD gene and choosing pGAD424 plasmid, which is commercial.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        After going through the above process, we decided to use a new R/FR light-controlled gene switch to design our system.
+                    </p>
+                </div>
+
+                <div class="content-pic" id="Pic3">
                     <style>
-                        #Pic5
+                        #Pic3
                         {
-                            height: 520px;
-                            background-image: url(./img/dry_lab_final/img/Figure\ 5.png);
+                            height: 150px;
+                            background-image: url(./img/engineering/img/engineering_figure_3.png);
                         }
                     </style>
                 </div>
                 <div class="content-text">
-                    <p style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
-                        Figure 5. 3D structure of FHY1.
+                    <p id="ACycle2LinksHere" style="text-indent: 1em; text-align: center; font-style: italic; font-size: 16px; color: #333333;">
+                        Figure 3. Plasmid and parts used in light-controlled switch.
                     </p>
                 </div>
-                <p style="text-indent: 1em;">
-                    We used some linkers that were often used in design of a fusion protein. We proposed that flexible linker wouldn’t help us divide the proteins into two clear part, so we choose rigid linkers primarily, such as (EAAAK)<sub>n</sub>, PAPAP, A(EAAAK)<sub>4</sub>ALEA(EAAAK)<sub>4</sub>A.
-                </p>
             </div>
-            <!-- Design -->
+            <!-- A_Cycle_5 -->
+            
+
+            <div class="ParentBox">
+                <div class="content-text" id="BCycle1LinksHere">
+                    <p style="font-size: 48px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
+                        Fusion protein TUP1-FHY1
+                    </p>
+                </div>
+            </div>
+
+            <!-- B_Cycle_1 -->
+            <div class="ParentBox" id="container-Cycle_21" >
+                <style>
+                    #container-Cycle_21
+                    {
+                        background-color: rgba(240, 225, 225, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Cycle 1
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <h2>Design</h2>
+                    <p style="text-indent: 1em;">
+                        The functional site of TUP1 is its N-terminal sequences. So FHY1 should be fused to the C-terminal of TUP1. To create the fusion protein TUP1-FHY1, we first try to simply link them together to see whether two proteins can fold normally respectively.
+                    </p>
+                    <h2>Build</h2>
+                    <p style="text-indent: 1em; font-style: italic;">
+                        We found the sequences of TUP1 and FHY1 from NCBI and previous parts from igem. Then we applied the sequences to AlphaFold2.
+                    </p>
+
+                    <h2>Test</h2>
+                    <p style="text-indent: 1em;">
+                        We got the 3D structure of our fusion protein and the pLDDT number.
+                    </p>
+                    <h2>Learn</h2>
+                    <p style="text-indent: 1em;">
+                        We found that TUP1 positioned through FHY1. And that wasn't what we need as we proposed that mixing structure of two proteins will cause functional loss. So we decided to add a linker.
+                    </p>
+                    <p id="BCycle2LinksHere" style="text-indent: 1em;">
+                        By consulting information online, we know that some specific sequences were often used. The most often used sequences such as $\scriptsize{(GGGGS)_n}$, $\scriptsize{(ESSSK)_n}$. We proposed that flexible linker wouldn't help us divide the proteins into two clear part, so we choose rigid linkers primarily. 
+                    </p>
+                </div>
+            </div>
+            <!-- B_Cycle_1 -->
+
+            <!-- B_Cycle_2 -->
+            <div class="ParentBox" id="container-Cycle_22" >
+                <style>
+                    #container-Cycle_22
+                    {
+                        background-color: rgba(225, 240, 225, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Cycle 2
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <h2>Design</h2>
+                    <p style="text-indent: 1em;">
+                        By consulting information online, we know that some specific sequences were often used. The most often used sequences such as $\scriptsize{(GGGGS)_n}$, $\scriptsize{(ESSSK)_n}$. We proposed that flexible linker wouldn't help us divide the proteins into two clear part, so we choose rigid linkers primarily.
+                    </p>
+                    <h2>Build</h2>
+                    <div class="container-table" style="margin: 15px 0;">
+                        <table border="1">
+                            <tr>
+                                <th>Text_ID</th>
+                                <th>Linker</th>
+                            </tr>
+                            <tr>
+                                <th>Test_1</th>
+                                <td>AEAAAKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_2</th>
+                                <td>AEAAAKGGGGSEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_3</th>
+                                <td>AEAAAKEAAAKEAAAKEAAAKEAAAKEAAAKGGGGSGGGGSGGGGSEAAAKEAAAKEAAAKEAAAKEAAAKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_4</th>
+                                <td>AEAAAKEAAAKEAAAKGGGGSGGGGSGGGGSEAAAKEAAAKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_5</th>
+                                <td>GGGGSEAAAKEAAAKEAAAKGGGGSEAAAKEAAAKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_6</th>
+                                <td>AEAAAKEAAAKAAEAAAKEAAAKAAEAAAKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_7</th>
+                                <td>PAPAP</td>
+                            </tr>
+                            <tr style="color: rgb(182, 18, 18);">
+                                <th >Test_8</th>
+                                <td>AEAAAKEAAAKEAAAKEAAAKALEAEAAAKEAAAKEAAAKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_9</th>
+                                <td>AEAAAKEAAAKEAAAKEAAAKEAAAKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_10</th>
+                                <td>AEAAAKECAAAKEAAAKGGGGSGCCGSGGGGSEAAAKEAAACKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_11</th>
+                                <td>AEAAAKECAAAKEAAAKGGGGSGGSGGGGSEAAAKEAAACKEAAAKA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_11</th>
+                                <td>ACEAAAKEAAAKEAAAKEAAAKALEAEAAAKEAAAKEAAAKEAAAKCA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_12</th>
+                                <td>ACEAAAKEAAAKEAAAKEAAAKALEAEAAAKEAAAKEAAAKEAAAKCA</td>
+                            </tr>
+                            <tr>
+                                <th>Test_13</th>
+                                <td>GGGGSGGGGSGGGGGSGGGGSGGGSGGGGS</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h2>Test</h2>
+                    <p style="text-indent: 1em;">
+                        Every time we applied the sequences to AlphaFold 2, it would give us 5 predicted models.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        We designed 12 different linkers and expect to find a best one (Test_13 was a simple verification that showed flexible linker had less promising results than rigid linker). However, it seemed difficult to use a linker loop to change the direction TUP1 positioned. Fortunately, one of our designs showed almost complete separation of all 5 models AlphaFold2 had displayed.
+                    </p>
+                    <h2>Learn</h2>
+                    <p style="text-indent: 1em;">
+                        We found that linkers with (GGGGS) showed less expected results when testing. And a longer linker showed better results. The inserting of amino acid C had no positive effects on the results. 
+                    </p>
+                    <p style="text-indent: 1em;">
+                        Also, it must be noticed that the pLDDT number of our model were around 59, with our best predicted design had the higher number of 62. We proposed that the flexibility of FHY1 caused the lower number of pLDDT.
+                    </p>
+                    <p style="text-indent: 1em;">
+                        We at last choose Test_8 as our final model. 
+                    </p>
+                </div>
+            </div>
+            <!-- B_Cycle_2 -->
+
+            <div class="ParentBox">
+                <div class="content-text" >
+                    <p id="CCycle1LinksHere" style="font-size: 44px; font-family: 'Tapestry', serif; padding: 15px 0;"><!-- 48px -->
+                        Construction of Luminescence Circuit and Biosynthesis of Caffeic Acid
+                    </p>
+                </div>
+            </div>
+
+            <!-- C_Cycle_1 -->
+            <div class="ParentBox" id="container-Cycle_31" >
+                <style>
+                    #container-Cycle_31
+                    {
+                        background-color: rgba(225, 240, 240, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Cycle 1
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <h2>Design</h2>
+                    <p style="text-indent: 1em;">
+                        As the substrates of the fungal bioluminescence pathway can be recycled, we initially planned to secrete a large amount of enzyme and caffeic acid into the extracellular space, so that the enzyme and substrate could accumulate to high concentrations outside the cell to achieve higher luminous intensity, which was proved in a paper [3] . At the same time, we can control the transport pathway of small molecules such as NADPH and ATP on the cell membrane to control light emission.
+                    </p>
+                    <h2>Build</h2>
+                    <p style="text-indent: 1em;">
+                        We planned to link the enzymes which involved in the recycling process with signal peptides and then introduce them into S. cerevisiae, along with the necessary transport proteins. We initially intended to construct three plasmids for this part, each responsible for the production of caffeic acid, the secretion of enzymes which involved in the recycling process, and the synthesis of transport proteins.
+                    </p>
+
+                    <h2>Test</h2>
+                    <p style="text-indent: 1em;">
+                        Limited by time condition, we cannot test our device in the lab. However, we have found some serious problems.
+                    </p>
+                    <h2>Learn</h2>
+                    <p id="CCycle2LinksHere" style="text-indent: 1em;">
+                        Because the circuit can turn Malonyl-CoA to CoA and pyruvic acid, in order to recycle these substances, the number of transport proteins required was excessive and the operation was complicated [4].  What's more, high-energy substances like NADPH are easy to generate free radicals under oxidizing conditions outside, which could damage the enzymes. So, we abandoned this approach and decided to place the luminescence cycle into the cells.
+                    </p>
+                </div>
+            </div>
+            <!-- C_Cycle_1 -->
+
+            <!-- C_Cycle_2 -->
+            <div class="ParentBox" id="container-Cycle_32" >
+                <style>
+                    #container-Cycle_32
+                    {
+                        background-color: rgba(225, 228, 240, 0.5);
+                        border-radius: 15px;
+                    }
+                </style>
+                <div class="content-text">
+                    <p style="font-size: 28px; padding-left: 10px; font-weight: 600;margin: 20px 0;">
+                        Cycle 2
+                    </p>
+                </div>
+
+                <div class="content-text" >
+                    <h2>Design</h2>
+                    <p style="text-indent: 1em;">
+                        Through reading papers, we learned that the key enzyme Luz literature research, has poor thermal stability and loses activity within 10 minutes above 30 degrees, while the higher temperature exists during the day. Therefore, we designed to control the synthesis of the Luz enzyme as a key to control light emission.
+                    </p>
+                    <h2>Build</h2>
+                    <p style="text-indent: 1em;">
+                        Because the light control device cannot work without GAL1 promoter, we planned to construct three plasmids for this part: one mainly for the production of caffeic acid, another for the synthesis of enzymes used in the cycle, and genes on these two plasmids are expressed continuously to replenish enzymes which is degraded or lose activity. The third plasmid would express Luz as the part to control luminescence.
+                    </p>
+
+                    <h2>Test</h2>
+                    <p style="text-indent: 1em;">
+                        Limited by time condition, we cannot test our device in the lab.
+                    </p>
+                    <h2>Learn</h2>
+                    <p style="text-indent: 1em;">
+                        Including the light control device, the number of plasmids which need to be introduced is 4, which is difficult to seek for the target strains and makes the procedure quite complex. We are about to conclude this DBTL cycle and propose possible improvement plans:
+                    </p>
+                    <div class="container-ul" style="margin: 5px 0 15px 0;">
+                        <ol>
+                            <li>
+                                &nbsp;&nbsp;Clone more genes to a plasmid?
+                            </li>
+                            <li id="ReferenceLinksHere">
+                                &nbsp;&nbsp;Is plasmids which are too long easy to be broken?
+                            </li>
+                            <li>
+                                &nbsp;&nbsp;Use other fungi such as Rhodotorula toruloides which can synthesis TAL itself [5] ?
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- C_Cycle_2 -->
 
             <!-- Reference -->
             <div class="ParentBox" id="container-Reference" >
                 <style>
                     #container-Reference
                     {
-                        background-color: rgba(212, 234, 210, 0.5);
+                        background-color: rgba(227, 210, 234, 0.5);
                         border-radius: 15px;
                     }
                 </style>
@@ -556,17 +812,15 @@
                 </div>
                 <div class="content-text">
                     <p>
-                        [1] R.L. Clark, L.L. McGinley, H.M. Purdy, T.C. Korosh, J.L. Reed, T.W. Root, B.F. Pfleger, Light-optimized growth of cyanobacterial cultures: growth phases and productivity of biomass and secreted molecules in light-limited batch growth, Metabolic engineering, 47 (2018) 230-242.
+                        [1] M. Hirst, C. Ho, L. Sabourin, M. Rudnicki, L. Penn, I. Sadowski, A two-hybrid system for transactivator bait proteins, Proceedings of the National Academy of Sciences, 98 (2001) 8726-8731.
 
-                        <br>[2] H.S. Choi, S.Y. Lee, T.Y. Kim, H.M. Woo, In silico identification of gene amplification targets for improvement of lycopene production, Applied and environmental microbiology, 76 (2010) 3097-3105.
+                        <br>[2] M.D. Hoffmann, F. Bubeck, R. Eils, D. Niopek, Controlling Cells with Light and LOV, Advanced Biosystems, 2 (2018) 1800098.
 
-                        <br>[3] M.L. Mo, B.Ø. Palsson, M.J. Herrgård, Connecting extracellular metabolomic measurements to intracellular flux states in yeast, BMC systems biology, 3 (2009) 1-17.
+                        <br>[3] P. Zheng, J. Ge, J. Ji, J. Zhong, H. Chen, D. Luo, W. Li, B. Bi, Y. Ma, W. Tong, Metabolic engineering and mechanical investigation of enhanced plant autoluminescence, Plant Biotechnology Journal, (2023).
 
-                        <br>[4] J.T. Broddrick, B.E. Rubin, D.G. Welkie, N. Du, N. Mih, S. Diamond, J.J. Lee, S.S. Golden, B.O. Palsson, Unique attributes of cyanobacterial metabolism revealed by improved genome-scale metabolic modeling and essential gene analysis, Proceedings of the National Academy of Sciences, 113 (2016) E8344-E8353.
+                        <br>[4] A.A. Kotlobay, K.S. Sarkisyan, Y.A. Mokrushina, M. Marcet-Houben, E.O. Serebrovskaya, N.M. Markina, L. Gonzalez Somermeyer, A.Y. Gorokhovatsky, A. Vvedensky, K.V. Purtov, Genetically encodable bioluminescent system from fungi, Proceedings of the National Academy of Sciences, 115 (2018) 12728-12732.
 
-                        <br>[5] J. Jumper, R. Evans, A. Pritzel, T. Green, M. Figurnov, O. Ronneberger, K. Tunyasuvunakool, R. Bates, A. Žídek, A. Potapenko, Highly accurate protein structure prediction with AlphaFold, Nature, 596 (2021) 583-589.
-
-                        <br>[6] D. Tzamarias, K. Struhl, Functional dissection of the yeast Cyc8-Tupl transcriptional co-repressor complex, Nature, 369 (1994) 758-761.
+                        <br>[5] Y. Li, J. Mao, Q. Liu, X. Song, Y. Wu, M. Cai, H. Xu, M. Qiao, De novo biosynthesis of caffeic acid from glucose by engineered Saccharomyces cerevisiae, ACS Synthetic Biology, 9 (2020) 756-765.
                     </p>
                 </div>
             </div>

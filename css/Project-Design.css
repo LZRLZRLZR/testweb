@@ -355,6 +355,9 @@ header li:hover>.nav-sub
 .menu-item>input#menu-item4:checked~.menu-content {
     height: calc(1 * 40px);
 }
+.menu-item>input#menu-item5:checked~.menu-content {
+    height: calc(1 * 40px);
+}
 
 .menu-content>span {
     width: 100%;

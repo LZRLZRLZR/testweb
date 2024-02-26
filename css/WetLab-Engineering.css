@@ -344,10 +344,16 @@ header li:hover>.nav-sub
 
 /* choices 选项，若 n 项，就 n * 40px */
 .menu-item>input#menu-item1:checked~.menu-content {
-    height: calc(2 * 40px);
+    height: calc(5 * 40px);
 }
 .menu-item>input#menu-item2:checked~.menu-content {
     height: calc(2 * 40px);
+}
+.menu-item>input#menu-item3:checked~.menu-content {
+    height: calc(2 * 40px);
+}
+.menu-item>input#menu-item4:checked~.menu-content {
+    height: calc(1 * 40px);
 }
 
 .menu-content>span {
@@ -476,6 +482,27 @@ header li:hover>.nav-sub
     margin: 10px auto;
 }
 
+.container-table
+{
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+.container-table table
+{
+    width: 98%;    
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container-table table td
+{
+    text-align: center;
+    word-break: break-all; word-wrap: break-word;
+}
 
 
 /* ---------内容 ends--------- */

@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # Design
 
 ## Co-culture
@@ -22,13 +26,13 @@ Figure 1: Electron micrographs of *Synechococcus elongatus UTEX 2973*. Labels ar
 
 Based on the work down by Hays et al.[5], we chose Saccharomyces cerevisiae W303clump as our strain. S. cerevisiae growth in co-culture is dependent on genetic engineering to improve sucrose utilization. 
 
-Wild type (WT) S. cerevisiae W303 did not grow in co-culture with or without IPTG induction. We examined the capacity of WT S. cerevisiae W303 to grow axenically at low sucrose concentrations and saw poor/no growth below 2.5 g/L sucrose , a higher concentration of sucrose than is produced by cscB+ S. elongatus at 48 hours. 
+Wild type (WT) S. cerevisiae W303 did not grow in co-culture with or without IPTG induction. We examined the capacity of WT S.cerevisiae W303 to grow axenically at low sucrose concentrations and saw poor/no growth below 2.5 g/L sucrose , a higher concentration of sucrose than is produced by cscB+ S. elongatus at 48 hours. 
 
 It is notable that W303 performed far better than other strains under salt stress (Figure 2), making it more suitable for our design.
 
 ![utex2973](./img/saltperform.jpeg)
 
-Figure 2: Saccharomyces cerevisiae BY4741 and W303-1A laboratory strains differ in salt tolerance. (adapted from Hana et al.[21])
+Figure 2: Saccharomyces cerevisiae BY4741 and W303-1A laboratory strains differ in salt tolerance. (adapted from Hana et al.[])
 
 However, an engineered strain, named W303Clump, derived from previous directed evolution experiments of S. cerevisiae W303 in low sucrose media. W303Clump contains mutations in genes CSE2, IRA1, MTH1, and UBR1 that enhance fitness in dilute sucrose, and also contains a nonsense mutation in ACE2 that compromises the full septation of budding daughter cells from the mother, resulting in small clonal cell aggregates (~6.6 cells per clump on average). These clusters proliferate in environments with low sucrose concentrations, facilitated by heightened local cell density and enhanced hexose availability subsequent to the external breakdown of sucrose by invertase enzymes. . Unlike the parental strain, axenic cultures of W303Clump exhibited some growth at all tested sucrose concentrations ≥0.156 g/L, as well as when co-cultured with IPTG-induced cscB+ S. elongatus. 
 
@@ -64,7 +68,7 @@ The Luciferase from fungi is not stable above 30 degrees (Figure 6)[14]. During 
 
 Figure 6: Total light emission after 10min incubation of recombinant purified Luz at various temperatures [14]
 
-### S. cerevisiae modification
+### S.cerevisiae modification
 
 *S. cerevisiae* can synthesis tyrosine. Previous research shows that TAL from *Rhodobacter capsulatus* (RcTAL) could catalyze the deamination of l-tyrosine and led to the biosynthesis of p-coumaric acid in *S. cerevisiae*. C3H from *A. thaliana* could catalyze the hydroxylation of p-coumaric and led to the biosynthesis of caffeic acid. (Figure 7) [16]. As C3H depends on cytochrome P450 reductase (CPR), the CPR is needed to transfer electrons.
 
@@ -84,7 +88,7 @@ Since the luminescence process is energy-consuming,to avoid energy waste and ens
 
 ### Design
 
-#### Light-controlled Phy-Y2H
+#### Light-controlled Phy-FHY1
 
 Phytochromes (Phys) are plant photoreceptors that exist in two inter-convertible conformational states. Pr is the inactive form and cannot interact with FHY1 and Pfr is the active form.When absorbing far red light or being kept in darkness,Pfr(active) will turn into Pr(inactive).
 
@@ -100,11 +104,11 @@ In the model organism Arabidopsis thaliana, a group of light-sensitive proteins 
 
 Figure 10: Conversion between Pf and Pfr
 
-*Supplementary:*
+*Supplementary of (1):*
 
-*Phytochrome receptors consist of a protein part and a covalently linked chromophore part,and the chromophore is not synthesized in yeast. Phycocyanobilin (PCB) produced by cyanobacteria is always used as analog of chromophore in yeast* [17]*. However,without the chromophore, Phy can also work in yeast though weakly* [18], *and when cyanobacteria dead,PCB can be released into medium .Hence,PCB is not paid too much attention.*
+*Phytochrome receptors consist of a protein part and a covalently linked chromophore part,and the chromophore is not synthesized in yeast.Phycocyanobilin (PCB) produced by cyanobacteria is always used as analog of chromophore in yeast* [17]*. However,without the chromophore,Phy can also work in yeast though weakly* [18], *and when cyanobacteria dead,PCB can be released into medium .Hence,PCB is not paid too much attention.*
 
-#### Phy-Y2H pairs
+#### Phy-FHY1 pairs
 
 Research shows that the PhyA-FHY1 pair provides higher induction level with lower background than that of the PhyB-PIF3 pair[18],hence we choose PhyA-FHY1 as our light-sensing pair.
 
@@ -114,13 +118,21 @@ Commonly used light-regulated gene expression system in yeast consist of PHY-GBD
 
 #### Repressor TUP1
 
-TUP1 is a yeast general repressor protein. The N-terminal 200 residues of TUP1 are sufficient to cause repression when artificially recruited to a promoter[19].A two-hybrid system for transactivator bait proteins has been developed using DBD-bait and TUP1-prey fusion.What’s more, TUP1 can repress gene expression even when GAD exists.[20]So GBD-PHY fusion protein, GAD and TUP1-FHY1 fusion protein are used in our switch.
+TUP1 is a yeast general repressor protein.The N-terminal 200 residues of TUP1 are sufficient to cause repression when artificially recruited to a promoter [19].A two-hybrid system for transactivator bait proteins has been developed using DBD-bait and TUP1-prey fusion.What’s more,TUP1 can repress gene expression even when GAD exists.[20]So GBD-PHY fusion protein ,GAD and TUP1-FHY1 fusion protein are used in our switch.
+
+## Parts
+
+![design_figure_11](./img/design_figure_11.png)
+
+Figure 11: Representation of our parts.
+
+It should notable that it seems that we have put too much pressure on yeast. Maybe we can utilize the co-culture system, letting cyano share some burden. 
 
  
 
 #### Working scenario
 
-When in daytime or the environment is bright,PhyA will be activated and luz gene will be blocked ,thus our system won’t glow.
+When in daytime or the environment is bright, PhyA will be activated and luz gene will be blocked ,thus our system won’t glow.
 
 When in dark,without red light,Pfr will be degraded or slowly turn into Pr,which is inactive.Also,in the shade(where top plants absorb a lot of red light),FR has a higher proportion than R,so PhyA will also be inactive.
 
