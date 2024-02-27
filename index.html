@@ -1,11 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="./mainbody.html">Home Page</a>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./css/index.css">
+
+        <link rel="icon" type="image/x-icon" href="./img/icon2-1.ico">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+            .MathJax
+            {
+                outline: 0 !important;
+            }
+            .MathJax_Display
+            {
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+            }
+        </style>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="dns-prefetch" href="https://cdn.bootcdn.net" />
+        <link rel="dns-prefetch" href="https://cdn.mathjax.org" />
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"]
+                    ], //行内公式选择$
+                    displayMath: [
+                        ["$$", "$$"]
+                    ] //段内公式选择$$
+                },
+                svg: {
+                    fontCache: 'global'
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a'], //避开某些标签
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.min.js">
+        </script>
+
+        <title>Home Page</title>
+    </head>
+    <body>
+        <script>
+            function getRatio()
+                {
+                    var ratio=0;
+                    var screen=window.screen;
+                    var ua=navigator.userAgent.toLowerCase();
+
+                    if(window.devicePixelRatio !== undefined)
+                    {
+                        ratio=window.devicePixelRatio;    
+                    }
+                    else if(~ua.indexOf('msie'))
+                    {
+                        if(screen.deviceXDPI && screen.logicalXDPI)
+                        {
+                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                        }
+                    
+                    }
+                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                    {
+                        ratio=window.outerWidth/window.innerWidth;
+                    }
+
+                    // if(ratio)
+                    // {
+                    //     ratio=Math.round(ratio*100);    
+                    // }
+                    return ratio;
+                }
+                let t=getRatio();
+                document.body.style.zoom =1.5/t;
+
+                let stot="其实并不难发现这个彩蛋吧! # !先说一些正经的! # !我是负责Wiki部分的，但是不像某些大佬能生物和前端兼长，所以我不清楚这个冬训项目效果究竟如何 ~~~That's a Pity~~~! # !但是我还是想说，大家的工作都很努力，远超了一个冬训项目该有的工作量! # !最后一次组会的时候看着成型的Wiki，大家还是挺感动的，毕竟这背后的工作真的只有每个成员才知道! # !如果你能看到这个彩蛋，希望你能把我们的网页看完! # !如果看不懂内容也可以从头到尾翻看一些小设计和排版；如果能看懂欢迎仔细阅读网页内容和Team->Documents里的文件，并指出我们的问题! # !毕竟冬训最后可能意味着某些队员的离开（当然这也包括我），老师只会“冷血”地一刀断定谁去谁留，留下来的同学还能继续创造“奇迹”，但是离开的同学的此次iGEM之旅便就此结束了，所以这里记录这大家在这个阶段一起努力的成果，这弥足珍贵! # !这个Wiki嘛，也算是满足了我学习前端的心愿，虽然只学习了皮毛网站也写得很丑（你能看到这里，那说明见过源码了，也知道网站是个什么水平）。所以，最终入选与否对我来说似乎不太重要了! # !对于presentation来说Wiki完全不用做得这么仔细，老师八成不会看，但是我觉得既然走过了，就不留遗憾啦! # !因为正如Avicii说过的：! # !He said, One day you'll leave this world behind! # !So live a life you will remember! # !My father told me when I was just a child! # !These are the nights that never die! # !所以这次大家都做的很好，Wiki自然不能辜负啦，这是我们的态度! # !这次的小组合作非常顺利和开心，不知道下一次这样的合作会在何时"
+                let s=stot.split("! # !");
+                for (let i = 0; i < 17; i++) 
+                {
+                    setTimeout(() => {
+                        console.log(s[i]);
+                    }, 2000*i);
+                }
+                
+        </script>
+    <div class="readme">
+
+        <div class="content-text" style="flex-direction: row;">
+            <div id="SideBar" class="Bar">
+                <style>
+                    #SideBar
+                    {
+                        background-color: #000000;
+                        height: 203px;
+                        width: 0.5%;
+                        position: relative;
+                        left: 0;
+                        margin-right: 20px;
+                        transform: translateX(-100%);
+                    }
+                </style>
+            </div>
+            <div style="width: 80%;">
+                <p class="Title">
+                写在最前面
+                </p>
+                <p class="Title">
+                    Our suggestions
+                </p>
+            </div>
+        </div>
+
+        <div class="content-text">
+            <p>
+                1.我们强烈建议您使用Google或edge在电脑端浏览我们的网页。<br>
+                1.We strongly recommend that you use Google or Edge to visit our Wiki on PC.
+            </p>
+        </div>
+        <div class="content-text">
+            <p>
+                2.如遇Google浏览器的安全提醒，可在确保安全的情况下在“详情”中选择“访问这个不安全的网站”。 <br>
+                2.If encountering security reminders from Google Chrome, you can select "Access this unsafe website" in the "Details" section while ensuring security.
+            </p>
+        </div>
+
+        <div class="content-pic">
+            <img src="./img/GoogleWarning.png" alt="This Picture shows how to visit our Wiki on Google Chrome.">
+        </div>
+
+        <div class="content-text">
+            <p>
+                3.在使用我们推荐的浏览器阅览Wiki时，请保持浏览器处于100%的最佳阅览比例。如中途更改了比例，如需回到最佳的浏览器比例，请刷新网页。<br>
+                3.The optimal ratio of your browser (Google or Edge) is 100% when visiting our Wiki. You can get to the optimal viewing ratio by reloading the Page.
+            </p>
+        </div>
+
+        <div class="content-text">
+            <p>
+                4.如果你坚持使用我们推荐之外的浏览器进行阅览，阅览效果可能会受到影响。此时你可以对网页进行缩放以达到合适的比例。下面的两张图为您展示了我们的Wiki在最有比例下的阅览效果。<br>
+                4.If you are not accessible to use the browsers recommended by us, 100% (of your browser) may not be the optimal ratio. If you encounter this problem, you can scale the webpage to achieve the appropriate ratio. The following two picture show you how our webpages are like under a appropriate ratio.  
+            </p>
+        </div>    
+
+        <div class="content-pic" style="flex-direction: row;">
+            <img style="width: 40%;" src="./img/CorrectRatio1.png" alt="This Picture shows the page (Home Page) on the optimal viewing ratio.">
+            <img style="width: 40%;" src="./img/CorrectRatio2.png" alt="This Picture shows the page on the optimal viewing ratio.">
+        </div>
+
+        <div class="content-text">
+            <p>
+                5.至此，你已经可以开始阅览我们的网页了，但是开始之前，我们的网页开发者在网页中留下了一个很容易被发现的小彩蛋，希望你能找到它。<br>
+                5.Now, you can solve most of problems when visiting our Wiki. But our web developer wants to inform you that he had left an Easter Egg on the website. Hope you can find it!    
+            </p>
+        </div>
+        <div class="content-text">
+            <p class="Title" style="text-align: center;">
+                Get Start ↓
+            </p>
+        </div>
+        <div class="content-text" id="Links">
+            <style>
+                #Links a
+                {
+                    font-size: 120px;
+                    padding: 15px 45px;
+                    border: solid #777777 2px;
+                    box-shadow: 0 0 10px #555555;
+                    border-radius: 15px;
+                    transition: 0.5s;
+                }
+                #Links a:hover
+                {
+                    color: brown;
+                    font-size: 135px;
+                    padding: 25px 60px;
+                    border: solid #666666 3px;
+                    box-shadow: 2px 2px 20px #444444;
+                    border-radius: 20px;
+                }
+            </style>
+            <a href="./mainbody.html">Home Page</a>
+        </div>
+    </div>
+
+    <!-- ENDing begins -->
+    <div class="endbar" ></div>
+    <div class="CopyrightDeclare" >
+        <p style="color: #ffffff;" class="ContactUs">Contact us: E-mail: zr-liu22@mails.tsinghua.edu.cn | Tel: 13547831314 </p>
+        <p style="color: #ffffff;" class="ContactUs">Copyright © 2024 Tsinghua University Tanwei College iGEM winter training Group 4. All rights reserved. </p>
+    </div>
+    <!-- it all ends -->
+    
+
+    </body>
 </html>

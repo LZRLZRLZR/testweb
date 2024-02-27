@@ -1,151 +1,80 @@
-
 *
 {
-    box-sizing: border-box;
-    font-family: 'Poppins' , sans-serif;
+    /* font-family: "Della Respira", serif; */
+    font-family: "Sriracha", "Ma Shan Zheng";
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
-
-/* ---------导航栏开始--------- */
-
 body
 {
-    background-color: #f4f8ec;
-    /* background: #F7F8F8;   fallback for old browsers */
-    /*background: linear-gradient(to right, #ACBB78, #F7F8F8);  W3C, IE 10+/ Edge, Firefox 16+,Chrome 26+, Opera 12+, Safari 7+ */
-    /*background: -webkit-linear-gradient(to right, #f7f8f8, #acbb78); /* Chrome 10-25, Safari 5.1-6 */
-
+    background-color: azure;
 }
-header
+.readme
 {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     display: flex;
-    justify-content: space-between; 
+    flex-direction: column;
     align-items: center;
-    transition: 0.6s;
-    padding: 8px 100px;
-    z-index: 100000;
+    justify-content: center; 
 }
-/* header .LOGOinTEXT
+.readme > div
 {
-
-    position: relative;
-    font-weight: 700;
-    color: #222222;
-    text-decoration: none;
-    font-size: 48px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.6s;
-
-    justify-content: left;
-} */
-
-header img
-{
-    /* position: relative; */
-    height: auto;
-    width: 140px;
+    width: 90%;
+    margin: 20px 0;
+    /* background-color: aqua; */
 }
-
-header > ul
+.content-text, .content-pic 
 {
     position: relative;
+    margin: 10px 0;
     display: flex;
-    justify-content: center;
-}
-header > ul > li
-{
-    /* position: relative; */
-    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
 }
 
-header > ul > li > a
+.Title
 {
-    /* position: relative; */
-    margin: 0 5px;
-    text-decoration: none;
-    color: #94b15e;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-size: 18px;
-    transition: 0.6s;
-    padding: 10px 15px;
+    font-size: 56px;
 }
-header > ul > li > a:hover
+p
 {
-    color: #eb6a53;
-    text-decoration: underline;
-    background-color: #cfd1ce;
+    width: 80%;
+    margin: 2px 0;
 }
-header.sticky
+img
 {
-    padding: 3px 100px;
-    background: #f8f8f8;
-    box-shadow: 0 0 15px 0 #888888;
+    margin: 5px;
+    width: 50%;
 }
 
-header .nav-sub
-{
-    display: none;
-    position: absolute;
-    background-color: #f8fbf3;
-    /* width: 185px;
-    height: 140px; */
-    top: 35px;
-    left: auto;
+/*ENDing begins*/
 
-    border-radius: 5px;
-}
-header li:hover>.nav-sub
+.endbar
 {
-    /* transition: 1s; */
-    display: block;
-    border: #d2d2d2 solid 0.5px;
+    background: linear-gradient(azure, #2a2e2e);
+    height: 400px;
 }
-.Project_submenu
+.CopyrightDeclare
 {
-    margin: 3px 8px;
-    list-style: none;
-    line-height: 2;
-    padding-inline-start: 0px; 
-    height: auto;
-}
-.Project_submenu li a
-{
-    /* margin: 3px 2px; */
-    padding: 5px 10px;
-    text-decoration: none;
-    color: #94b15e;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: 0.6s;
-}
-
-.Project_submenu li:hover>a
-{
-    color: #eb6a53;
-    text-decoration: underline;
-    background-color: #cfd1ce;
-}
-
-
-/* .banner
-{
-    position: relative;
+    
+    background-color: #2a2e2e;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
     width: 100%;
-    height: 82px;
-    background-size: cover;
-}   */
+    justify-content: center;
+    align-items: center;
+}
+.CopyrightDeclare p
+{
+    text-align: center;
+    font-family: 'Poppins' , sans-serif;
+    font-size: 16px;
+    margin: 2px;
+    padding: 0;
+}
 
-/* header.sticky ul li a, */
-
-/* ---------导航栏结束--------- */
-
-
-/* ---------banner开始--------- */
-
-/* ---------banner结束--------- */
+/*it all ends*/
