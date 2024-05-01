@@ -90,8 +90,20 @@
                     return ratio;
                 }
                 let t=getRatio();
-                console.log( getRatio() );
-                document.body.style.zoom =1.5/t;
+                 console.log('t=')
+                 console.log(t)
+                //  var w=document.documentElement.clientWidth;
+                //  var h=document.documentElement.clientHeight;
+                var w=screen.width
+                var h=screen.height
+                 console.log('w=')
+                 console.log(w)
+                 console.log('h=')
+                 console.log(h)
+                 var p=Math.min(1.5/2560*w, 1.5/1600*h)
+                 console.log('p=')
+                 console.log(p)
+                 document.body.style.zoom = p;
         </script>
         <style>
             .body   
