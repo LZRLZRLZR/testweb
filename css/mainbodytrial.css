@@ -578,7 +578,8 @@ mainbanner > img
 .core_teammember
 {
     position: relative;
-    height: 70vh;
+    /* height: 70vh; */
+    height: 522.39px;
     display: flex;
     justify-content: center;
     align-items: center;

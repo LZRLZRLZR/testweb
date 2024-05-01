@@ -60,37 +60,62 @@
     </head>
     <body>
         <script>
-            function getRatio()
-                {
-                    var ratio=0;
-                    var screen=window.screen;
-                    var ua=navigator.userAgent.toLowerCase();
+             function getRatio()
+                 {
+                     var ratio=0;
+                     var screen=window.screen;
+                     var ua=navigator.userAgent.toLowerCase();
 
-                    if(window.devicePixelRatio !== undefined)
-                    {
+                     if(window.devicePixelRatio !== undefined)
+                     {
+                        console.log('window.devicePixelRatio = ')
+                        console.log(window.devicePixelRatio)
                         ratio=window.devicePixelRatio;    
-                    }
-                    else if(~ua.indexOf('msie'))
-                    {
-                        if(screen.deviceXDPI && screen.logicalXDPI)
-                        {
-                            ratio=screen.deviceXDPI/screen.logicalXDPI;        
-                        }
+                     }
+                     else if(~ua.indexOf('msie'))
+                     {
+                         if(screen.deviceXDPI && screen.logicalXDPI)
+                         {
+                            console.log('screen.deviceXDPI')
+                            console.log(screen.deviceXDPI)
+                            console.log('screen.logicalXDPI')
+                            console.log(screen.logicalXDPI)
+                             ratio=screen.deviceXDPI/screen.logicalXDPI;        
+                         }
                     
-                    }
-                    else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
-                    {
-                        ratio=window.outerWidth/window.innerWidth;
-                    }
+                     }
+                     else if(window.outerWidth !== undefined && window.innerWidth !== undefined)
+                     {
+                        console.log('window.outerWidth')
+                        console.log(window.outerWidth)
+                        console.log('window.innerWidth')
+                        console.log(window.innerWidth)
+                         ratio=window.outerWidth/window.innerWidth;
+                     }
 
-                    // if(ratio)
-                    // {
-                    //     ratio=Math.round(ratio*100);    
-                    // }
-                    return ratio;
-                }
-                let t=getRatio();
-                document.body.style.zoom =1.5/t;
+                     // if(ratio)
+                     // {
+                     //     ratio=Math.round(ratio*100);    
+                     // }
+                     return ratio;
+                 }
+                 
+                 let t=getRatio();
+                 console.log('t=')
+                 console.log(t)
+                //  var w=document.documentElement.clientWidth;
+                //  var h=document.documentElement.clientHeight;
+                var w=screen.width
+                var h=screen.height
+                 console.log('w=')
+                 console.log(w)
+                 console.log('h=')
+                 console.log(h)
+                 var p=Math.min(1.5/2560*w, 1.5/1600*h)
+                 console.log('p=')
+                 console.log(p)
+                 document.body.style.zoom = p;
+
 
                 let stot="其实并不难发现这个彩蛋吧! # !先说一些正经的! # !我是负责Wiki部分的，但是不像某些大佬能生物和前端兼长，所以我不清楚这个冬训项目效果究竟如何 ~~~That's a Pity~~~! # !但是我还是想说，大家的工作都很努力，远超了一个冬训项目该有的工作量! # !最后一次组会的时候看着成型的Wiki，大家还是挺感动的，毕竟这背后的工作真的只有每个成员才知道! # !如果你能看到这个彩蛋，希望你能把我们的网页看完! # !如果看不懂内容也可以从头到尾翻看一些小设计和排版；如果能看懂欢迎仔细阅读网页内容和Team->Documents里的文件，并指出我们的问题! # !毕竟冬训最后可能意味着某些队员的离开（当然这也包括我），老师只会“冷血”地一刀断定谁去谁留，留下来的同学还能继续创造“奇迹”，但是离开的同学的此次iGEM之旅便就此结束了，所以这里记录这大家在这个阶段一起努力的成果，这弥足珍贵! # !这个Wiki嘛，也算是满足了我学习前端的心愿，虽然只学习了皮毛网站也写得很丑（你能看到这里，那说明见过源码了，也知道网站是个什么水平）。所以，最终入选与否对我来说似乎不太重要了! # !对于presentation来说Wiki完全不用做得这么仔细，老师八成不会看，但是我觉得既然走过了，就不留遗憾啦! # !因为正如Avicii说过的：! # !He said, One day you'll leave this world behind! # !So live a life you will remember! # !My father told me when I was just a child! # !These are the nights that never die! # !所以这次大家都做的很好，Wiki自然不能辜负啦，这是我们的态度! # !这次的小组合作非常顺利和开心，不知道下一次这样的合作会在何时"
                 let s=stot.split("! # !");
